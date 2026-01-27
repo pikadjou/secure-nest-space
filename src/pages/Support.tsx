@@ -13,15 +13,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-
-const ticketSchema = z.object({
-  nom: z.string().trim().min(2, "Le nom doit contenir au moins 2 caractères").max(50, "Le nom ne peut pas dépasser 50 caractères"),
-  prenom: z.string().trim().min(2, "Le prénom doit contenir au moins 2 caractères").max(50, "Le prénom ne peut pas dépasser 50 caractères"),
-  idBailo: z.string().trim().min(5, "L'ID Bailo doit contenir au moins 5 caractères").max(20, "L'ID Bailo ne peut pas dépasser 20 caractères"),
-  message: z.string().trim().min(20, "Le message doit contenir au moins 20 caractères").max(2000, "Le message ne peut pas dépasser 2000 caractères"),
-});
-
-type TicketFormData = z.infer<typeof ticketSchema>;
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface Attachment {
   id: string;
@@ -31,10 +23,20 @@ interface Attachment {
 }
 
 const Support = () => {
+  const { t } = useLanguage();
   const [attachments, setAttachments] = useState<Attachment[]>([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [ticketNumber, setTicketNumber] = useState("");
   const { toast } = useToast();
+
+  const ticketSchema = z.object({
+    nom: z.string().trim().min(2, t("support.validation.lastName")).max(50, t("support.validation.lastNameMax")),
+    prenom: z.string().trim().min(2, t("support.validation.firstName")).max(50, t("support.validation.firstNameMax")),
+    idBailo: z.string().trim().min(5, t("support.validation.bailoId")).max(20, t("support.validation.bailoIdMax")),
+    message: z.string().trim().min(20, t("support.validation.message")).max(2000, t("support.validation.messageMax")),
+  });
+
+  type TicketFormData = z.infer<typeof ticketSchema>;
 
   const form = useForm<TicketFormData>({
     resolver: zodResolver(ticketSchema),
@@ -64,8 +66,8 @@ const Support = () => {
     Array.from(files).forEach((file) => {
       if (file.size > maxFileSize) {
         toast({
-          title: "Fichier trop volumineux",
-          description: `${file.name} dépasse la limite de 10MB`,
+          title: t("support.error.fileTooLarge"),
+          description: `${file.name} ${t("support.error.fileTooLargeDesc")}`,
           variant: "destructive",
         });
         return;
@@ -73,8 +75,8 @@ const Support = () => {
 
       if (!allowedTypes.includes(file.type)) {
         toast({
-          title: "Type de fichier non supporté",
-          description: `${file.name} n'est pas un format accepté (JPG, PNG, GIF, PDF, DOC)`,
+          title: t("support.error.unsupportedType"),
+          description: `${file.name} ${t("support.error.unsupportedTypeDesc")}`,
           variant: "destructive",
         });
         return;
@@ -82,8 +84,8 @@ const Support = () => {
 
       if (attachments.length >= 5) {
         toast({
-          title: "Limite atteinte",
-          description: "Vous ne pouvez pas ajouter plus de 5 pièces jointes",
+          title: t("support.error.maxFiles"),
+          description: t("support.error.maxFilesDesc"),
           variant: "destructive",
         });
         return;
@@ -144,24 +146,24 @@ const Support = () => {
                   <CheckCircle className="w-10 h-10 text-secondary" />
                 </div>
                 <h2 className="text-2xl font-bold text-foreground mb-2">
-                  Ticket envoyé avec succès !
+                  {t("support.success.title")}
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Votre demande a été enregistrée. Notre équipe vous répondra dans les plus brefs délais.
+                  {t("support.success.message")}
                 </p>
                 <div className="bg-muted/50 rounded-lg p-4 mb-8">
-                  <p className="text-sm text-muted-foreground mb-1">Numéro de ticket</p>
+                  <p className="text-sm text-muted-foreground mb-1">{t("support.success.ticketNumber")}</p>
                   <p className="text-xl font-mono font-bold text-primary">{ticketNumber}</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button onClick={handleNewTicket} variant="outline">
                     <Ticket className="w-4 h-4 mr-2" />
-                    Créer un autre ticket
+                    {t("support.success.newTicket")}
                   </Button>
                   <Button asChild>
                     <Link to="/">
                       <ArrowLeft className="w-4 h-4 mr-2" />
-                      Retour à l'accueil
+                      {t("support.success.backHome")}
                     </Link>
                   </Button>
                 </div>
@@ -183,22 +185,22 @@ const Support = () => {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Ticket className="w-4 h-4" />
-              Support Client
+              {t("support.badge")}
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Créer un ticket de support
+              {t("support.title")}
             </h1>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Décrivez votre problème ou votre question et notre équipe vous répondra rapidement.
+              {t("support.subtitle")}
             </p>
           </div>
 
           {/* Form Card */}
           <Card className="shadow-card">
             <CardHeader>
-              <CardTitle>Nouveau ticket</CardTitle>
+              <CardTitle>{t("support.form.title")}</CardTitle>
               <CardDescription>
-                Remplissez le formulaire ci-dessous. Les champs marqués d'un * sont obligatoires.
+                {t("support.form.subtitle")}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -211,7 +213,7 @@ const Support = () => {
                       name="nom"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Nom *</FormLabel>
+                          <FormLabel>{t("support.form.lastName")} *</FormLabel>
                           <FormControl>
                             <Input placeholder="Dupont" {...field} />
                           </FormControl>
@@ -224,7 +226,7 @@ const Support = () => {
                       name="prenom"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Prénom *</FormLabel>
+                          <FormLabel>{t("support.form.firstName")} *</FormLabel>
                           <FormControl>
                             <Input placeholder="Jean" {...field} />
                           </FormControl>
@@ -240,7 +242,7 @@ const Support = () => {
                     name="idBailo"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>ID Bailo *</FormLabel>
+                        <FormLabel>{t("support.form.bailoId")} *</FormLabel>
                         <FormControl>
                           <Input placeholder="BLO-12345" {...field} />
                         </FormControl>
@@ -255,10 +257,10 @@ const Support = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message *</FormLabel>
+                        <FormLabel>{t("support.form.message")} *</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Décrivez votre problème ou votre question en détail..."
+                            placeholder={t("support.form.messagePlaceholder")}
                             className="min-h-[150px] resize-y"
                             {...field}
                           />
@@ -270,9 +272,9 @@ const Support = () => {
 
                   {/* Attachments */}
                   <div className="space-y-3">
-                    <Label>Pièces jointes (optionnel)</Label>
+                    <Label>{t("support.form.attachments")}</Label>
                     <p className="text-sm text-muted-foreground">
-                      Formats acceptés: JPG, PNG, GIF, PDF, DOC. Maximum 10MB par fichier, 5 fichiers maximum.
+                      {t("support.form.attachmentsHelp")}
                     </p>
                     
                     {/* Upload Button */}
@@ -287,11 +289,11 @@ const Support = () => {
                         />
                         <div className="inline-flex items-center gap-2 px-4 py-2 border-2 border-dashed border-muted-foreground/30 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-colors">
                           <Paperclip className="w-4 h-4 text-muted-foreground" />
-                          <span className="text-sm text-muted-foreground">Ajouter des fichiers</span>
+                          <span className="text-sm text-muted-foreground">{t("support.form.addFiles")}</span>
                         </div>
                       </label>
                       <span className="text-sm text-muted-foreground">
-                        {attachments.length}/5 fichiers
+                        {attachments.length}/5 {t("support.form.filesCount")}
                       </span>
                     </div>
 
@@ -329,7 +331,7 @@ const Support = () => {
                   <div className="pt-4">
                     <Button type="submit" size="lg" className="w-full" variant="accent">
                       <Send className="w-4 h-4 mr-2" />
-                      Envoyer le ticket
+                      {t("support.form.submit")}
                     </Button>
                   </div>
                 </form>

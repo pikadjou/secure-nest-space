@@ -5,8 +5,10 @@ import { articles } from "@/data/articles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Blog = () => {
+  const { t, language } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -28,10 +30,10 @@ const Blog = () => {
       <section className="pt-32 pb-16 bg-hero-gradient">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-            Le Blog <span className="text-gradient">Bailo</span>
+            {t("blog.hero.title")} <span className="text-gradient">Bailo</span>
           </h1>
           <p className="text-xl text-primary-foreground/80 max-w-2xl mx-auto">
-            Conseils, guides et actualités pour réussir votre parcours locatif
+            {t("blog.hero.subtitle")}
           </p>
         </div>
       </section>
@@ -45,7 +47,7 @@ const Blog = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Rechercher un article..."
+                placeholder={t("blog.search")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
@@ -62,7 +64,7 @@ const Blog = () => {
                     : "bg-muted text-muted-foreground hover:bg-muted/80"
                 }`}
               >
-                Tous
+                {t("blog.all")}
               </button>
               {categories.map((category) => (
                 <button
@@ -87,7 +89,7 @@ const Blog = () => {
         <div className="container mx-auto px-6">
           {filteredArticles.length === 0 ? (
             <div className="text-center py-16">
-              <p className="text-xl text-muted-foreground">Aucun article trouvé</p>
+              <p className="text-xl text-muted-foreground">{t("blog.noResults")}</p>
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,7 +121,7 @@ const Blog = () => {
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
                           <span>
-                            {new Date(article.publishedAt).toLocaleDateString("fr-FR", {
+                            {new Date(article.publishedAt).toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', {
                               day: "numeric",
                               month: "short",
                               year: "numeric",
