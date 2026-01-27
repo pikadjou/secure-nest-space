@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Star, Lock } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
   const partners = ["NEXITY", "CENTURY21", "ORPI", "FONCIA", "LAFORÊT"];
 
   return (
@@ -18,42 +20,41 @@ const HeroSection = () => {
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8 animate-fade-in">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20">
                 <Shield className="w-4 h-4 text-secondary" />
-                <span className="text-foreground text-sm font-medium">Vérification KYC</span>
+                <span className="text-foreground text-sm font-medium">{t("hero.badge.kyc")}</span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20">
                 <Star className="w-4 h-4 text-accent" />
-                <span className="text-foreground text-sm font-medium">Évaluations certifiées</span>
+                <span className="text-foreground text-sm font-medium">{t("hero.badge.ratings")}</span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-                <span className="text-foreground text-sm font-medium">+10 000 utilisateurs</span>
+                <span className="text-foreground text-sm font-medium">{t("hero.badge.users")}</span>
               </div>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              LA PLATEFORME DE{" "}
-              <span className="text-primary">CONFIANCE</span>{" "}
-              POUR VOS{" "}
-              <span className="text-gradient">LOCATIONS</span>
+              {t("hero.title.platform")}{" "}
+              <span className="text-primary">{t("hero.title.trust")}</span>{" "}
+              {t("hero.title.for")}{" "}
+              <span className="text-gradient">{t("hero.title.rentals")}</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              Évaluez et soyez évalué en toute sérénité. Bailo révolutionne la relation 
-              locataire-propriétaire avec transparence et sécurité.
+              {t("hero.description")}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <Button variant="accent" size="xl">
-                Découvrir la plateforme
+                {t("hero.cta.discover")}
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <Button variant="outline" size="xl">
-                Voir la démonstration
+                {t("hero.cta.demo")}
               </Button>
             </div>
             
             {/* Partners logos */}
             <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <p className="text-sm text-muted-foreground mb-4">Ils nous font confiance</p>
+              <p className="text-sm text-muted-foreground mb-4">{t("hero.partners")}</p>
               <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
                 {partners.map((partner) => (
                   <span 
@@ -88,8 +89,8 @@ const HeroSection = () => {
                     <Lock className="w-5 h-5 text-secondary-foreground" />
                   </div>
                   <div>
-                    <p className="font-semibold text-card-foreground text-sm">100% Sécurisé</p>
-                    <p className="text-xs text-muted-foreground">Données cryptées</p>
+                    <p className="font-semibold text-card-foreground text-sm">{t("hero.secure")}</p>
+                    <p className="text-xs text-muted-foreground">{t("hero.encrypted")}</p>
                   </div>
                 </div>
               </div>
@@ -97,7 +98,7 @@ const HeroSection = () => {
               {/* Floating badge - Rating */}
               <div className="absolute -right-4 lg:-right-8 bottom-1/4 bg-card rounded-xl shadow-card p-4 animate-float" style={{ animationDelay: "1s" }}>
                 <div className="text-center">
-                  <p className="text-xs text-muted-foreground mb-1">Note moyenne</p>
+                  <p className="text-xs text-muted-foreground mb-1">{t("hero.avgRating")}</p>
                   <div className="flex items-center gap-1">
                     <span className="text-2xl font-bold text-card-foreground">4.8/5</span>
                     <Star className="w-5 h-5 text-accent fill-accent" />

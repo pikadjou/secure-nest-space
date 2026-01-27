@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { articles } from "@/data/articles";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const BlogSection = () => {
+  const { t, language } = useLanguage();
   const featuredArticles = articles.slice(0, 3);
 
   return (
@@ -13,16 +15,16 @@ const BlogSection = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Nos derniers{" "}
-              <span className="text-primary">articles</span>
+              {t("blog.title")}{" "}
+              <span className="text-primary">{t("blog.title.highlight")}</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl">
-              Conseils, guides et actualités pour réussir votre parcours locatif.
+              {t("blog.subtitle")}
             </p>
           </div>
           <Link to="/blog">
             <Button variant="outline" size="lg">
-              Voir tous les articles
+              {t("blog.viewAll")}
               <ArrowRight className="w-4 h-4" />
             </Button>
           </Link>
@@ -57,7 +59,7 @@ const BlogSection = () => {
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
-                      <span>{new Date(article.publishedAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
+                      <span>{new Date(article.publishedAt).toLocaleDateString(language === 'fr' ? 'fr-FR' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />

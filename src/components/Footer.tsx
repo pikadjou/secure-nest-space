@@ -1,24 +1,28 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   const footerLinks = {
     produit: [
-      { label: "Fonctionnalités", href: "#features" },
-      { label: "Tarifs", href: "#pricing" },
-      { label: "FAQ", href: "#faq" },
-      { label: "Témoignages", href: "#testimonials" },
+      { label: t("footer.features"), href: "#features" },
+      { label: t("footer.pricing"), href: "#pricing" },
+      { label: t("footer.faq"), href: "#faq" },
+      { label: t("footer.testimonials"), href: "#testimonials" },
     ],
     entreprise: [
-      { label: "À propos", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Carrières", href: "#" },
-      { label: "Presse", href: "#" },
+      { label: t("footer.about"), href: "#" },
+      { label: t("footer.blog"), href: "#" },
+      { label: t("footer.careers"), href: "#" },
+      { label: t("footer.press"), href: "#" },
     ],
     legal: [
-      { label: "Conditions générales", href: "#" },
-      { label: "Politique de confidentialité", href: "#" },
-      { label: "Mentions légales", href: "#" },
-      { label: "Cookies", href: "#" },
+      { label: t("footer.terms"), href: "#" },
+      { label: t("footer.privacy"), href: "#" },
+      { label: t("footer.legalNotice"), href: "#" },
+      { label: t("footer.cookies"), href: "#" },
     ],
   };
 
@@ -42,7 +46,7 @@ const Footer = () => {
               <span className="text-xl font-bold">bailo</span>
             </a>
             <p className="text-primary-foreground/70 mb-6 max-w-xs">
-              La plateforme qui simplifie la location immobilière pour tous.
+              {t("footer.description")}
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
@@ -60,7 +64,7 @@ const Footer = () => {
 
           {/* Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-lg">Produit</h4>
+            <h4 className="font-semibold mb-4 text-lg">{t("footer.product")}</h4>
             <ul className="space-y-3">
               {footerLinks.produit.map((link) => (
                 <li key={link.label}>
@@ -76,7 +80,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-lg">Entreprise</h4>
+            <h4 className="font-semibold mb-4 text-lg">{t("footer.company")}</h4>
             <ul className="space-y-3">
               {footerLinks.entreprise.map((link) => (
                 <li key={link.label}>
@@ -92,7 +96,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-lg">Légal</h4>
+            <h4 className="font-semibold mb-4 text-lg">{t("footer.legal")}</h4>
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.label}>
@@ -109,7 +113,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-lg">Contact</h4>
+            <h4 className="font-semibold mb-4 text-lg">{t("footer.contact")}</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-primary-foreground/70">
                 <Mail className="w-4 h-4" />
@@ -128,13 +132,16 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/50 text-sm text-center md:text-left">
-            © 2024 Bailo. Tous droits réservés.
-          </p>
-          <p className="text-primary-foreground/50 text-sm">
-            Fait avec ❤️ en France
-          </p>
+        <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+            <p className="text-primary-foreground/50 text-sm text-center md:text-left">
+              {t("footer.rights")}
+            </p>
+            <p className="text-primary-foreground/50 text-sm">
+              {t("footer.madeWith")}
+            </p>
+          </div>
+          <LanguageSwitcher />
         </div>
       </div>
     </footer>

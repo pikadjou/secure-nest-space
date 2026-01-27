@@ -2,19 +2,21 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const { t } = useLanguage();
 
   const navLinks = [
-    { label: "Accueil", href: isHome ? "#" : "/", isRoute: !isHome },
-    { label: "Fonctionnalités", href: isHome ? "#features" : "/#features", isRoute: !isHome },
-    { label: "Abonnement", href: isHome ? "#pricing" : "/#pricing", isRoute: !isHome },
-    { label: "Blog", href: "/blog", isRoute: true },
-    { label: "FAQ", href: "/faq", isRoute: true },
-    { label: "Support", href: "/support", isRoute: true },
+    { label: t("nav.home"), href: isHome ? "#" : "/", isRoute: !isHome },
+    { label: t("nav.features"), href: isHome ? "#features" : "/#features", isRoute: !isHome },
+    { label: t("nav.pricing"), href: isHome ? "#pricing" : "/#pricing", isRoute: !isHome },
+    { label: t("nav.blog"), href: "/blog", isRoute: true },
+    { label: t("nav.faq"), href: "/faq", isRoute: true },
+    { label: t("nav.support"), href: "/support", isRoute: true },
   ];
 
   return (
@@ -55,10 +57,10 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Button variant="ghost" size="sm">
-              Connexion
+              {t("nav.login")}
             </Button>
             <Button variant="accent" size="default">
-              S'inscrire
+              {t("nav.signup")}
             </Button>
           </div>
 
@@ -98,10 +100,10 @@ const Navbar = () => {
               )}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
                 <Button variant="ghost" className="w-full justify-center">
-                  Connexion
+                  {t("nav.login")}
                 </Button>
                 <Button variant="accent" className="w-full justify-center">
-                  S'inscrire
+                  {t("nav.signup")}
                 </Button>
               </div>
             </div>
