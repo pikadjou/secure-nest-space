@@ -13,6 +13,7 @@ const Navbar = () => {
     { label: "Fonctionnalités", href: isHome ? "#features" : "/#features", isRoute: !isHome },
     { label: "Abonnement", href: isHome ? "#pricing" : "/#pricing", isRoute: !isHome },
     { label: "Blog", href: "/blog", isRoute: true },
+    { label: "FAQ", href: "/faq", isRoute: true },
     { label: "Support", href: "/support", isRoute: true },
   ];
 
