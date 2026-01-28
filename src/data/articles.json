@@ -1,62 +1,47 @@
 [
   {
     "id": "1",
-    "slug": "guide-complet-dossier-locataire",
-    "title": "Le guide complet pour constituer un dossier locataire parfait",
-    "excerpt": "Découvrez toutes les pièces nécessaires et nos conseils pour maximiser vos chances d'obtenir le logement de vos rêves.",
-    "content": "## Introduction\n\nLa constitution d'un dossier locataire est une étape cruciale dans votre recherche de logement. Un dossier bien préparé peut faire la différence entre obtenir l'appartement de vos rêves ou passer à côté.\n\n## Les pièces indispensables\n\n### 1. Pièce d'identité\nUne copie recto-verso de votre carte d'identité ou passeport en cours de validité.\n\n### 2. Justificatifs de revenus\n- Les 3 derniers bulletins de salaire\n- Votre dernier avis d'imposition\n- Votre contrat de travail\n\n### 3. Justificatif de domicile\n- Quittances de loyer des 3 derniers mois\n- Ou attestation d'hébergement avec pièce d'identité de l'hébergeant\n\n## Nos conseils pour se démarquer\n\n1. **Soignez la présentation** : Un dossier bien organisé montre votre sérieux\n2. **Anticipez** : Préparez votre dossier avant même de visiter\n3. **Soyez transparent** : Ne cachez aucune information importante\n\n## Conclusion\n\nAvec Bailo, la constitution de votre dossier devient un jeu d'enfant. Notre plateforme vous guide pas à pas et vérifie automatiquement vos documents.",
+    "slug": "pourquoi-choisir-bailo",
+    "title": "Pourquoi choisir Bailo ?",
+    "excerpt": "Découvrez comment Bailo révolutionne la relation locataire-propriétaire en Belgique avec un système d'évaluation mutuelle unique.",
+    "content": "## Une plateforme unique en Belgique\n\nBailo est la première plateforme belge permettant aux propriétaires et locataires de s'évaluer mutuellement. Notre objectif : créer un historique de confiance pour sécuriser les locations.\n\n## Comment ça marche ?\n\n### Pour les locataires\nConsultez les avis sur les propriétaires avant de signer un bail. Évaluez votre propriétaire sur des critères objectifs : état du bien, réactivité, respect des engagements.\n\n### Pour les propriétaires\nVérifiez l'historique locatif de vos candidats. Évaluez vos locataires sur le paiement du loyer, l'entretien du bien, le respect du voisinage.\n\n## Les avantages Bailo\n\n1. **Transparence totale** : Accès à l'historique complet des évaluations\n2. **Profils vérifiés** : Vérification KYC de tous les utilisateurs\n3. **Protection des données** : Conformité RGPD garantie\n4. **Droit de réponse** : Possibilité de contester les évaluations injustifiées\n\n## Gratuit pour commencer\n\nLa création de profil et la consultation des évaluations de base sont gratuites. Des fonctionnalités premium sont disponibles pour aller plus loin.",
     "author": {
-      "name": "Marie Dupont",
-      "avatar": "M"
+      "name": "Équipe Bailo",
+      "avatar": "B"
     },
-    "category": "Guide",
-    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&auto=format&fit=crop",
-    "readTime": "5 min",
-    "publishedAt": "2024-01-15"
+    "category": "Présentation",
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop",
+    "readTime": "4 min",
+    "publishedAt": "2025-01-15"
   },
   {
     "id": "2",
-    "slug": "droits-obligations-locataires",
-    "title": "Droits et obligations des locataires : tout ce que vous devez savoir",
-    "excerpt": "Un tour d'horizon complet de vos droits en tant que locataire et des obligations à respecter pour une location sereine.",
-    "content": "## Vos droits en tant que locataire\n\n### Le droit à un logement décent\nTout locataire a droit à un logement répondant aux critères de décence définis par la loi.\n\n### Le droit à la vie privée\nLe propriétaire ne peut pas entrer dans le logement sans votre accord, sauf en cas d'urgence.\n\n### Le droit au maintien dans les lieux\nVous ne pouvez être expulsé que dans des conditions strictement encadrées par la loi.\n\n## Vos obligations\n\n### Payer le loyer\nLe paiement du loyer et des charges à la date convenue est votre obligation principale.\n\n### Entretenir le logement\nVous devez assurer l'entretien courant et les petites réparations.\n\n### Respecter le voisinage\nL'usage paisible du logement implique de respecter la tranquillité de vos voisins.\n\n## En cas de litige\n\nN'hésitez pas à contacter une association de locataires ou un conciliateur de justice pour résoudre les conflits à l'amiable.",
+    "slug": "bailo-marche-locatif-belge",
+    "title": "Ce qu'apporte Bailo au marché locatif belge",
+    "excerpt": "Analyse de l'impact de Bailo sur le marché immobilier locatif en Belgique : plus de confiance, moins de litiges.",
+    "content": "## Un marché en quête de confiance\n\nLe marché locatif belge souffre d'un manque de transparence. Les propriétaires peinent à évaluer la fiabilité des candidats, tandis que les locataires n'ont aucun moyen de connaître la réputation d'un bailleur.\n\n## La solution Bailo\n\n### Un système d'évaluation bidirectionnel\nContrairement aux listes noires qui ne ciblent que les locataires, Bailo permet une évaluation mutuelle. Les deux parties sont responsabilisées.\n\n### Une couverture nationale\nBailo est disponible dans toute la Belgique : Wallonie, Flandre et Bruxelles.\n\n## Les bénéfices concrets\n\n- **Réduction des impayés** : Les locataires bien notés sont plus fiables\n- **Amélioration de la qualité** : Les propriétaires soignent leurs biens pour obtenir de bonnes évaluations\n- **Moins de litiges** : La transparence réduit les conflits\n\n## Un complément, pas un remplacement\n\nBailo ne remplace pas les garanties locatives traditionnelles. C'est un outil complémentaire qui enrichit la prise de décision.",
     "author": {
-      "name": "Thomas Martin",
-      "avatar": "T"
+      "name": "Équipe Bailo",
+      "avatar": "B"
     },
-    "category": "Juridique",
-    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop",
-    "readTime": "7 min",
-    "publishedAt": "2024-01-10"
+    "category": "Marché",
+    "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&auto=format&fit=crop",
+    "readTime": "5 min",
+    "publishedAt": "2025-01-10"
   },
   {
     "id": "3",
-    "slug": "tendances-marche-immobilier-2024",
-    "title": "Les tendances du marché immobilier locatif en 2024",
-    "excerpt": "Analyse des évolutions du marché, des prix et des nouvelles attentes des locataires et propriétaires.",
-    "content": "## État des lieux du marché\n\nL'année 2024 marque un tournant pour le marché immobilier locatif français. Entre nouvelles réglementations et évolutions des modes de vie, le secteur se transforme.\n\n## Les grandes tendances\n\n### 1. La digitalisation des processus\nLes visites virtuelles et les dossiers numériques deviennent la norme.\n\n### 2. L'importance de la performance énergétique\nLe DPE devient un critère déterminant pour les locataires.\n\n### 3. La flexibilité des baux\nLes locations de moyenne durée gagnent en popularité.\n\n## Évolution des prix\n\nLes loyers continuent leur progression modérée dans les grandes métropoles, tandis que les villes moyennes attirent de plus en plus.\n\n## Perspectives\n\nLa tendance est à la professionnalisation du secteur, avec des plateformes comme Bailo qui simplifient les relations locatives.",
+    "slug": "proposition-bouchez-avenir-locatif",
+    "title": "La proposition Bouchez et l'avenir du marché locatif",
+    "excerpt": "Décryptage de la proposition de Georges-Louis Bouchez sur les locataires mauvais payeurs et son impact potentiel sur le secteur.",
+    "content": "## Le contexte politique\n\nGeorges-Louis Bouchez a récemment proposé la création d'une liste des locataires mauvais payeurs. Cette proposition a relancé le débat sur la régulation du marché locatif en Belgique.\n\n## Les enjeux\n\n### Pour les propriétaires\nUne meilleure visibilité sur les candidats permettrait de réduire les risques d'impayés et les procédures d'expulsion coûteuses.\n\n### Pour les locataires\nLe risque d'une liste noire est la stigmatisation durable de personnes ayant connu des difficultés temporaires.\n\n## L'approche Bailo : une alternative équilibrée\n\nContrairement à une liste noire unidirectionnelle, Bailo propose :\n\n1. **L'évaluation mutuelle** : Propriétaires ET locataires sont notés\n2. **La possibilité d'amélioration** : Chacun peut reconstruire sa réputation au fil du temps\n3. **Le droit de réponse** : Contestation possible des évaluations abusives\n4. **La modération** : Vérification que la relation locative a bien existé\n\n## Conclusion\n\nPlutôt qu'une liste noire punitive, Bailo propose un système de réputation constructif qui responsabilise toutes les parties.",
     "author": {
-      "name": "Sophie Bernard",
-      "avatar": "S"
+      "name": "Équipe Bailo",
+      "avatar": "B"
     },
-    "category": "Marché",
-    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop",
+    "category": "Actualité",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop",
     "readTime": "6 min",
-    "publishedAt": "2024-01-05"
-  },
-  {
-    "id": "4",
-    "slug": "optimiser-profil-bailo",
-    "title": "Comment optimiser votre profil Bailo pour attirer les propriétaires",
-    "excerpt": "Nos astuces pour créer un profil attractif et multiplier vos chances de trouver rapidement un logement.",
-    "content": "## L'importance d'un bon profil\n\nSur Bailo, votre profil est votre vitrine. Un profil complet et soigné augmente significativement vos chances d'être sélectionné.\n\n## Les éléments clés\n\n### Photo de profil\nChoisissez une photo professionnelle et souriante.\n\n### Description personnelle\nPrésentez-vous en quelques lignes : profession, situation, motivations.\n\n### Vérifications\nComplétez toutes les vérifications KYC pour obtenir le badge \"Profil vérifié\".\n\n## Les bonnes pratiques\n\n1. Répondez rapidement aux messages\n2. Soyez transparent sur votre situation\n3. Collectez des évaluations positives\n\n## Le badge Premium\n\nLe badge Premium augmente votre visibilité de 40% et montre votre sérieux aux propriétaires.",
-    "author": {
-      "name": "Lucas Petit",
-      "avatar": "L"
-    },
-    "category": "Conseils",
-    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop",
-    "readTime": "4 min",
-    "publishedAt": "2024-01-02"
+    "publishedAt": "2025-01-05"
   }
 ]
