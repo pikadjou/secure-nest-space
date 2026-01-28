@@ -8,44 +8,12 @@ import {
 } from "@/components/ui/accordion";
 import { HelpCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import faqData from "@/data/faq.json";
 
 const FAQ = () => {
   const { t } = useLanguage();
 
-  const faqCategories = [
-    {
-      categoryKey: "faq.cat.general",
-      questions: [
-        { questionKey: "faq.q1", answerKey: "faq.a1" },
-        { questionKey: "faq.q2", answerKey: "faq.a2" },
-        { questionKey: "faq.q3", answerKey: "faq.a3" },
-      ],
-    },
-    {
-      categoryKey: "faq.cat.payment",
-      questions: [
-        { questionKey: "faq.q4", answerKey: "faq.a4" },
-        { questionKey: "faq.q5", answerKey: "faq.a5" },
-        { questionKey: "faq.q6", answerKey: "faq.a6" },
-      ],
-    },
-    {
-      categoryKey: "faq.cat.features",
-      questions: [
-        { questionKey: "faq.q7", answerKey: "faq.a7" },
-        { questionKey: "faq.q8", answerKey: "faq.a8" },
-        { questionKey: "faq.q9", answerKey: "faq.a9" },
-      ],
-    },
-    {
-      categoryKey: "faq.cat.technical",
-      questions: [
-        { questionKey: "faq.q10", answerKey: "faq.a10" },
-        { questionKey: "faq.q11", answerKey: "faq.a11" },
-        { questionKey: "faq.q12", answerKey: "faq.a12" },
-      ],
-    },
-  ];
+  const faqCategories = faqData;
 
   return (
     <div className="min-h-screen bg-background">
