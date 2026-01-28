@@ -1,6 +1,6 @@
 [
   {
-    "categoryKey": "faq.cat.general",
+    "categoryKey": "faq.cat.general.test",
     "questions": [
       { "questionKey": "faq.q1", "answerKey": "faq.a1" },
       { "questionKey": "faq.q2", "answerKey": "faq.a2" },
