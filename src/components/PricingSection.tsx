@@ -1,54 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Check, Crown, Shield, FileText, Headphones } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import siteData from "@/data/site.json";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Shield,
+  FileText,
+  Headphones,
+};
 
 const PricingSection = () => {
   const { t } = useLanguage();
-
-  const plans = [
-    {
-      nameKey: "pricing.basic.name",
-      descKey: "pricing.basic.desc",
-      priceKey: "pricing.basic.price",
-      period: "",
-      featured: false,
-      featuresKeys: [
-        "pricing.feature.kyc",
-        "pricing.feature.3reviews",
-        "pricing.feature.profiles",
-        "pricing.feature.emailSupport",
-        "pricing.feature.6months",
-      ],
-      ctaKey: "pricing.basic.cta",
-    },
-    {
-      nameKey: "pricing.premium.name",
-      descKey: "pricing.premium.desc",
-      priceKey: "pricing.premium.price",
-      periodKey: "pricing.premium.period",
-      featured: true,
-      subtitleKey: "pricing.premium.subtitle",
-      featuresKeys: [
-        "pricing.feature.all",
-        "pricing.feature.unlimited",
-        "pricing.feature.photos",
-        "pricing.feature.badge",
-        "pricing.feature.fullHistory",
-        "pricing.feature.analytics",
-        "pricing.feature.prioritySupport",
-        "pricing.feature.export",
-        "pricing.feature.notifications",
-      ],
-      ctaKey: "pricing.premium.cta",
-      trialKey: "pricing.premium.trial",
-    },
-  ];
-
-  const trustBadges = [
-    { icon: Shield, textKey: "pricing.trust.ssl" },
-    { icon: FileText, textKey: "pricing.trust.invoice" },
-    { icon: Headphones, textKey: "pricing.trust.support" },
-  ];
 
   return (
     <section id="pricing" className="py-20 lg:py-32 bg-background">
@@ -66,7 +28,7 @@ const PricingSection = () => {
 
         {/* Pricing cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {plans.map((plan, index) => (
+          {siteData.plans.map((plan, index) => (
             <div
               key={plan.nameKey}
               className={`relative rounded-2xl p-8 lg:p-10 animate-fade-in ${
@@ -141,12 +103,15 @@ const PricingSection = () => {
 
         {/* Trust badges */}
         <div className="flex flex-wrap justify-center gap-8 mt-12">
-          {trustBadges.map((badge) => (
-            <div key={badge.textKey} className="flex items-center gap-2 text-muted-foreground">
-              <badge.icon className="w-5 h-5 text-secondary" />
-              <span className="text-sm">{t(badge.textKey)}</span>
-            </div>
-          ))}
+          {siteData.trustBadges.map((badge) => {
+            const IconComponent = iconMap[badge.icon];
+            return (
+              <div key={badge.textKey} className="flex items-center gap-2 text-muted-foreground">
+                {IconComponent && <IconComponent className="w-5 h-5 text-secondary" />}
+                <span className="text-sm">{t(badge.textKey)}</span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

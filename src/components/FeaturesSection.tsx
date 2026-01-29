@@ -1,47 +1,18 @@
 import { Shield, UserCheck, Zap, Star, Eye, Lock } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import siteData from "@/data/site.json";
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  Shield,
+  UserCheck,
+  Zap,
+  Star,
+  Eye,
+  Lock,
+};
 
 const FeaturesSection = () => {
   const { t } = useLanguage();
-
-  const features = [
-    {
-      icon: Shield,
-      titleKey: "features.secure.title",
-      descKey: "features.secure.desc",
-      color: "bg-primary",
-    },
-    {
-      icon: UserCheck,
-      titleKey: "features.verified.title",
-      descKey: "features.verified.desc",
-      color: "bg-secondary",
-    },
-    {
-      icon: Zap,
-      titleKey: "features.simple.title",
-      descKey: "features.simple.desc",
-      color: "bg-accent",
-    },
-    {
-      icon: Star,
-      titleKey: "features.ratings.title",
-      descKey: "features.ratings.desc",
-      color: "bg-primary",
-    },
-    {
-      icon: Eye,
-      titleKey: "features.transparent.title",
-      descKey: "features.transparent.desc",
-      color: "bg-secondary",
-    },
-    {
-      icon: Lock,
-      titleKey: "features.privacy.title",
-      descKey: "features.privacy.desc",
-      color: "bg-accent",
-    },
-  ];
 
   return (
     <section id="features" className="py-20 lg:py-32 bg-muted/30">
@@ -59,25 +30,28 @@ const FeaturesSection = () => {
 
         {/* Features grid - 3x2 */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={feature.titleKey}
-              className="group relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 animate-fade-in border border-border/50"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+          {siteData.features.map((feature, index) => {
+            const IconComponent = iconMap[feature.icon];
+            return (
               <div
-                className={`w-14 h-14 rounded-xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                key={feature.titleKey}
+                className="group relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 animate-fade-in border border-border/50"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <feature.icon className="w-7 h-7 text-primary-foreground" />
+                <div
+                  className={`w-14 h-14 rounded-xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
+                  {IconComponent && <IconComponent className="w-7 h-7 text-primary-foreground" />}
+                </div>
+                <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                  {t(feature.titleKey)}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {t(feature.descKey)}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-card-foreground mb-3">
-                {t(feature.titleKey)}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {t(feature.descKey)}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* CTA Banner */}

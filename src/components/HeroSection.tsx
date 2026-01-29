@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Star, Lock } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import siteData from "@/data/site.json";
 
 const HeroSection = () => {
   const { t } = useLanguage();
-  const partners = ["NEXITY", "CENTURY21", "ORPI", "FONCIA", "LAFORÊT"];
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
@@ -56,7 +56,7 @@ const HeroSection = () => {
             <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
               <p className="text-sm text-muted-foreground mb-4">{t("hero.partners")}</p>
               <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
-                {partners.map((partner) => (
+                {siteData.partners.map((partner) => (
                   <span 
                     key={partner} 
                     className="text-lg font-bold text-muted-foreground/50 hover:text-muted-foreground transition-colors"

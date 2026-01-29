@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import siteData from "@/data/site.json";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,14 +11,11 @@ const Navbar = () => {
   const isHome = location.pathname === "/";
   const { t } = useLanguage();
 
-  const navLinks = [
-    { label: t("nav.home"), href: isHome ? "#" : "/", isRoute: !isHome },
-    { label: t("nav.features"), href: isHome ? "#features" : "/#features", isRoute: !isHome },
-    { label: t("nav.pricing"), href: isHome ? "#pricing" : "/#pricing", isRoute: !isHome },
-    { label: t("nav.blog"), href: "/blog", isRoute: true },
-    { label: t("nav.faq"), href: "/faq", isRoute: true },
-    { label: t("nav.support"), href: "/support", isRoute: true },
-  ];
+  const navLinks = siteData.navLinks.map((link) => ({
+    label: t(link.labelKey),
+    href: isHome ? link.href : (link.homeHref || link.href),
+    isRoute: link.isRoute || !isHome,
+  }));
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
