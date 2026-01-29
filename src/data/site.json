@@ -1,0 +1,93 @@
+{
+  "partners": ["NEXITY", "CENTURY21", "ORPI", "FONCIA", "LAFORÊT"],
+  "navLinks": [
+    { "labelKey": "nav.home", "href": "#", "homeHref": "/", "isRoute": false },
+    { "labelKey": "nav.features", "href": "#features", "homeHref": "/#features", "isRoute": false },
+    { "labelKey": "nav.pricing", "href": "#pricing", "homeHref": "/#pricing", "isRoute": false },
+    { "labelKey": "nav.blog", "href": "/blog", "isRoute": true },
+    { "labelKey": "nav.faq", "href": "/faq", "isRoute": true },
+    { "labelKey": "nav.support", "href": "/support", "isRoute": true }
+  ],
+  "footerLinks": {
+    "product": [
+      { "labelKey": "footer.features", "href": "#features" },
+      { "labelKey": "footer.pricing", "href": "#pricing" },
+      { "labelKey": "footer.faq", "href": "#faq" },
+      { "labelKey": "footer.testimonials", "href": "#testimonials" }
+    ],
+    "company": [
+      { "labelKey": "footer.about", "href": "#" },
+      { "labelKey": "footer.blog", "href": "/blog" },
+      { "labelKey": "footer.careers", "href": "#" },
+      { "labelKey": "footer.press", "href": "#" }
+    ],
+    "legal": [
+      { "labelKey": "footer.terms", "href": "#" },
+      { "labelKey": "footer.privacy", "href": "#" },
+      { "labelKey": "footer.legalNotice", "href": "#" },
+      { "labelKey": "footer.cookies", "href": "#" }
+    ]
+  },
+  "socialLinks": [
+    { "icon": "Facebook", "href": "https://facebook.com/bailo", "label": "Facebook" },
+    { "icon": "Twitter", "href": "https://twitter.com/bailo", "label": "Twitter" },
+    { "icon": "Instagram", "href": "https://instagram.com/bailo", "label": "Instagram" },
+    { "icon": "Linkedin", "href": "https://linkedin.com/company/bailo", "label": "LinkedIn" }
+  ],
+  "contact": {
+    "email": "contact@bailo.fr",
+    "phone": "01 23 45 67 89",
+    "address": "12 rue de la Paix, 75002 Paris"
+  },
+  "features": [
+    { "icon": "Shield", "titleKey": "features.secure.title", "descKey": "features.secure.desc", "color": "bg-primary" },
+    { "icon": "UserCheck", "titleKey": "features.verified.title", "descKey": "features.verified.desc", "color": "bg-secondary" },
+    { "icon": "Zap", "titleKey": "features.simple.title", "descKey": "features.simple.desc", "color": "bg-accent" },
+    { "icon": "Star", "titleKey": "features.ratings.title", "descKey": "features.ratings.desc", "color": "bg-primary" },
+    { "icon": "Eye", "titleKey": "features.transparent.title", "descKey": "features.transparent.desc", "color": "bg-secondary" },
+    { "icon": "Lock", "titleKey": "features.privacy.title", "descKey": "features.privacy.desc", "color": "bg-accent" }
+  ],
+  "plans": [
+    {
+      "nameKey": "pricing.basic.name",
+      "descKey": "pricing.basic.desc",
+      "priceKey": "pricing.basic.price",
+      "period": "",
+      "featured": false,
+      "featuresKeys": [
+        "pricing.feature.kyc",
+        "pricing.feature.3reviews",
+        "pricing.feature.profiles",
+        "pricing.feature.emailSupport",
+        "pricing.feature.6months"
+      ],
+      "ctaKey": "pricing.basic.cta"
+    },
+    {
+      "nameKey": "pricing.premium.name",
+      "descKey": "pricing.premium.desc",
+      "priceKey": "pricing.premium.price",
+      "periodKey": "pricing.premium.period",
+      "featured": true,
+      "subtitleKey": "pricing.premium.subtitle",
+      "featuresKeys": [
+        "pricing.feature.all",
+        "pricing.feature.unlimited",
+        "pricing.feature.photos",
+        "pricing.feature.badge",
+        "pricing.feature.fullHistory",
+        "pricing.feature.analytics",
+        "pricing.feature.prioritySupport",
+        "pricing.feature.export",
+        "pricing.feature.notifications"
+      ],
+      "ctaKey": "pricing.premium.cta",
+      "trialKey": "pricing.premium.trial"
+    }
+  ],
+  "trustBadges": [
+    { "icon": "Shield", "textKey": "pricing.trust.ssl" },
+    { "icon": "FileText", "textKey": "pricing.trust.invoice" },
+    { "icon": "Headphones", "textKey": "pricing.trust.support" }
+  ]
+}
