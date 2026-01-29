@@ -1,0 +1,47 @@
+{
+  "terms": {
+    "titleKey": "legal.terms.title",
+    "lastUpdatedKey": "legal.terms.lastUpdated",
+    "sections": [
+      { "titleKey": "legal.terms.s1.title", "contentKey": "legal.terms.s1.content" },
+      { "titleKey": "legal.terms.s2.title", "contentKey": "legal.terms.s2.content" },
+      { "titleKey": "legal.terms.s3.title", "contentKey": "legal.terms.s3.content" },
+      { "titleKey": "legal.terms.s4.title", "contentKey": "legal.terms.s4.content" },
+      { "titleKey": "legal.terms.s5.title", "contentKey": "legal.terms.s5.content" },
+      { "titleKey": "legal.terms.s6.title", "contentKey": "legal.terms.s6.content" }
+    ]
+  },
+  "privacy": {
+    "titleKey": "legal.privacy.title",
+    "lastUpdatedKey": "legal.privacy.lastUpdated",
+    "sections": [
+      { "titleKey": "legal.privacy.s1.title", "contentKey": "legal.privacy.s1.content" },
+      { "titleKey": "legal.privacy.s2.title", "contentKey": "legal.privacy.s2.content" },
+      { "titleKey": "legal.privacy.s3.title", "contentKey": "legal.privacy.s3.content" },
+      { "titleKey": "legal.privacy.s4.title", "contentKey": "legal.privacy.s4.content" },
+      { "titleKey": "legal.privacy.s5.title", "contentKey": "legal.privacy.s5.content" },
+      { "titleKey": "legal.privacy.s6.title", "contentKey": "legal.privacy.s6.content" }
+    ]
+  },
+  "legalNotice": {
+    "titleKey": "legal.notice.title",
+    "lastUpdatedKey": "legal.notice.lastUpdated",
+    "sections": [
+      { "titleKey": "legal.notice.s1.title", "contentKey": "legal.notice.s1.content" },
+      { "titleKey": "legal.notice.s2.title", "contentKey": "legal.notice.s2.content" },
+      { "titleKey": "legal.notice.s3.title", "contentKey": "legal.notice.s3.content" },
+      { "titleKey": "legal.notice.s4.title", "contentKey": "legal.notice.s4.content" }
+    ]
+  },
+  "cookies": {
+    "titleKey": "legal.cookies.title",
+    "lastUpdatedKey": "legal.cookies.lastUpdated",
+    "sections": [
+      { "titleKey": "legal.cookies.s1.title", "contentKey": "legal.cookies.s1.content" },
+      { "titleKey": "legal.cookies.s2.title", "contentKey": "legal.cookies.s2.content" },
+      { "titleKey": "legal.cookies.s3.title", "contentKey": "legal.cookies.s3.content" },
+      { "titleKey": "legal.cookies.s4.title", "contentKey": "legal.cookies.s4.content" },
+      { "titleKey": "legal.cookies.s5.title", "contentKey": "legal.cookies.s5.content" }
+    ]
+  }
+}

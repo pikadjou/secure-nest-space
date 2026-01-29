@@ -97,12 +97,21 @@ const Footer = () => {
             <ul className="space-y-3">
               {siteData.footerLinks.legal.map((link) => (
                 <li key={link.labelKey}>
-                  <a
-                    href={link.href}
-                    className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                  >
-                    {t(link.labelKey)}
-                  </a>
+                  {link.href.startsWith("/") ? (
+                    <Link
+                      to={link.href}
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    >
+                      {t(link.labelKey)}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                    >
+                      {t(link.labelKey)}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
