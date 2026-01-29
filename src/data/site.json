@@ -22,10 +22,10 @@
       { "labelKey": "footer.press", "href": "#" }
     ],
     "legal": [
-      { "labelKey": "footer.terms", "href": "#" },
-      { "labelKey": "footer.privacy", "href": "#" },
-      { "labelKey": "footer.legalNotice", "href": "#" },
-      { "labelKey": "footer.cookies", "href": "#" }
+      { "labelKey": "footer.terms", "href": "/terms" },
+      { "labelKey": "footer.privacy", "href": "/privacy" },
+      { "labelKey": "footer.legalNotice", "href": "/legal-notice" },
+      { "labelKey": "footer.cookies", "href": "/cookies" }
     ]
   },
   "socialLinks": [
