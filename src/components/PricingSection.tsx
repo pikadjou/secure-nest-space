@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Check, Crown, Shield, FileText, Headphones } from "lucide-react";
+import { Check, Gift, Zap, Building, Calendar, Shield, FileText, Headphones, AlertTriangle, XCircle, Info } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Shield,
@@ -26,83 +27,180 @@ const PricingSection = () => {
           </p>
         </div>
 
-        {/* Pricing cards */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {siteData.plans.map((plan, index) => (
-            <div
-              key={plan.nameKey}
-              className={`relative rounded-2xl p-8 lg:p-10 animate-fade-in ${
-                plan.featured
-                  ? "bg-primary text-primary-foreground shadow-elevated ring-4 ring-accent/20"
-                  : "bg-card text-card-foreground shadow-card border border-border"
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-accent-gradient text-accent-foreground text-sm font-semibold shadow-soft">
-                    <Crown className="w-4 h-4" />
-                    {t("pricing.popular")}
-                  </div>
-                </div>
-              )}
-
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold mb-2">{t(plan.nameKey)}</h3>
-                <p className={plan.featured ? "text-primary-foreground/70" : "text-muted-foreground"}>
-                  {t(plan.descKey)}
-                </p>
+        {/* Main pricing grid */}
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+          
+          {/* Free Offer Card */}
+          <div className="relative rounded-2xl p-8 bg-card text-card-foreground shadow-card border-2 border-secondary animate-fade-in">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+              <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-sm font-semibold shadow-soft">
+                <Gift className="w-4 h-4" />
+                {t("pricing.freeOffer.badge")}
               </div>
+            </div>
 
-              <div className="mb-2">
-                <span className="text-4xl lg:text-5xl font-bold">{t(plan.priceKey)}</span>
-                <span className={plan.featured ? "text-primary-foreground/70" : "text-muted-foreground"}>
-                  {plan.periodKey ? t(plan.periodKey) : plan.period}
+            <div className="mt-4 mb-6 text-center">
+              <h3 className="text-2xl font-bold mb-2">{t("pricing.freeOffer.title")}</h3>
+              <p className="text-primary font-semibold text-lg">{t("pricing.freeOffer.duration")}</p>
+            </div>
+
+            <p className="text-muted-foreground text-center mb-6">
+              {t("pricing.freeOffer.desc")}
+            </p>
+
+            <Button variant="secondary" size="lg" className="w-full mb-4">
+              {t("pricing.freeOffer.cta")}
+            </Button>
+
+            <p className="text-xs text-muted-foreground text-center">
+              {t("pricing.freeOffer.conversion")}
+            </p>
+          </div>
+
+          {/* Per Property Card */}
+          <div className="relative rounded-2xl p-8 bg-primary text-primary-foreground shadow-elevated ring-4 ring-accent/20 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <Building className="w-6 h-6" />
+              <h3 className="text-2xl font-bold">{t("pricing.perProperty.title")}</h3>
+            </div>
+
+            <div className="text-center mb-2">
+              <span className="text-5xl font-bold">{t(siteData.pricing.perProperty.priceKey)}</span>
+              <span className="text-primary-foreground/70">{t(siteData.pricing.perProperty.periodKey)}</span>
+            </div>
+
+            <p className="text-sm text-primary-foreground/60 text-center mb-2">
+              {t(siteData.pricing.perProperty.descKey)}
+            </p>
+            <p className="text-xs text-primary-foreground/50 text-center mb-6">
+              {t(siteData.pricing.perProperty.prorataKey)}
+            </p>
+
+            <div className="mb-6">
+              <p className="text-sm font-medium mb-4 text-primary-foreground/80">
+                {t("pricing.features.title")}
+              </p>
+              <ul className="space-y-3">
+                {siteData.pricing.features.map((featureKey) => (
+                  <li key={featureKey} className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-secondary">
+                      <Check className="w-3 h-3 text-secondary-foreground" />
+                    </div>
+                    <span className="text-sm">{t(featureKey)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Annual option */}
+            <div className="bg-primary-foreground/10 rounded-lg p-4 mb-4">
+              <div className="flex items-center gap-2 mb-2">
+                <Calendar className="w-4 h-4" />
+                <span className="font-semibold">{t("pricing.annual.title")}</span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-bold">{t(siteData.pricing.annual.priceKey)}</span>
+                <span className="text-primary-foreground/70">{t(siteData.pricing.annual.periodKey)}</span>
+                <span className="text-xs bg-accent text-accent-foreground px-2 py-0.5 rounded-full">
+                  {t(siteData.pricing.annual.savingsKey)}
                 </span>
               </div>
-              
-              {plan.subtitleKey && (
-                <p className="text-sm text-primary-foreground/60 mb-6">{t(plan.subtitleKey)}</p>
-              )}
-              {!plan.subtitleKey && <div className="mb-6" />}
-
-              <div className="mb-8">
-                <p className={`text-sm font-medium mb-4 ${plan.featured ? "text-primary-foreground/80" : "text-muted-foreground"}`}>
-                  {t("pricing.features")}
-                </p>
-                <ul className="space-y-3">
-                  {plan.featuresKeys.map((featureKey) => (
-                    <li key={featureKey} className="flex items-start gap-3">
-                      <div className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
-                        plan.featured ? "bg-secondary" : "bg-secondary/20"
-                      }`}>
-                        <Check className={`w-3 h-3 ${plan.featured ? "text-secondary-foreground" : "text-secondary"}`} />
-                      </div>
-                      <span className="text-sm">{t(featureKey)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <Button
-                variant={plan.featured ? "hero" : "outline"}
-                size="lg"
-                className="w-full"
-              >
-                {t(plan.ctaKey)}
-              </Button>
-
-              {plan.trialKey && (
-                <p className="text-xs text-center mt-4 text-primary-foreground/60">
-                  {t(plan.trialKey)}
-                </p>
-              )}
+              <p className="text-xs text-primary-foreground/60 mt-2">
+                {t(siteData.pricing.annual.descKey)}
+              </p>
             </div>
-          ))}
+          </div>
+
+          {/* Boost Card */}
+          <div className="relative rounded-2xl p-8 bg-card text-card-foreground shadow-card border border-border animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+              <div className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-accent-gradient text-accent-foreground text-sm font-semibold shadow-soft">
+                <Zap className="w-4 h-4" />
+                {t("pricing.boost.badge")}
+              </div>
+            </div>
+
+            <div className="mt-4 mb-4 text-center">
+              <h3 className="text-2xl font-bold mb-2">{t("pricing.boost.title")}</h3>
+              <div className="flex items-baseline justify-center gap-2">
+                <span className="text-4xl font-bold text-primary">{t(siteData.pricing.boost.priceKey)}</span>
+                <span className="text-muted-foreground">{t(siteData.pricing.boost.durationKey)}</span>
+              </div>
+            </div>
+
+            <p className="text-muted-foreground text-center mb-6">
+              {t("pricing.boost.desc")}
+            </p>
+
+            <ul className="space-y-3 mb-6">
+              {siteData.pricing.boost.features.map((featureKey) => (
+                <li key={featureKey} className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center bg-accent/20">
+                    <Zap className="w-3 h-3 text-accent" />
+                  </div>
+                  <span className="text-sm">{t(featureKey)}</span>
+                </li>
+              ))}
+            </ul>
+
+            <Button variant="accent" size="lg" className="w-full mb-4">
+              {t("pricing.boost.cta")}
+            </Button>
+
+            <p className="text-xs text-muted-foreground text-center">
+              {t("pricing.boost.nonRefundable")}
+            </p>
+          </div>
+        </div>
+
+        {/* Boost Warning/Error Messages Examples */}
+        <div className="max-w-4xl mx-auto mb-12 space-y-4">
+          <p className="text-sm text-muted-foreground text-center mb-4">
+            Exemples de notifications Boost :
+          </p>
+          
+          <Alert className="border-accent/50 bg-accent/10">
+            <AlertTriangle className="h-4 w-4 text-accent" />
+            <AlertTitle className="text-accent">{t("pricing.boost.warning.expiringSoon")}</AlertTitle>
+            <AlertDescription className="text-accent/80">
+              {t("pricing.boost.warning.expiringSoonDesc")}
+              <Button variant="link" className="p-0 h-auto ml-2 text-accent">
+                {t("pricing.boost.renew")} →
+              </Button>
+            </AlertDescription>
+          </Alert>
+
+          <Alert className="border-secondary/50 bg-secondary/10">
+            <Info className="h-4 w-4 text-secondary" />
+            <AlertTitle className="text-secondary">{t("pricing.boost.warning.expiresTomorrow")}</AlertTitle>
+            <AlertDescription className="text-secondary/80">
+              {t("pricing.boost.warning.expiresTomorrowDesc")}
+              <Button variant="link" className="p-0 h-auto ml-2 text-secondary">
+                {t("pricing.boost.renew")} →
+              </Button>
+            </AlertDescription>
+          </Alert>
+
+          <Alert variant="destructive" className="border-destructive/50 bg-destructive/10">
+            <XCircle className="h-4 w-4" />
+            <AlertTitle>{t("pricing.boost.error.expired")}</AlertTitle>
+            <AlertDescription>
+              {t("pricing.boost.error.expiredDesc")}
+              <Button variant="link" className="p-0 h-auto ml-2 text-destructive">
+                {t("pricing.boost.renew")} →
+              </Button>
+            </AlertDescription>
+          </Alert>
+        </div>
+
+        {/* Payment Methods */}
+        <div className="text-center mb-8">
+          <p className="text-sm text-muted-foreground mb-2">{t("pricing.payment.provider")}</p>
+          <p className="text-xs text-muted-foreground">{t("pricing.payment.methods")}</p>
         </div>
 
         {/* Trust badges */}
-        <div className="flex flex-wrap justify-center gap-8 mt-12">
+        <div className="flex flex-wrap justify-center gap-8">
           {siteData.trustBadges.map((badge) => {
             const IconComponent = iconMap[badge.icon];
             return (

@@ -47,44 +47,40 @@
     { "icon": "Eye", "titleKey": "features.transparent.title", "descKey": "features.transparent.desc", "color": "bg-secondary" },
     { "icon": "Lock", "titleKey": "features.privacy.title", "descKey": "features.privacy.desc", "color": "bg-accent" }
   ],
-  "plans": [
-    {
-      "nameKey": "pricing.basic.name",
-      "descKey": "pricing.basic.desc",
-      "priceKey": "pricing.basic.price",
-      "period": "",
-      "featured": false,
-      "featuresKeys": [
-        "pricing.feature.kyc",
-        "pricing.feature.3reviews",
-        "pricing.feature.profiles",
-        "pricing.feature.emailSupport",
-        "pricing.feature.6months"
-      ],
-      "ctaKey": "pricing.basic.cta"
+  "pricing": {
+    "perProperty": {
+      "priceKey": "pricing.perProperty.price",
+      "periodKey": "pricing.perProperty.period",
+      "descKey": "pricing.perProperty.desc",
+      "prorataKey": "pricing.perProperty.prorata"
     },
-    {
-      "nameKey": "pricing.premium.name",
-      "descKey": "pricing.premium.desc",
-      "priceKey": "pricing.premium.price",
-      "periodKey": "pricing.premium.period",
-      "featured": true,
-      "subtitleKey": "pricing.premium.subtitle",
-      "featuresKeys": [
-        "pricing.feature.all",
-        "pricing.feature.unlimited",
-        "pricing.feature.photos",
-        "pricing.feature.badge",
-        "pricing.feature.fullHistory",
-        "pricing.feature.analytics",
-        "pricing.feature.prioritySupport",
-        "pricing.feature.export",
-        "pricing.feature.notifications"
-      ],
-      "ctaKey": "pricing.premium.cta",
-      "trialKey": "pricing.premium.trial"
+    "annual": {
+      "priceKey": "pricing.annual.price",
+      "periodKey": "pricing.annual.period",
+      "savingsKey": "pricing.annual.savings",
+      "descKey": "pricing.annual.desc"
+    },
+    "features": [
+      "pricing.feature.kyc",
+      "pricing.feature.unlimited",
+      "pricing.feature.photos",
+      "pricing.feature.history",
+      "pricing.feature.analytics",
+      "pricing.feature.support",
+      "pricing.feature.export",
+      "pricing.feature.notifications"
+    ],
+    "boost": {
+      "priceKey": "pricing.boost.price",
+      "durationKey": "pricing.boost.duration",
+      "features": [
+        "pricing.boost.features.visibility",
+        "pricing.boost.features.badge",
+        "pricing.boost.features.priority",
+        "pricing.boost.features.stats"
+      ]
     }
-  ],
+  },
   "trustBadges": [
     { "icon": "Shield", "textKey": "pricing.trust.ssl" },
     { "icon": "FileText", "textKey": "pricing.trust.invoice" },
