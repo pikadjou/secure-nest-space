@@ -74,6 +74,7 @@
       "priceKey": "pricing.boost.price",
       "durationKey": "pricing.boost.duration",
       "features": [
+        "pricing.boost.features.planning",
         "pricing.boost.features.visibility",
         "pricing.boost.features.badge",
         "pricing.boost.features.priority",

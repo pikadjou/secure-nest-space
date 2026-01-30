@@ -17,7 +17,7 @@ const PricingSection = () => {
     <section id="pricing" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             {t("pricing.title")}{" "}
             <span className="text-primary">{t("pricing.title.highlight")}</span>
@@ -25,6 +25,15 @@ const PricingSection = () => {
           <p className="text-lg text-muted-foreground">
             {t("pricing.subtitle")}
           </p>
+        </div>
+
+        {/* Tenant Free Banner */}
+        <div className="max-w-md mx-auto mb-16 p-6 rounded-2xl bg-secondary/10 border border-secondary/30 text-center">
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <Check className="w-6 h-6 text-secondary" />
+            <h3 className="text-xl font-bold text-secondary">{t("pricing.tenantFree")}</h3>
+          </div>
+          <p className="text-sm text-muted-foreground">{t("pricing.tenantFreeDesc")}</p>
         </div>
 
         {/* Main pricing grid */}
