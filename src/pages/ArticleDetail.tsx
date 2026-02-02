@@ -4,54 +4,7 @@ import { getArticleBySlug, getRelatedArticles } from "@/data/articles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-
-const parseMarkdown = (content: string): string => {
-  let html = content;
-
-  // Escape HTML first
-  html = html.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-  // Headers (must be done before other replacements)
-  html = html.replace(/^### (.+)$/gm, '<h3 class="text-xl font-semibold mt-6 mb-3 text-foreground">$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2 class="text-2xl font-bold mt-8 mb-4 text-foreground">$1</h2>');
-
-  // Bold text **text** or __text__
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong class="text-foreground font-semibold">$1</strong>');
-  html = html.replace(/__(.+?)__/g, '<strong class="text-foreground font-semibold">$1</strong>');
-
-  // Italic text *text* or _text_
-  html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-  html = html.replace(/_([^_]+)_/g, '<em>$1</em>');
-
-  // Unordered lists
-  html = html.replace(/^- (.+)$/gm, '<li class="ml-4">$1</li>');
-  html = html.replace(/(<li class="ml-4">.*<\/li>\n?)+/g, '<ul class="list-disc pl-6 mb-4 space-y-1">$&</ul>');
-
-  // Ordered lists
-  html = html.replace(/^\d+\. (.+)$/gm, '<li class="ml-4">$1</li>');
-
-  // Paragraphs - split by double newlines
-  const blocks = html.split(/\n\n+/);
-  html = blocks.map(block => {
-    // Don't wrap if already wrapped in HTML tags
-    if (block.trim().startsWith('<h') ||
-        block.trim().startsWith('<ul') ||
-        block.trim().startsWith('<ol') ||
-        block.trim().startsWith('<li')) {
-      return block;
-    }
-    // Wrap plain text in paragraph
-    if (block.trim()) {
-      return `<p class="mb-4 text-muted-foreground leading-relaxed">${block.trim()}</p>`;
-    }
-    return '';
-  }).join('\n');
-
-  // Clean up any remaining single newlines within paragraphs
-  html = html.replace(/([^>])\n([^<])/g, '$1 $2');
-
-  return html;
-};
+import RichContent from "@/components/RichContent";
 
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -144,13 +97,7 @@ const ArticleDetail = () => {
           <div className="max-w-4xl mx-auto">
             <div className="grid lg:grid-cols-[1fr_200px] gap-12">
               {/* Article content */}
-              <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-li:text-muted-foreground">
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: parseMarkdown(article.content)
-                  }}
-                />
-              </article>
+              <RichContent content={article.content} />
 
               {/* Sidebar */}
               <aside className="hidden lg:block">
