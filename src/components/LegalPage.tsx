@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import RichContent from "@/components/RichContent";
 
 interface LegalSection {
   titleKey: string;
@@ -46,13 +47,11 @@ const LegalPage = ({ titleKey, lastUpdatedKey, sections }: LegalPageProps) => {
           {/* Content */}
           <div className="space-y-8">
             {sections.map((section, index) => (
-              <section key={index} className="prose prose-gray dark:prose-invert max-w-none">
+              <section key={index}>
                 <h2 className="text-xl font-semibold text-foreground mb-4">
                   {t(section.titleKey)}
                 </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  {t(section.contentKey)}
-                </p>
+                <RichContent content={t(section.contentKey)} />
               </section>
             ))}
           </div>
