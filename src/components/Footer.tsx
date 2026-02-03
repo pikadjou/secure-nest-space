@@ -1,6 +1,7 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import CookieSettingsButton from "@/components/CookieSettingsButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
 
@@ -147,7 +148,10 @@ const Footer = () => {
               {t("footer.madeWith")}
             </p>
           </div>
-          <LanguageSwitcher />
+          <div className="flex items-center gap-4">
+            <CookieSettingsButton />
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </footer>

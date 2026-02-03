@@ -262,5 +262,28 @@
   "legal.cookies.s4.title": "4. Cookie Management",
   "legal.cookies.s4.content": "You can modify your cookie preferences at any time via your browser settings. Note that disabling certain cookies may affect the functionality of some site features.",
   "legal.cookies.s5.title": "5. Retention Period",
-  "legal.cookies.s5.content": "Session cookies are deleted when you close your browser. Persistent cookies are retained for a maximum of 13 months in accordance with Data Protection Authority recommendations."
+  "legal.cookies.s5.content": "Session cookies are deleted when you close your browser. Persistent cookies are retained for a maximum of 13 months in accordance with Data Protection Authority recommendations.",
+
+  "cookies.banner.title": "We respect your privacy",
+  "cookies.banner.description": "We use cookies to improve your experience on our site, analyze our traffic and personalize content. You can choose to accept all cookies or customize your preferences.",
+  "cookies.banner.learnMore": "Learn more",
+  "cookies.banner.acceptAll": "Accept all",
+  "cookies.banner.rejectAll": "Reject all",
+  "cookies.banner.customize": "Customize",
+
+  "cookies.settings.title": "Cookie settings",
+  "cookies.settings.description": "Choose the types of cookies you want to allow. Necessary cookies are always active as they are essential for the site to function.",
+  "cookies.settings.save": "Save my preferences",
+  "cookies.settings.required": "Always active",
+
+  "cookies.types.necessary.title": "Necessary cookies",
+  "cookies.types.necessary.desc": "These cookies are essential for the site to function. They enable authentication, security and remembering your language preferences.",
+  "cookies.types.analytics.title": "Analytics cookies",
+  "cookies.types.analytics.desc": "These cookies help us understand how visitors interact with our site by collecting anonymous information.",
+  "cookies.types.marketing.title": "Marketing cookies",
+  "cookies.types.marketing.desc": "These cookies are used to show you relevant ads and measure the effectiveness of our campaigns.",
+  "cookies.types.preferences.title": "Preference cookies",
+  "cookies.types.preferences.desc": "These cookies remember your choices and personalize your experience on the site.",
+
+  "cookies.manage": "Manage cookies"
 }
