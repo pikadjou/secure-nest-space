@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Check, Gift, Zap, Building, Calendar, Shield, FileText, Headphones, AlertTriangle, XCircle, Info } from "lucide-react";
+import { Check, Gift, Zap, Building, Calendar, Shield, FileText, Headphones } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Shield,
@@ -160,46 +159,6 @@ const PricingSection = () => {
               {t("pricing.boost.nonRefundable")}
             </p>
           </div>
-        </div>
-
-        {/* Boost Warning/Error Messages Examples */}
-        <div className="max-w-4xl mx-auto mb-12 space-y-4">
-          <p className="text-sm text-muted-foreground text-center mb-4">
-            Exemples de notifications Boost :
-          </p>
-          
-          <Alert className="border-accent/50 bg-accent/10">
-            <AlertTriangle className="h-4 w-4 text-accent" />
-            <AlertTitle className="text-accent">{t("pricing.boost.warning.expiringSoon")}</AlertTitle>
-            <AlertDescription className="text-accent/80">
-              {t("pricing.boost.warning.expiringSoonDesc")}
-              <Button variant="link" className="p-0 h-auto ml-2 text-accent">
-                {t("pricing.boost.renew")} →
-              </Button>
-            </AlertDescription>
-          </Alert>
-
-          <Alert className="border-secondary/50 bg-secondary/10">
-            <Info className="h-4 w-4 text-secondary" />
-            <AlertTitle className="text-secondary">{t("pricing.boost.warning.expiresTomorrow")}</AlertTitle>
-            <AlertDescription className="text-secondary/80">
-              {t("pricing.boost.warning.expiresTomorrowDesc")}
-              <Button variant="link" className="p-0 h-auto ml-2 text-secondary">
-                {t("pricing.boost.renew")} →
-              </Button>
-            </AlertDescription>
-          </Alert>
-
-          <Alert variant="destructive" className="border-destructive/50 bg-destructive/10">
-            <XCircle className="h-4 w-4" />
-            <AlertTitle>{t("pricing.boost.error.expired")}</AlertTitle>
-            <AlertDescription>
-              {t("pricing.boost.error.expiredDesc")}
-              <Button variant="link" className="p-0 h-auto ml-2 text-destructive">
-                {t("pricing.boost.renew")} →
-              </Button>
-            </AlertDescription>
-          </Alert>
         </div>
 
         {/* Payment Methods */}
