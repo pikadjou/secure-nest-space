@@ -262,5 +262,28 @@
   "legal.cookies.s4.title": "4. Gestion des cookies",
   "legal.cookies.s4.content": "Vous pouvez à tout moment modifier vos préférences en matière de cookies via les paramètres de votre navigateur. Notez que la désactivation de certains cookies peut affecter le fonctionnement de certaines fonctionnalités du site.",
   "legal.cookies.s5.title": "5. Durée de conservation",
-  "legal.cookies.s5.content": "Les cookies de session sont supprimés à la fermeture de votre navigateur. Les cookies persistants sont conservés pour une durée maximale de 13 mois conformément aux recommandations de l'Autorité de Protection des Données."
+  "legal.cookies.s5.content": "Les cookies de session sont supprimés à la fermeture de votre navigateur. Les cookies persistants sont conservés pour une durée maximale de 13 mois conformément aux recommandations de l'Autorité de Protection des Données.",
+
+  "cookies.banner.title": "Nous respectons votre vie privée",
+  "cookies.banner.description": "Nous utilisons des cookies pour améliorer votre expérience sur notre site, analyser notre trafic et personnaliser le contenu. Vous pouvez choisir d'accepter tous les cookies ou de personnaliser vos préférences.",
+  "cookies.banner.learnMore": "En savoir plus",
+  "cookies.banner.acceptAll": "Tout accepter",
+  "cookies.banner.rejectAll": "Tout refuser",
+  "cookies.banner.customize": "Personnaliser",
+
+  "cookies.settings.title": "Paramètres des cookies",
+  "cookies.settings.description": "Choisissez les types de cookies que vous souhaitez autoriser. Les cookies nécessaires sont toujours actifs car ils sont essentiels au fonctionnement du site.",
+  "cookies.settings.save": "Enregistrer mes préférences",
+  "cookies.settings.required": "Toujours actif",
+
+  "cookies.types.necessary.title": "Cookies nécessaires",
+  "cookies.types.necessary.desc": "Ces cookies sont essentiels au fonctionnement du site. Ils permettent l'authentification, la sécurité et la mémorisation de vos préférences de langue.",
+  "cookies.types.analytics.title": "Cookies d'analyse",
+  "cookies.types.analytics.desc": "Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site en collectant des informations anonymes.",
+  "cookies.types.marketing.title": "Cookies marketing",
+  "cookies.types.marketing.desc": "Ces cookies sont utilisés pour vous proposer des publicités pertinentes et mesurer l'efficacité de nos campagnes.",
+  "cookies.types.preferences.title": "Cookies de préférences",
+  "cookies.types.preferences.desc": "Ces cookies permettent de mémoriser vos choix et de personnaliser votre expérience sur le site.",
+
+  "cookies.manage": "Gérer les cookies"
 }
