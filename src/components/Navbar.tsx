@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +23,8 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-hero-gradient flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">B</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">bailo</span>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Bailo" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
