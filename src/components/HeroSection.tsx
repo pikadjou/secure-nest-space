@@ -8,7 +8,7 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
+    <section className="relative flex items-center pt-24 pb-12 overflow-hidden bg-background">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-muted/50 to-transparent" />
       
