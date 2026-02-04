@@ -285,5 +285,21 @@
   "cookies.types.preferences.title": "Preference cookies",
   "cookies.types.preferences.desc": "These cookies remember your choices and personalize your experience on the site.",
 
-  "cookies.manage": "Manage cookies"
+  "cookies.manage": "Manage cookies",
+
+  "about.title": "About Bailo",
+  "about.subtitle": "We are revolutionizing trust in rental real estate by creating a transparent and secure ecosystem for landlords and tenants.",
+  "about.mission.title": "Our mission",
+  "about.mission.content": "At Bailo, we believe that trust is the foundation of any successful rental relationship. Our platform enables landlords and tenants to build a verifiable reputation based on authentic reviews and certified profiles. We want to eliminate the uncertainty and stress associated with property rentals.",
+  "about.values.title": "Our values",
+  "about.values.trust.title": "Trust",
+  "about.values.trust.desc": "We place trust at the heart of our platform with KYC verifications and authenticated reviews.",
+  "about.values.transparency.title": "Transparency",
+  "about.values.transparency.desc": "Complete access to rental histories and reviews for informed decisions.",
+  "about.values.innovation.title": "Innovation",
+  "about.values.innovation.desc": "We use the latest technologies to simplify and secure the rental experience.",
+  "about.values.community.title": "Community",
+  "about.values.community.desc": "We are building a community of responsible and committed landlords and tenants.",
+  "about.story.title": "Our story",
+  "about.story.content": "Bailo was born from a simple observation: finding a trustworthy tenant or a reliable landlord shouldn't be an obstacle course. Founded by a team passionate about real estate and technology, our platform meets the real needs of the French rental market by bringing transparency and peace of mind to all stakeholders."
 }

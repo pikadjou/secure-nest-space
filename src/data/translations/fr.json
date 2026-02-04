@@ -285,5 +285,21 @@
   "cookies.types.preferences.title": "Cookies de préférences",
   "cookies.types.preferences.desc": "Ces cookies permettent de mémoriser vos choix et de personnaliser votre expérience sur le site.",
 
-  "cookies.manage": "Gérer les cookies"
+  "cookies.manage": "Gérer les cookies",
+
+  "about.title": "À propos de Bailo",
+  "about.subtitle": "Nous révolutionnons la confiance dans l'immobilier locatif en créant un écosystème transparent et sécurisé pour les propriétaires et les locataires.",
+  "about.mission.title": "Notre mission",
+  "about.mission.content": "Chez Bailo, nous croyons que la confiance est le fondement de toute relation locative réussie. Notre plateforme permet aux propriétaires et aux locataires de construire une réputation vérifiable, basée sur des évaluations authentiques et des profils certifiés. Nous voulons éliminer l'incertitude et le stress liés à la location immobilière.",
+  "about.values.title": "Nos valeurs",
+  "about.values.trust.title": "Confiance",
+  "about.values.trust.desc": "Nous plaçons la confiance au cœur de notre plateforme avec des vérifications KYC et des évaluations authentifiées.",
+  "about.values.transparency.title": "Transparence",
+  "about.values.transparency.desc": "Accès complet aux historiques de location et aux évaluations pour des décisions éclairées.",
+  "about.values.innovation.title": "Innovation",
+  "about.values.innovation.desc": "Nous utilisons les dernières technologies pour simplifier et sécuriser l'expérience locative.",
+  "about.values.community.title": "Communauté",
+  "about.values.community.desc": "Nous construisons une communauté de propriétaires et locataires responsables et engagés.",
+  "about.story.title": "Notre histoire",
+  "about.story.content": "Bailo est né d'un constat simple : trouver un locataire de confiance ou un propriétaire sérieux ne devrait pas être un parcours du combattant. Fondée par une équipe passionnée d'immobilier et de technologie, notre plateforme répond aux besoins réels du marché locatif français en apportant transparence et sérénité à tous les acteurs."
 }
