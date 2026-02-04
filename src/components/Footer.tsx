@@ -4,6 +4,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import CookieSettingsButton from "@/components/CookieSettingsButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
+import logo from "@/assets/logo.png";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Facebook,
@@ -21,11 +22,8 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
-            <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-accent-gradient flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-xl">B</span>
-              </div>
-              <span className="text-xl font-bold">bailo</span>
+            <Link to="/" className="flex items-center mb-6">
+              <img src={logo} alt="Bailo" className="h-10 w-auto brightness-0 invert" />
             </Link>
             <p className="text-primary-foreground/70 mb-6 max-w-xs">
               {t("footer.description")}
