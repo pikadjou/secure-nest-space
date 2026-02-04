@@ -16,16 +16,13 @@
   ],
   "footerLinks": {
     "product": [
-      { "labelKey": "footer.features", "href": "#features" },
-      { "labelKey": "footer.pricing", "href": "#pricing" },
-      { "labelKey": "footer.faq", "href": "#faq" },
-      { "labelKey": "footer.testimonials", "href": "#testimonials" }
+      { "labelKey": "footer.features", "href": "/#features" },
+      { "labelKey": "footer.pricing", "href": "/#pricing" },
+      { "labelKey": "footer.faq", "href": "/faq" },
+      { "labelKey": "footer.blog", "href": "/blog" }
     ],
     "company": [
-      { "labelKey": "footer.about", "href": "#" },
-      { "labelKey": "footer.blog", "href": "/blog" },
-      { "labelKey": "footer.careers", "href": "#" },
-      { "labelKey": "footer.press", "href": "#" }
+      { "labelKey": "footer.about", "href": "/about" }
     ],
     "legal": [
       { "labelKey": "footer.terms", "href": "/terms" },
