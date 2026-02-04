@@ -1,4 +1,10 @@
 {
+  "externalUrls": {
+    "login": "https://app.bailo.fr/login",
+    "signup": "https://app.bailo.fr/signup",
+    "demo": "https://app.bailo.fr/demo",
+    "platform": "https://app.bailo.fr"
+  },
   "partners": ["NEXITY", "CENTURY21", "ORPI", "FONCIA", "LAFORÊT"],
   "navLinks": [
     { "labelKey": "nav.home", "href": "#", "homeHref": "/", "isRoute": false },

@@ -43,12 +43,14 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <Button variant="accent" size="xl">
-                {t("hero.cta.discover")}
-                <ArrowRight className="w-5 h-5" />
+              <Button variant="accent" size="xl" asChild>
+                <a href={siteData.externalUrls.platform}>
+                  {t("hero.cta.discover")}
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
-              <Button variant="outline" size="xl">
-                {t("hero.cta.demo")}
+              <Button variant="outline" size="xl" asChild>
+                <a href={siteData.externalUrls.demo}>{t("hero.cta.demo")}</a>
               </Button>
             </div>
             

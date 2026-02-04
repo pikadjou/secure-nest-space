@@ -56,8 +56,8 @@ const PricingSection = () => {
               {t("pricing.freeOffer.desc")}
             </p>
 
-            <Button variant="secondary" size="lg" className="w-full mb-4">
-              {t("pricing.freeOffer.cta")}
+            <Button variant="secondary" size="lg" className="w-full mb-4" asChild>
+              <a href={siteData.externalUrls.signup}>{t("pricing.freeOffer.cta")}</a>
             </Button>
 
             <p className="text-xs text-muted-foreground text-center">
@@ -151,8 +151,8 @@ const PricingSection = () => {
               ))}
             </ul>
 
-            <Button variant="accent" size="lg" className="w-full mb-4">
-              {t("pricing.boost.cta")}
+            <Button variant="accent" size="lg" className="w-full mb-4" asChild>
+              <a href={siteData.externalUrls.signup}>{t("pricing.boost.cta")}</a>
             </Button>
 
             <p className="text-xs text-muted-foreground text-center">

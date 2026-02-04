@@ -54,11 +54,11 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              {t("nav.login")}
+            <Button variant="ghost" size="sm" asChild>
+              <a href={siteData.externalUrls.login}>{t("nav.login")}</a>
             </Button>
-            <Button variant="accent" size="default">
-              {t("nav.signup")}
+            <Button variant="accent" size="default" asChild>
+              <a href={siteData.externalUrls.signup}>{t("nav.signup")}</a>
             </Button>
           </div>
 
@@ -97,11 +97,11 @@ const Navbar = () => {
                 )
               )}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" className="w-full justify-center">
-                  {t("nav.login")}
+                <Button variant="ghost" className="w-full justify-center" asChild>
+                  <a href={siteData.externalUrls.login}>{t("nav.login")}</a>
                 </Button>
-                <Button variant="accent" className="w-full justify-center">
-                  {t("nav.signup")}
+                <Button variant="accent" className="w-full justify-center" asChild>
+                  <a href={siteData.externalUrls.signup}>{t("nav.signup")}</a>
                 </Button>
               </div>
             </div>
