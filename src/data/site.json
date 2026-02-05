@@ -8,6 +8,7 @@
   "partners": ["NEXITY", "CENTURY21", "ORPI", "FONCIA", "LAFORÊT"],
   "navLinks": [
     { "labelKey": "nav.home", "href": "#", "homeHref": "/", "isRoute": false },
+    { "labelKey": "nav.howItWorks", "href": "/how-it-works", "isRoute": true },
     { "labelKey": "nav.features", "href": "#features", "homeHref": "/#features", "isRoute": false },
     { "labelKey": "nav.pricing", "href": "#pricing", "homeHref": "/#pricing", "isRoute": false },
     { "labelKey": "nav.blog", "href": "/blog", "isRoute": true },
@@ -16,6 +17,7 @@
   ],
   "footerLinks": {
     "product": [
+      { "labelKey": "footer.howItWorks", "href": "/how-it-works" },
       { "labelKey": "footer.features", "href": "/#features" },
       { "labelKey": "footer.pricing", "href": "/#pricing" },
       { "labelKey": "footer.faq", "href": "/faq" },

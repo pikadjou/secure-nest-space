@@ -301,5 +301,65 @@
   "about.values.community.title": "Communauté",
   "about.values.community.desc": "Nous construisons une communauté de propriétaires et locataires responsables et engagés.",
   "about.story.title": "Notre histoire",
-  "about.story.content": "Bailo est né d'un constat simple : trouver un locataire de confiance ou un propriétaire sérieux ne devrait pas être un parcours du combattant. Fondée par une équipe passionnée d'immobilier et de technologie, notre plateforme répond aux besoins réels du marché locatif français en apportant transparence et sérénité à tous les acteurs."
+  "about.story.content": "Bailo est né d'un constat simple : trouver un locataire de confiance ou un propriétaire sérieux ne devrait pas être un parcours du combattant. Fondée par une équipe passionnée d'immobilier et de technologie, notre plateforme répond aux besoins réels du marché locatif français en apportant transparence et sérénité à tous les acteurs.",
+
+  "nav.howItWorks": "Comment ça marche",
+  "footer.howItWorks": "Comment ça marche",
+
+  "howItWorks.hero.title": "Découvrez comment Bailo fonctionne",
+  "howItWorks.hero.subtitle": "Une plateforme intuitive qui révolutionne la relation locative en 6 étapes simples. Construisez votre réputation et louez en toute confiance.",
+  "howItWorks.hero.cta": "Créer mon compte gratuitement",
+
+  "howItWorks.trust.verified": "Profils vérifiés via itsme®",
+  "howItWorks.trust.ratings": "Avis équilibrés et transparents",
+  "howItWorks.trust.reputation": "Réputation locative certifiée",
+
+  "howItWorks.step1.title": "Inscription et vérification d'identité",
+  "howItWorks.step1.desc": "Créez votre compte et validez votre identité via itsme® pour garantir un profil 100% vérifié. Cette étape essentielle assure que tous les utilisateurs de Bailo sont de vraies personnes, créant ainsi un environnement de confiance.",
+  "howItWorks.step1.feature1": "Inscription gratuite en quelques minutes",
+  "howItWorks.step1.feature2": "Vérification sécurisée via itsme® (identité belge)",
+  "howItWorks.step1.feature3": "Badge de profil vérifié visible par tous",
+
+  "howItWorks.step2.title": "Gestion des biens (Propriétaires)",
+  "howItWorks.step2.desc": "En tant que propriétaire, ajoutez facilement vos biens à la plateforme. Visualisez l'ensemble de votre portefeuille immobilier, suivez les biens loués et disponibles, le tout depuis un tableau de bord centralisé.",
+  "howItWorks.step2.feature1": "Ajout de biens en quelques clics",
+  "howItWorks.step2.feature2": "Vue d'ensemble de tous vos biens",
+  "howItWorks.step2.feature3": "Suivi des locations actives et passées",
+
+  "howItWorks.step3.title": "Consultation des profils et avis",
+  "howItWorks.step3.desc": "Avant de vous engager, consultez les profils des propriétaires, des locataires et des biens. Accédez aux évaluations laissées par d'anciens partenaires locatifs pour prendre des décisions éclairées.",
+  "howItWorks.step3.feature1": "Consultez les avis sur les propriétaires",
+  "howItWorks.step3.feature2": "Vérifiez l'historique des locataires",
+  "howItWorks.step3.feature3": "Découvrez les évaluations des biens",
+
+  "howItWorks.step4.title": "Création d'une relation locative",
+  "howItWorks.step4.desc": "Le propriétaire initie la relation locative en sélectionnant un locataire déjà inscrit sur Bailo ou en l'invitant à rejoindre la plateforme. Cette étape officialise le lien entre les parties.",
+  "howItWorks.step4.feature1": "Recherchez un locataire inscrit",
+  "howItWorks.step4.feature2": "Ou invitez-le par email à rejoindre Bailo",
+  "howItWorks.step4.feature3": "Confirmation mutuelle de la relation",
+
+  "howItWorks.step5.title": "Documents centralisés",
+  "howItWorks.step5.desc": "Tous vos documents importants au même endroit ! Consultez et gérez le bail, l'état des lieux d'entrée et de sortie, et tous les autres documents liés à la location directement dans l'espace de la relation locative.",
+  "howItWorks.step5.feature1": "Accès au bail signé",
+  "howItWorks.step5.feature2": "États des lieux d'entrée et de sortie",
+  "howItWorks.step5.feature3": "Archivage sécurisé des documents",
+
+  "howItWorks.step6.title": "Évaluations mutuelles à la clôture",
+  "howItWorks.step6.desc": "À la fin de la location, chaque partie est invitée à évaluer l'autre. Les avis restent confidentiels jusqu'à ce que les deux parties aient soumis leur évaluation, ou après un délai de 15 jours, garantissant des avis sincères et équilibrés.",
+  "howItWorks.step6.feature1": "Le propriétaire évalue le(s) locataire(s)",
+  "howItWorks.step6.feature2": "Le(s) locataire(s) évalue(nt) le propriétaire et le bien",
+  "howItWorks.step6.feature3": "Avis révélés après soumission des deux parties ou après 15 jours",
+
+  "howItWorks.reputation.title": "Construisez votre réputation locative",
+  "howItWorks.reputation.desc": "Chaque location réussie renforce votre réputation. Bailo crée un historique locatif fiable qui vous suit et vous valorise. Propriétaires et locataires bâtissent ensemble un écosystème de confiance mutuelle.",
+  "howItWorks.reputation.benefits.title": "Les avantages d'une bonne réputation",
+  "howItWorks.reputation.benefits.item1": "Trouvez plus facilement un logement ou un locataire de qualité",
+  "howItWorks.reputation.benefits.item2": "Négociez en position de confiance",
+  "howItWorks.reputation.benefits.item3": "Bénéficiez de la transparence dans vos relations locatives",
+  "howItWorks.reputation.benefits.item4": "Contribuez à un marché locatif plus sain",
+
+  "howItWorks.cta.title": "Prêt à construire votre réputation locative ?",
+  "howItWorks.cta.subtitle": "Rejoignez des milliers d'utilisateurs qui font confiance à Bailo pour leurs locations.",
+  "howItWorks.cta.button": "Créer mon compte",
+  "howItWorks.cta.demo": "Voir la démo"
 }
