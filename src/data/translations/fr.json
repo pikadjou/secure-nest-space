@@ -1,4 +1,16 @@
 {
+  "pageTitle.home": "Confiance locative simplifiée",
+  "pageTitle.blog": "Blog - Conseils et actualités",
+  "pageTitle.faq": "Questions fréquentes",
+  "pageTitle.support": "Contacter le support",
+  "pageTitle.about": "À propos de Bailo",
+  "pageTitle.howItWorks": "Comment ça marche",
+  "pageTitle.terms": "Conditions générales",
+  "pageTitle.privacy": "Politique de confidentialité",
+  "pageTitle.legalNotice": "Mentions légales",
+  "pageTitle.cookies": "Gestion des cookies",
+  "pageTitle.notFound": "Page introuvable",
+
   "nav.home": "Accueil",
   "nav.features": "Fonctionnalités",
   "nav.pricing": "Abonnement",

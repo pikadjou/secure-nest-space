@@ -9,8 +9,10 @@ import {
 import { HelpCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import faqData from "@/data/faq.json";
+import usePageTitle from "@/hooks/usePageTitle";
 
 const FAQ = () => {
+  usePageTitle("pageTitle.faq");
   const { t } = useLanguage();
 
   const faqCategories = faqData;

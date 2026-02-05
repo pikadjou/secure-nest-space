@@ -2,8 +2,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Users, Target, Shield, Heart } from "lucide-react";
+import usePageTitle from "@/hooks/usePageTitle";
 
 const About = () => {
+  usePageTitle("pageTitle.about");
   const { t } = useLanguage();
 
   const values = [

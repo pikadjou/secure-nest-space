@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft, Calendar, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
 import { getArticleBySlug, getRelatedArticles } from "@/data/articles";
 import Navbar from "@/components/Navbar";
@@ -10,6 +11,12 @@ const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const article = slug ? getArticleBySlug(slug) : undefined;
   const relatedArticles = article ? getRelatedArticles(article.id, 3) : [];
+
+  useEffect(() => {
+    if (article) {
+      document.title = `${article.title} | Bailo`;
+    }
+  }, [article]);
 
   if (!article) {
     return <Navigate to="/blog" replace />;

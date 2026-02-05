@@ -1,4 +1,16 @@
 {
+  "pageTitle.home": "Simplified rental trust",
+  "pageTitle.blog": "Blog - Tips and news",
+  "pageTitle.faq": "Frequently asked questions",
+  "pageTitle.support": "Contact support",
+  "pageTitle.about": "About Bailo",
+  "pageTitle.howItWorks": "How it works",
+  "pageTitle.terms": "Terms of service",
+  "pageTitle.privacy": "Privacy policy",
+  "pageTitle.legalNotice": "Legal notice",
+  "pageTitle.cookies": "Cookie settings",
+  "pageTitle.notFound": "Page not found",
+
   "nav.home": "Home",
   "nav.features": "Features",
   "nav.pricing": "Pricing",

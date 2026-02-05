@@ -1,7 +1,9 @@
 import LegalPage from "@/components/LegalPage";
 import legalData from "@/data/legal.json";
+import usePageTitle from "@/hooks/usePageTitle";
 
 const Cookies = () => {
+  usePageTitle("pageTitle.cookies");
   return (
     <LegalPage
       titleKey={legalData.cookies.titleKey}
