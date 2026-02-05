@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Shield, Building, Users, FileText, Star, Award, ArrowRight, CheckCircle2 } from "lucide-react";
 import siteData from "@/data/site.json";
+import usePageTitle from "@/hooks/usePageTitle";
 
 // Images
 import verificationImg from "@/assets/how-it-works/verification.jpg";
@@ -15,6 +16,7 @@ import reviewsImg from "@/assets/how-it-works/reviews.jpg";
 import reputationImg from "@/assets/how-it-works/reputation.jpg";
 
 const HowItWorks = () => {
+  usePageTitle("pageTitle.howItWorks");
   const { t } = useLanguage();
 
   const steps = [

@@ -14,6 +14,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
+import usePageTitle from "@/hooks/usePageTitle";
 
 interface Attachment {
   id: string;
@@ -23,6 +24,7 @@ interface Attachment {
 }
 
 const Support = () => {
+  usePageTitle("pageTitle.support");
   const { t } = useLanguage();
   const [attachments, setAttachments] = useState<Attachment[]>([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
