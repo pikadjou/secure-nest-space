@@ -301,5 +301,65 @@
   "about.values.community.title": "Community",
   "about.values.community.desc": "We are building a community of responsible and committed landlords and tenants.",
   "about.story.title": "Our story",
-  "about.story.content": "Bailo was born from a simple observation: finding a trustworthy tenant or a reliable landlord shouldn't be an obstacle course. Founded by a team passionate about real estate and technology, our platform meets the real needs of the French rental market by bringing transparency and peace of mind to all stakeholders."
+  "about.story.content": "Bailo was born from a simple observation: finding a trustworthy tenant or a reliable landlord shouldn't be an obstacle course. Founded by a team passionate about real estate and technology, our platform meets the real needs of the French rental market by bringing transparency and peace of mind to all stakeholders.",
+
+  "nav.howItWorks": "How it works",
+  "footer.howItWorks": "How it works",
+
+  "howItWorks.hero.title": "Discover how Bailo works",
+  "howItWorks.hero.subtitle": "An intuitive platform that revolutionizes rental relationships in 6 simple steps. Build your reputation and rent with confidence.",
+  "howItWorks.hero.cta": "Create my free account",
+
+  "howItWorks.trust.verified": "Profiles verified via itsme®",
+  "howItWorks.trust.ratings": "Balanced and transparent reviews",
+  "howItWorks.trust.reputation": "Certified rental reputation",
+
+  "howItWorks.step1.title": "Registration and identity verification",
+  "howItWorks.step1.desc": "Create your account and verify your identity via itsme® to guarantee a 100% verified profile. This essential step ensures that all Bailo users are real people, creating a trusted environment.",
+  "howItWorks.step1.feature1": "Free registration in minutes",
+  "howItWorks.step1.feature2": "Secure verification via itsme® (Belgian identity)",
+  "howItWorks.step1.feature3": "Verified profile badge visible to all",
+
+  "howItWorks.step2.title": "Property management (Landlords)",
+  "howItWorks.step2.desc": "As a landlord, easily add your properties to the platform. View your entire real estate portfolio, track rented and available properties, all from a centralized dashboard.",
+  "howItWorks.step2.feature1": "Add properties in a few clicks",
+  "howItWorks.step2.feature2": "Overview of all your properties",
+  "howItWorks.step2.feature3": "Track active and past rentals",
+
+  "howItWorks.step3.title": "View profiles and reviews",
+  "howItWorks.step3.desc": "Before committing, view profiles of landlords, tenants and properties. Access reviews left by former rental partners to make informed decisions.",
+  "howItWorks.step3.feature1": "View landlord reviews",
+  "howItWorks.step3.feature2": "Check tenant history",
+  "howItWorks.step3.feature3": "Discover property ratings",
+
+  "howItWorks.step4.title": "Creating a rental relationship",
+  "howItWorks.step4.desc": "The landlord initiates the rental relationship by selecting a tenant already registered on Bailo or by inviting them to join the platform. This step formalizes the link between the parties.",
+  "howItWorks.step4.feature1": "Search for a registered tenant",
+  "howItWorks.step4.feature2": "Or invite them by email to join Bailo",
+  "howItWorks.step4.feature3": "Mutual confirmation of the relationship",
+
+  "howItWorks.step5.title": "Centralized documents",
+  "howItWorks.step5.desc": "All your important documents in one place! View and manage the lease, entry and exit inventories, and all other rental-related documents directly in the rental relationship space.",
+  "howItWorks.step5.feature1": "Access to signed lease",
+  "howItWorks.step5.feature2": "Entry and exit inventories",
+  "howItWorks.step5.feature3": "Secure document archiving",
+
+  "howItWorks.step6.title": "Mutual reviews at closure",
+  "howItWorks.step6.desc": "At the end of the rental, each party is invited to review the other. Reviews remain confidential until both parties have submitted their review, or after 15 days, ensuring sincere and balanced feedback.",
+  "howItWorks.step6.feature1": "The landlord reviews the tenant(s)",
+  "howItWorks.step6.feature2": "The tenant(s) review(s) the landlord and property",
+  "howItWorks.step6.feature3": "Reviews revealed after both parties submit or after 15 days",
+
+  "howItWorks.reputation.title": "Build your rental reputation",
+  "howItWorks.reputation.desc": "Every successful rental strengthens your reputation. Bailo creates a reliable rental history that follows and values you. Landlords and tenants build together an ecosystem of mutual trust.",
+  "howItWorks.reputation.benefits.title": "Benefits of a good reputation",
+  "howItWorks.reputation.benefits.item1": "More easily find housing or quality tenants",
+  "howItWorks.reputation.benefits.item2": "Negotiate from a position of trust",
+  "howItWorks.reputation.benefits.item3": "Benefit from transparency in your rental relationships",
+  "howItWorks.reputation.benefits.item4": "Contribute to a healthier rental market",
+
+  "howItWorks.cta.title": "Ready to build your rental reputation?",
+  "howItWorks.cta.subtitle": "Join thousands of users who trust Bailo for their rentals.",
+  "howItWorks.cta.button": "Create my account",
+  "howItWorks.cta.demo": "See the demo"
 }
