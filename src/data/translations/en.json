@@ -11,6 +11,17 @@
   "pageTitle.cookies": "Cookie settings",
   "pageTitle.notFound": "Page not found",
 
+  "metaDesc.home": "Bailo simplifies renting with verified profiles, certified reviews, and centralized document management. Build trust on both sides of the lease.",
+  "metaDesc.blog": "Read our latest articles and practical tips for landlords and tenants. News, guides, and best practices for stress-free property rentals.",
+  "metaDesc.faq": "Find quick answers about Bailo: registration, identity verification, rental reviews, subscriptions, and platform features explained.",
+  "metaDesc.support": "Need help? Contact the Bailo team through our support form. We respond within 24 hours to resolve your questions and issues.",
+  "metaDesc.about": "Learn about Bailo's mission: restoring trust between landlords and tenants through transparency, identity verification, and mutual reviews.",
+  "metaDesc.howItWorks": "How does Bailo work? itsme® verification, property management, rental relationships, centralized documents, and double-blind reviews explained.",
+  "metaDesc.terms": "Read Bailo's terms of service. Rights, obligations, and rules governing the use of our rental trust platform.",
+  "metaDesc.privacy": "Learn how Bailo protects your personal data. Our privacy policy details how we collect, use, and secure your information.",
+  "metaDesc.legalNotice": "Bailo's legal notice: information about the publisher, hosting, and responsibilities related to using the platform.",
+  "metaDesc.cookies": "Manage your cookie preferences on Bailo. Learn which cookies we use and how they improve your browsing experience.",
+
   "nav.home": "Home",
   "nav.features": "Features",
   "nav.pricing": "Pricing",

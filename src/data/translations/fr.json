@@ -11,6 +11,17 @@
   "pageTitle.cookies": "Gestion des cookies",
   "pageTitle.notFound": "Page introuvable",
 
+  "metaDesc.home": "Bailo simplifie la relation locative grâce à des profils vérifiés, des avis certifiés et une gestion centralisée des documents. Louez en confiance.",
+  "metaDesc.blog": "Découvrez nos articles et conseils pratiques pour propriétaires et locataires. Actualités, guides et bonnes pratiques de la location immobilière.",
+  "metaDesc.faq": "Trouvez rapidement les réponses à vos questions sur Bailo : inscription, vérification d'identité, avis locatifs, abonnements et fonctionnalités.",
+  "metaDesc.support": "Besoin d'aide ? Contactez l'équipe Bailo via notre formulaire de support. Nous répondons sous 24h pour résoudre vos questions et problèmes.",
+  "metaDesc.about": "Découvrez la mission de Bailo : rétablir la confiance entre propriétaires et locataires grâce à la transparence, la vérification et les avis mutuels.",
+  "metaDesc.howItWorks": "Comment fonctionne Bailo ? Vérification itsme®, gestion des biens, relation locative, documents centralisés et avis à double aveugle expliqués.",
+  "metaDesc.terms": "Consultez les conditions générales d'utilisation de Bailo. Droits, obligations et règles encadrant l'utilisation de notre plateforme locative.",
+  "metaDesc.privacy": "Découvrez comment Bailo protège vos données personnelles. Notre politique de confidentialité détaille la collecte, l'usage et la sécurité de vos informations.",
+  "metaDesc.legalNotice": "Mentions légales de Bailo : informations sur l'éditeur, l'hébergement et les responsabilités liées à l'utilisation de la plateforme.",
+  "metaDesc.cookies": "Gérez vos préférences de cookies sur Bailo. Découvrez quels cookies nous utilisons et comment ils améliorent votre expérience utilisateur.",
+
   "nav.home": "Accueil",
   "nav.features": "Fonctionnalités",
   "nav.pricing": "Abonnement",
