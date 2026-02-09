@@ -153,9 +153,9 @@ const ArticleDetail = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="bg-hero-gradient rounded-2xl p-8 lg:p-12 text-center shadow-elevated">
-              <h3 className="text-2xl lg:text-3xl font-bold text-primary-foreground mb-4">
+              <h2 className="text-2xl lg:text-3xl font-bold text-primary-foreground mb-4">
                 Prêt à simplifier votre location ?
-              </h3>
+              </h2>
               <p className="text-primary-foreground/80 mb-6">
                 Rejoignez plus de 10 000 utilisateurs satisfaits sur Bailo
               </p>
