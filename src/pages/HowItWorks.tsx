@@ -104,6 +104,7 @@ const HowItWorks = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
+      <main>
       {/* Hero Section */}
       <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 bg-hero-gradient">
         <div className="container mx-auto px-6">
@@ -276,6 +277,7 @@ const HowItWorks = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
