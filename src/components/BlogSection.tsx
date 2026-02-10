@@ -44,8 +44,11 @@ const BlogSection = () => {
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={article.image}
-                    alt={article.title}
+                    alt={`Illustration de l'article : ${article.title}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    width={400}
+                    height={192}
                   />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold">

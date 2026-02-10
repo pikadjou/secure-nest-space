@@ -166,8 +166,11 @@ const HowItWorks = () => {
                       <div className={`absolute -inset-4 ${step.color} opacity-10 rounded-3xl blur-xl`} />
                       <img
                         src={step.image}
-                        alt={t(step.titleKey)}
+                        alt={`Étape ${step.number} : ${t(step.titleKey)}`}
                         className="relative w-full rounded-2xl shadow-elevated"
+                        loading="lazy"
+                        width={600}
+                        height={400}
                       />
                       <div className={`absolute -top-6 ${isEven ? '-right-6' : '-left-6'} w-16 h-16 ${step.color} rounded-2xl flex items-center justify-center shadow-lg`}>
                         <span className="text-2xl font-bold text-primary-foreground">{step.number}</span>
@@ -210,8 +213,11 @@ const HowItWorks = () => {
               <div className="flex-1">
                 <img
                   src={reputationImg}
-                  alt={t("howItWorks.reputation.title")}
+                  alt={`Système de réputation Bailo : ${t("howItWorks.reputation.title")}`}
                   className="w-full rounded-2xl shadow-elevated"
+                  loading="lazy"
+                  width={600}
+                  height={400}
                 />
               </div>
               <div className="flex-1">
