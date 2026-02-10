@@ -1,10 +1,12 @@
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import PricingSection from "@/components/PricingSection";
-import BlogSection from "@/components/BlogSection";
-import Footer from "@/components/Footer";
 import usePageTitle from "@/hooks/usePageTitle";
+
+const FeaturesSection = lazy(() => import("@/components/FeaturesSection"));
+const PricingSection = lazy(() => import("@/components/PricingSection"));
+const BlogSection = lazy(() => import("@/components/BlogSection"));
+import Footer from "@/components/Footer";
 
 const Index = () => {
   usePageTitle("pageTitle.home");
@@ -14,9 +16,11 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
-        <FeaturesSection />
-        <PricingSection />
-        <BlogSection />
+        <Suspense fallback={<div className="min-h-[200px]" />}>
+          <FeaturesSection />
+          <PricingSection />
+          <BlogSection />
+        </Suspense>
       </main>
       <Footer />
     </div>
