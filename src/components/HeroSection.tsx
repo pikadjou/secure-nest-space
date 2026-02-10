@@ -81,6 +81,7 @@ const HeroSection = () => {
                   className="w-full h-auto object-cover"
                   width={600}
                   height={400}
+                  fetchPriority="high"
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
