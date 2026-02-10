@@ -21,6 +21,7 @@ const FAQ = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
+      <main>
       {/* Hero Section */}
       <section className="pt-24 lg:pt-32 pb-12 lg:pb-16">
         <div className="container mx-auto px-6">
@@ -87,6 +88,7 @@ const FAQ = () => {
           </div>
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>

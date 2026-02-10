@@ -28,6 +28,7 @@ const Blog = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
+      <main>
       {/* Hero */}
       <section className="pt-32 pb-16 bg-hero-gradient">
         <div className="container mx-auto px-6 text-center">
@@ -158,6 +159,7 @@ const Blog = () => {
           )}
         </div>
       </section>
+      </main>
 
       <Footer />
     </div>
