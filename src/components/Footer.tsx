@@ -23,7 +23,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1 mb-8 lg:mb-0">
             <Link to="/" className="flex items-center mb-6">
-              <img src={logo} alt="Bailo" className="h-10 w-auto brightness-0 invert" />
+              <img src={logo} alt="Bailo - Plateforme de confiance pour la location" className="h-10 w-auto brightness-0 invert" width={120} height={40} />
             </Link>
             <p className="text-primary-foreground/70 mb-6 max-w-xs">
               {t("footer.description")}

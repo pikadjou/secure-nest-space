@@ -90,8 +90,10 @@ const ArticleDetail = () => {
             <div className="rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={article.image}
-                alt={article.title}
+                alt={`Image principale de l'article : ${article.title}`}
                 className="w-full h-64 md:h-96 object-cover"
+                width={896}
+                height={384}
               />
             </div>
           </div>
@@ -185,8 +187,11 @@ const ArticleDetail = () => {
                     <div className="h-40 overflow-hidden">
                       <img
                         src={relatedArticle.image}
-                        alt={relatedArticle.title}
+                        alt={`Illustration de l'article : ${relatedArticle.title}`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                        width={400}
+                        height={160}
                       />
                     </div>
                     <div className="p-4">

@@ -77,8 +77,10 @@ const HeroSection = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-elevated">
                 <img 
                   src={heroImage} 
-                  alt="Plateforme Bailo - Gestion de locations sécurisée" 
+                  alt="Tableau de bord Bailo montrant la gestion sécurisée des locations entre propriétaires et locataires" 
                   className="w-full h-auto object-cover"
+                  width={600}
+                  height={400}
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
