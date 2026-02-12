@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const NotFound = () => {
-  usePageTitle("pageTitle.notFound");
+  usePageTitle("pageTitle.notFound", { path: "/404" });
   const location = useLocation();
 
   useEffect(() => {

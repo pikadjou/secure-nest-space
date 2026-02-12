@@ -33,7 +33,7 @@ const organizationSchema = {
 };
 
 const Index = () => {
-  usePageTitle("pageTitle.home");
+  usePageTitle("pageTitle.home", { path: "/" });
 
   return (
     <div className="min-h-screen bg-background">

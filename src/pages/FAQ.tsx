@@ -12,7 +12,7 @@ import faqData from "@/data/faq.json";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const FAQ = () => {
-  usePageTitle("pageTitle.faq");
+  usePageTitle("pageTitle.faq", { path: "/faq" });
   const { t } = useLanguage();
 
   const faqCategories = faqData;

@@ -9,7 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const Blog = () => {
-  usePageTitle("pageTitle.blog");
+  usePageTitle("pageTitle.blog", { path: "/blog" });
   const { t, language } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);

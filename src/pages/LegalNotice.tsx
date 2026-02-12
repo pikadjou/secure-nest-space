@@ -3,7 +3,7 @@ import legalData from "@/data/legal.json";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const LegalNotice = () => {
-  usePageTitle("pageTitle.legalNotice");
+  usePageTitle("pageTitle.legalNotice", { path: "/legal-notice" });
   return (
     <LegalPage
       titleKey={legalData.legalNotice.titleKey}

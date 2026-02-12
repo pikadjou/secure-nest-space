@@ -3,7 +3,7 @@ import legalData from "@/data/legal.json";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const Cookies = () => {
-  usePageTitle("pageTitle.cookies");
+  usePageTitle("pageTitle.cookies", { path: "/cookies" });
   return (
     <LegalPage
       titleKey={legalData.cookies.titleKey}
