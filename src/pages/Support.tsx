@@ -24,7 +24,7 @@ interface Attachment {
 }
 
 const Support = () => {
-  usePageTitle("pageTitle.support");
+  usePageTitle("pageTitle.support", { path: "/support" });
   const { t } = useLanguage();
   const [attachments, setAttachments] = useState<Attachment[]>([]);
   const [isSubmitted, setIsSubmitted] = useState(false);

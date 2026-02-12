@@ -5,7 +5,7 @@ import { Users, Target, Shield, Heart } from "lucide-react";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const About = () => {
-  usePageTitle("pageTitle.about");
+  usePageTitle("pageTitle.about", { path: "/about" });
   const { t } = useLanguage();
 
   const values = [

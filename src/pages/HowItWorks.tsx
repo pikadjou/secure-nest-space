@@ -16,7 +16,7 @@ import reviewsImg from "@/assets/how-it-works/reviews.jpg";
 import reputationImg from "@/assets/how-it-works/reputation.jpg";
 
 const HowItWorks = () => {
-  usePageTitle("pageTitle.howItWorks");
+  usePageTitle("pageTitle.howItWorks", { path: "/how-it-works" });
   const { t } = useLanguage();
 
   const steps = [
