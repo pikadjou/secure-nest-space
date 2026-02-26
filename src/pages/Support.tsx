@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Send, Paperclip, X, CheckCircle, Ticket, ArrowLeft } from "lucide-react";
+import { Send, Paperclip, X, CheckCircle, Ticket, ArrowLeft, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -28,12 +28,14 @@ const Support = () => {
   const { t } = useLanguage();
   const [attachments, setAttachments] = useState<Attachment[]>([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [ticketNumber, setTicketNumber] = useState("");
   const { toast } = useToast();
 
   const ticketSchema = z.object({
     nom: z.string().trim().min(2, t("support.validation.lastName")).max(50, t("support.validation.lastNameMax")),
     prenom: z.string().trim().min(2, t("support.validation.firstName")).max(50, t("support.validation.firstNameMax")),
+    email: z.string().trim().email(t("support.validation.email")),
     idBailo: z.string().trim().min(5, t("support.validation.bailoId")).max(20, t("support.validation.bailoIdMax")),
     message: z.string().trim().min(20, t("support.validation.message")).max(2000, t("support.validation.messageMax")),
   });
@@ -45,6 +47,7 @@ const Support = () => {
     defaultValues: {
       nom: "",
       prenom: "",
+      email: "",
       idBailo: "",
       message: "",
     },
@@ -110,23 +113,36 @@ const Support = () => {
     setAttachments((prev) => prev.filter((att) => att.id !== id));
   };
 
-  const generateTicketNumber = (): string => {
-    const timestamp = Date.now().toString(36).toUpperCase();
-    const random = Math.random().toString(36).substr(2, 4).toUpperCase();
-    return `BLO-${timestamp}-${random}`;
-  };
+  const onSubmit = async (data: TicketFormData) => {
+    setIsSubmitting(true);
+    try {
+      const formData = new FormData();
+      formData.append("firstName", data.prenom);
+      formData.append("lastName", data.nom);
+      formData.append("email", data.email);
+      formData.append("bailoId", data.idBailo);
+      formData.append("message", data.message);
+      attachments.forEach((att) => formData.append("files", att.file));
 
-  const onSubmit = (data: TicketFormData) => {
-    const generatedTicketNumber = generateTicketNumber();
-    setTicketNumber(generatedTicketNumber);
-    
-    console.log("Ticket soumis:", {
-      ...data,
-      attachments: attachments.map((a) => ({ name: a.name, size: a.size })),
-      ticketNumber: generatedTicketNumber,
-    });
+      const response = await fetch(
+        "https://bailo-api-support-gggre3bbd8d2bpf8.francecentral-01.azurewebsites.net/api/tickets",
+        { method: "POST", body: formData }
+      );
 
-    setIsSubmitted(true);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+      const result = await response.json();
+      setTicketNumber(result.reference);
+      setIsSubmitted(true);
+    } catch {
+      toast({
+        title: t("support.error.submitFailed"),
+        description: t("support.error.submitFailedDesc"),
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleNewTicket = () => {
@@ -238,6 +254,21 @@ const Support = () => {
                     />
                   </div>
 
+                  {/* Email */}
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t("support.form.email")} *</FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="jean.dupont@email.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
                   {/* ID Bailo */}
                   <FormField
                     control={form.control}
@@ -331,8 +362,12 @@ const Support = () => {
 
                   {/* Submit Button */}
                   <div className="pt-4">
-                    <Button type="submit" size="lg" className="w-full" variant="accent">
-                      <Send className="w-4 h-4 mr-2" />
+                    <Button type="submit" size="lg" className="w-full" variant="accent" disabled={isSubmitting}>
+                      {isSubmitting ? (
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                      ) : (
+                        <Send className="w-4 h-4 mr-2" />
+                      )}
                       {t("support.form.submit")}
                     </Button>
                   </div>
