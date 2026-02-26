@@ -1,51 +1,8 @@
 const BOT_AGENTS = /googlebot|bingbot|yandex|baiduspider|duckduckbot|slurp|facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|discordbot|applebot|pinterestbot/i
 
-const SITE = 'https://www.bailo.fr'
+const SITE = 'https://www.bailo.be'
 const SITE_NAME = 'Bailo'
 const OG_IMAGE = `${SITE}/og-default.jpg`
-
-const PAGES = {
-  '/': {
-    title: null,
-    description: 'Bailo simplifie la relation locative grâce à des profils vérifiés, des avis certifiés et une gestion centralisée des documents. Louez en confiance.',
-  },
-  '/how-it-works': {
-    title: 'Comment ça marche',
-    description: 'Comment fonctionne Bailo ? Vérification itsme®, gestion des biens, relation locative, documents centralisés et avis à double aveugle expliqués.',
-  },
-  '/blog': {
-    title: 'Blog - Conseils et actualités',
-    description: 'Découvrez nos articles et conseils pratiques pour propriétaires et locataires. Actualités, guides et bonnes pratiques de la location immobilière.',
-  },
-  '/faq': {
-    title: 'Questions fréquentes',
-    description: 'Trouvez rapidement les réponses à vos questions sur Bailo : inscription, vérification d\'identité, avis locatifs, abonnements et fonctionnalités.',
-  },
-  '/support': {
-    title: 'Contacter le support',
-    description: 'Besoin d\'aide ? Contactez l\'équipe Bailo via notre formulaire de support. Nous répondons sous 24h.',
-  },
-  '/about': {
-    title: 'À propos de Bailo',
-    description: 'Découvrez la mission de Bailo : rétablir la confiance entre propriétaires et locataires grâce à la transparence, la vérification et les avis mutuels.',
-  },
-  '/terms': {
-    title: 'Conditions générales',
-    description: 'Consultez les conditions générales d\'utilisation de Bailo. Droits, obligations et règles encadrant l\'utilisation de notre plateforme locative.',
-  },
-  '/privacy': {
-    title: 'Politique de confidentialité',
-    description: 'Découvrez comment Bailo protège vos données personnelles. Collecte, usage et sécurité de vos informations.',
-  },
-  '/legal-notice': {
-    title: 'Mentions légales',
-    description: 'Mentions légales de Bailo : informations sur l\'éditeur, l\'hébergement et les responsabilités liées à l\'utilisation de la plateforme.',
-  },
-  '/cookies': {
-    title: 'Gestion des cookies',
-    description: 'Gérez vos préférences de cookies sur Bailo. Découvrez quels cookies nous utilisons et comment ils améliorent votre expérience.',
-  },
-}
 
 const ARTICLES = {
   'pourquoi-choisir-bailo': {
@@ -65,16 +22,11 @@ const ARTICLES = {
   },
 }
 
-function escapeHtml(str) {
-  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
-}
-
 function buildHtml({ title, description, image, url, type = 'website' }) {
-  const fullTitle = title ? `${escapeHtml(title)} - ${SITE_NAME}` : `${SITE_NAME} - La plateforme de confiance pour vos locations`
-  const desc = escapeHtml(description || 'Bailo simplifie la relation locative grâce à des profils vérifiés, des avis certifiés et une gestion centralisée des documents.')
+  const fullTitle = title ? `${title} - ${SITE_NAME}` : `${SITE_NAME} - La plateforme de confiance pour vos locations`
+  const desc = description || 'Bailo simplifie la relation locative grâce à des profils vérifiés, des avis certifiés et une gestion centralisée des documents.'
   const canonical = url || SITE
-  const ogImage = image || OG_IMAGE
-  const imageTag = ogImage ? `<meta property="og:image" content="${ogImage}" /><meta name="twitter:image" content="${ogImage}" />` : ''
+  const ogImage = image ? `<meta property="og:image" content="${image}" /><meta name="twitter:image" content="${image}" />` : `<meta property="og:image" content="${OG_IMAGE}" /><meta name="twitter:image" content="${OG_IMAGE}" />`
 
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -91,8 +43,8 @@ function buildHtml({ title, description, image, url, type = 'website' }) {
   <meta property="og:description" content="${desc}" />
   <meta property="og:url" content="${canonical}" />
   <meta property="og:locale" content="fr_BE" />
-  ${imageTag}
-  <meta name="twitter:card" content="summary_large_image" />
+  ${ogImage}
+  <meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}" />
   <meta name="twitter:title" content="${fullTitle}" />
   <meta name="twitter:description" content="${desc}" />
 </head>
@@ -109,6 +61,11 @@ export async function onRequest(context) {
   const url = new URL(request.url)
   const path = url.pathname
 
+  // Sitemap - serve to everyone
+  if (path === '/sitemap.xml') {
+    return context.next()
+  }
+
   // Only intercept bots for pre-rendering
   if (!BOT_AGENTS.test(ua)) {
     return context.next()
@@ -122,33 +79,46 @@ export async function onRequest(context) {
     const slug = blogMatch[1]
     const article = ARTICLES[slug]
     if (article) {
-      seo = {
-        title: article.title,
-        description: article.description,
-        image: article.image,
-        url: `${SITE}/blog/${slug}`,
-        type: 'article',
-      }
+      seo = { title: article.title, description: article.description, image: article.image, url: `${SITE}/blog/${slug}`, type: 'article' }
     }
   }
 
   // Static pages
-  if (!seo && PAGES[path]) {
-    const page = PAGES[path]
-    seo = {
-      title: page.title,
-      description: page.description,
-      url: path === '/' ? SITE : `${SITE}${path}`,
-    }
+  if (path === '/') {
+    seo = { title: null, description: 'Bailo simplifie la relation locative grâce à des profils vérifiés, des avis certifiés et une gestion centralisée des documents. Louez en confiance.', url: SITE }
+  }
+  if (path === '/how-it-works') {
+    seo = { title: 'Comment ça marche', description: 'Comment fonctionne Bailo ? Vérification itsme®, gestion des biens, relation locative, documents centralisés et avis à double aveugle expliqués.', url: `${SITE}/how-it-works` }
+  }
+  if (path === '/blog' && !seo) {
+    seo = { title: 'Blog - Conseils et actualités', description: 'Découvrez nos articles et conseils pratiques pour propriétaires et locataires. Actualités, guides et bonnes pratiques de la location immobilière.', url: `${SITE}/blog` }
+  }
+  if (path === '/faq') {
+    seo = { title: 'Questions fréquentes', description: 'Trouvez rapidement les réponses à vos questions sur Bailo : inscription, vérification d\'identité, avis locatifs, abonnements et fonctionnalités.', url: `${SITE}/faq` }
+  }
+  if (path === '/support') {
+    seo = { title: 'Contacter le support', description: 'Besoin d\'aide ? Contactez l\'équipe Bailo via notre formulaire de support. Nous répondons sous 24h.', url: `${SITE}/support` }
+  }
+  if (path === '/about') {
+    seo = { title: 'À propos de Bailo', description: 'Découvrez la mission de Bailo : rétablir la confiance entre propriétaires et locataires grâce à la transparence, la vérification et les avis mutuels.', url: `${SITE}/about` }
+  }
+  if (path === '/terms') {
+    seo = { title: 'Conditions générales', description: 'Consultez les conditions générales d\'utilisation de Bailo. Droits, obligations et règles encadrant l\'utilisation de notre plateforme locative.', url: `${SITE}/terms` }
+  }
+  if (path === '/privacy') {
+    seo = { title: 'Politique de confidentialité', description: 'Découvrez comment Bailo protège vos données personnelles. Collecte, usage et sécurité de vos informations.', url: `${SITE}/privacy` }
+  }
+  if (path === '/legal-notice') {
+    seo = { title: 'Mentions légales', description: 'Mentions légales de Bailo : informations sur l\'éditeur, l\'hébergement et les responsabilités liées à l\'utilisation de la plateforme.', url: `${SITE}/legal-notice` }
+  }
+  if (path === '/cookies') {
+    seo = { title: 'Gestion des cookies', description: 'Gérez vos préférences de cookies sur Bailo. Découvrez quels cookies nous utilisons et comment ils améliorent votre expérience.', url: `${SITE}/cookies` }
   }
 
   if (seo) {
     const html = buildHtml(seo)
     return new Response(html, {
-      headers: {
-        'Content-Type': 'text/html;charset=UTF-8',
-        'Cache-Control': 'public, max-age=3600',
-      },
+      headers: { 'Content-Type': 'text/html;charset=UTF-8', 'Cache-Control': 'public, max-age=3600' }
     })
   }
 
