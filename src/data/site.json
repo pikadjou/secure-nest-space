@@ -1,9 +1,6 @@
 {
   "externalUrls": {
-    "login": "https://app.bailo.fr/login",
-    "signup": "https://app.bailo.fr/signup",
-    "demo": "https://app.bailo.fr/demo",
-    "platform": "https://app.bailo.fr"
+    "platform": "https://app.bailo.be"
   },
   "partners": ["NEXITY", "CENTURY21", "ORPI", "FONCIA", "LAFORÊT"],
   "navLinks": [
@@ -34,15 +31,10 @@
     ]
   },
   "socialLinks": [
-    { "icon": "Facebook", "href": "https://facebook.com/bailo", "label": "Facebook" },
-    { "icon": "Twitter", "href": "https://twitter.com/bailo", "label": "Twitter" },
-    { "icon": "Instagram", "href": "https://instagram.com/bailo", "label": "Instagram" },
-    { "icon": "Linkedin", "href": "https://linkedin.com/company/bailo", "label": "LinkedIn" }
+    { "icon": "Facebook", "href": "https://www.facebook.com/profile.php?id=61563125913500", "label": "Facebook" },
   ],
   "contact": {
-    "email": "contact@bailo.fr",
-    "phone": "01 23 45 67 89",
-    "address": "12 rue de la Paix, 75002 Paris"
+    "email": "contact@bailo.be"
   },
   "features": [
     { "icon": "Shield", "titleKey": "features.secure.title", "descKey": "features.secure.desc", "color": "bg-primary" },
