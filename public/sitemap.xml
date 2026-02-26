@@ -1,78 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
-    <loc>https://secure-nest-space.lovable.app/</loc>
+    <loc>https://www.bailo.be/</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Main Pages -->
   <url>
-    <loc>https://secure-nest-space.lovable.app/blog</loc>
+    <loc>https://www.bailo.be/how-it-works</loc>
+    <lastmod>2025-02-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.bailo.be/blog</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/faq</loc>
+    <loc>https://www.bailo.be/faq</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/support</loc>
+    <loc>https://www.bailo.be/support</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/about</loc>
+    <loc>https://www.bailo.be/about</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/terms</loc>
+    <loc>https://www.bailo.be/terms</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/privacy</loc>
+    <loc>https://www.bailo.be/privacy</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/legal-notice</loc>
+    <loc>https://www.bailo.be/legal-notice</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/cookies</loc>
+    <loc>https://www.bailo.be/cookies</loc>
     <lastmod>2025-02-04</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
-  
-  <!-- Blog Posts -->
   <url>
-    <loc>https://secure-nest-space.lovable.app/blog/pourquoi-choisir-bailo</loc>
+    <loc>https://www.bailo.be/blog/pourquoi-choisir-bailo</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/blog/bailo-marche-locatif-belge</loc>
+    <loc>https://www.bailo.be/blog/bailo-marche-locatif-belge</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://secure-nest-space.lovable.app/blog/proposition-bouchez-avenir-locatif</loc>
+    <loc>https://www.bailo.be/blog/proposition-bouchez-avenir-locatif</loc>
     <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
