@@ -159,7 +159,7 @@ const ArticleDetail = () => {
                 Prêt à simplifier votre location ?
               </h2>
               <p className="text-primary-foreground/80 mb-6">
-                Rejoignez plus de 10 000 utilisateurs satisfaits sur Bailo
+                Commencez dès aujourd'hui à construire votre réputation locative
               </p>
               <Button variant="hero" size="lg">
                 Créer mon compte gratuitement
