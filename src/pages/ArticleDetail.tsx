@@ -6,6 +6,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import RichContent from "@/components/RichContent";
+import { getLaunchUrl } from "@/lib/launch";
+import siteData from "@/data/site.json";
 
 const ArticleDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -161,8 +163,10 @@ const ArticleDetail = () => {
               <p className="text-primary-foreground/80 mb-6">
                 Commencez dès aujourd'hui à construire votre réputation locative
               </p>
-              <Button variant="hero" size="lg">
-                Créer mon compte gratuitement
+              <Button variant="hero" size="lg" asChild>
+                <Link to={getLaunchUrl(siteData.externalUrls.signup)}>
+                  Créer mon compte gratuitement
+                </Link>
               </Button>
             </div>
           </div>
