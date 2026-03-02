@@ -239,7 +239,7 @@
   "legal.backHome": "Back to home",
 
   "legal.terms.title": "Terms of Service",
-  "legal.terms.lastUpdated": "Last updated: January 1, 2024",
+  "legal.terms.lastUpdated": "Last updated: March 1, 2026",
   "legal.terms.s1.title": "1. Purpose",
   "legal.terms.s1.content": "These terms of service define the terms and conditions under which Bailo provides users with its mutual rating platform between landlords and tenants. By accessing and using the Bailo platform, you accept these terms without reservation.",
   "legal.terms.s2.title": "2. Platform Access",
@@ -254,7 +254,7 @@
   "legal.terms.s6.content": "Bailo reserves the right to modify these terms at any time. Users will be informed of any substantial modification. Continued use of the platform after modification constitutes acceptance of the new terms.",
 
   "legal.privacy.title": "Privacy Policy",
-  "legal.privacy.lastUpdated": "Last updated: January 1, 2024",
+  "legal.privacy.lastUpdated": "Last updated: March 1, 2026",
   "legal.privacy.s1.title": "1. Data Collection",
   "legal.privacy.s1.content": "Bailo collects the following personal data: name, first name, email address, phone number, and identity documents as part of KYC verification. This data is collected during registration and use of our services.",
   "legal.privacy.s2.title": "2. Data Use",
@@ -269,7 +269,7 @@
   "legal.privacy.s6.content": "Your personal data is retained for the duration of your use of our services, then archived for applicable legal periods. Reviews are retained for 5 years after the end of the rental relationship.",
 
   "legal.notice.title": "Legal Notice",
-  "legal.notice.lastUpdated": "Last updated: January 1, 2024",
+  "legal.notice.lastUpdated": "Last updated: March 1, 2026",
   "legal.notice.s1.title": "Site Publisher",
   "legal.notice.s1.content": "The Bailo site is published by Bailo SRL, a Belgian company with share capital of €50,000, registered with the Brussels trade register under number BE 0123.456.789, with headquarters at 12 rue de la Paix, 1000 Brussels, Belgium. Publication director: Jean Dupont. Contact: contact@bailo.be",
   "legal.notice.s2.title": "Hosting",
@@ -280,7 +280,7 @@
   "legal.notice.s4.content": "These legal notices are subject to Belgian law. In case of dispute, the courts of Brussels will have sole jurisdiction.",
 
   "legal.cookies.title": "Cookie Policy",
-  "legal.cookies.lastUpdated": "Last updated: January 1, 2024",
+  "legal.cookies.lastUpdated": "Last updated: March 1, 2026",
   "legal.cookies.s1.title": "1. What is a Cookie?",
   "legal.cookies.s1.content": "A cookie is a small text file placed on your device (computer, smartphone, tablet) when visiting a website. It stores information about your browsing and recognizes you during subsequent visits.",
   "legal.cookies.s2.title": "2. Cookies Used",
