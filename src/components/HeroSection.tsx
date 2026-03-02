@@ -68,19 +68,21 @@ const HeroSection = () => {
             </div>
             
             {/* Partners logos */}
-            <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <p className="text-sm text-muted-foreground mb-4">{t("hero.partners")}</p>
-              <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
-                {siteData.partners.map((partner) => (
-                  <span 
-                    key={partner} 
-                    className="text-lg font-bold text-muted-foreground/50 hover:text-muted-foreground transition-colors"
-                  >
-                    {partner}
-                  </span>
-                ))}
+            {siteData.partners.length > 0 && (
+              <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <p className="text-sm text-muted-foreground mb-4">{t("hero.partners")}</p>
+                <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
+                  {siteData.partners.map((partner) => (
+                    <span
+                      key={partner}
+                      className="text-lg font-bold text-muted-foreground/50 hover:text-muted-foreground transition-colors"
+                    >
+                      {partner}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
           
           {/* Right content - Hero Image with floating badges */}
