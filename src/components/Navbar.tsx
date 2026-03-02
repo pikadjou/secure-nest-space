@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
-import { getLaunchUrl } from "@/lib/launch";
+import { getLaunchUrl, isLaunchMode } from "@/lib/launch";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
@@ -52,14 +52,16 @@ const Navbar = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Button variant="ghost" size="sm" asChild>
-              <Link to={getLaunchUrl(siteData.externalUrls.login)}>{t("nav.login")}</Link>
-            </Button>
-            <Button variant="accent" size="default" asChild>
-              <Link to={getLaunchUrl(siteData.externalUrls.signup)}>{t("nav.signup")}</Link>
-            </Button>
-          </div>
+          {!isLaunchMode() && (
+            <div className="hidden lg:flex items-center gap-4">
+              <Button variant="ghost" size="sm" asChild>
+                <Link to={getLaunchUrl(siteData.externalUrls.login)}>{t("nav.login")}</Link>
+              </Button>
+              <Button variant="accent" size="default" asChild>
+                <Link to={getLaunchUrl(siteData.externalUrls.signup)}>{t("nav.signup")}</Link>
+              </Button>
+            </div>
+          )}
 
           {/* Mobile Menu Button */}
           <button
@@ -95,14 +97,16 @@ const Navbar = () => {
                   </a>
                 )
               )}
-              <div className="flex flex-col gap-2 pt-4 border-t border-border">
-                <Button variant="ghost" className="w-full justify-center" asChild>
-                  <Link to={getLaunchUrl(siteData.externalUrls.login)}>{t("nav.login")}</Link>
-                </Button>
-                <Button variant="accent" className="w-full justify-center" asChild>
-                  <Link to={getLaunchUrl(siteData.externalUrls.signup)}>{t("nav.signup")}</Link>
-                </Button>
-              </div>
+              {!isLaunchMode() && (
+                <div className="flex flex-col gap-2 pt-4 border-t border-border">
+                  <Button variant="ghost" className="w-full justify-center" asChild>
+                    <Link to={getLaunchUrl(siteData.externalUrls.login)}>{t("nav.login")}</Link>
+                  </Button>
+                  <Button variant="accent" className="w-full justify-center" asChild>
+                    <Link to={getLaunchUrl(siteData.externalUrls.signup)}>{t("nav.signup")}</Link>
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         )}

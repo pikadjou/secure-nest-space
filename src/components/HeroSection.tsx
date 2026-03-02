@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Star, Lock } from "lucide-react";
+import { ArrowRight, Shield, Star, Lock, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -115,13 +115,15 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Floating badge - Rating */}
+              {/* Floating badge - Launch */}
               <div className="absolute -right-4 lg:-right-8 bottom-1/4 bg-card rounded-xl shadow-card p-4 animate-float" style={{ animationDelay: "1s" }}>
-                <div className="text-center">
-                  <p className="text-xs text-muted-foreground mb-1">{t("hero.avgRating")}</p>
-                  <div className="flex items-center gap-1">
-                    <span className="text-2xl font-bold text-card-foreground">4.8/5</span>
-                    <Star className="w-5 h-5 text-accent fill-accent" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-accent-gradient flex items-center justify-center">
+                    <Rocket className="w-5 h-5 text-accent-foreground" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-card-foreground text-sm">{t("launch.badge")}</p>
+                    <p className="text-xs text-muted-foreground">{t("hero.badge.kyc")}</p>
                   </div>
                 </div>
               </div>
