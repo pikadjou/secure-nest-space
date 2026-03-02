@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Star, Lock } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
+import { getLaunchUrl, isLaunchMode } from "@/lib/launch";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -44,13 +46,24 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <Button variant="accent" size="xl" asChild>
-                <a href={siteData.externalUrls.platform}>
-                  {t("hero.cta.discover")}
-                  <ArrowRight className="w-5 h-5" />
-                </a>
+                {isLaunchMode() ? (
+                  <Link to="/launch">
+                    {t("hero.cta.discover")}
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                ) : (
+                  <a href={siteData.externalUrls.platform}>
+                    {t("hero.cta.discover")}
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                )}
               </Button>
               <Button variant="outline" size="xl" asChild>
-                <a href={siteData.externalUrls.demo}>{t("hero.cta.demo")}</a>
+                {isLaunchMode() ? (
+                  <Link to="/launch">{t("hero.cta.demo")}</Link>
+                ) : (
+                  <a href={siteData.externalUrls.demo}>{t("hero.cta.demo")}</a>
+                )}
               </Button>
             </div>
             

@@ -1,4 +1,5 @@
 {
+  "launch": true,
   "externalUrls": {
     "platform": "https://app.bailo.be",
     "login": "https://app.bailo.be/login",
