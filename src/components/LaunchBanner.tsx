@@ -9,7 +9,7 @@ import { z } from "zod";
 const emailSchema = z.string().trim().email().max(255);
 
 const API_URL =
-  "https://bailo-api-support-gggre3bbd8d2bpf8.francecentral-01.azurewebsites.net/api/interested/api/interested";
+  "https://bailo-api-support-gggre3bbd8d2bpf8.francecentral-01.azurewebsites.net/api/interested";
 
 const LaunchBanner = () => {
   const { t } = useLanguage();
