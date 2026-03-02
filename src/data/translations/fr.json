@@ -388,5 +388,15 @@
   "howItWorks.cta.title": "Prêt à construire votre réputation locative ?",
   "howItWorks.cta.subtitle": "Rejoignez des milliers d'utilisateurs qui font confiance à Bailo pour leurs locations.",
   "howItWorks.cta.button": "Créer mon compte",
-  "howItWorks.cta.demo": "Voir la démo"
+  "howItWorks.cta.demo": "Voir la démo",
+
+  "launch.badge": "Lancement en avril 2025",
+  "launch.title": "Bailo arrive bientôt !",
+  "launch.description": "Notre plateforme sera disponible en avril. Inscrivez-vous dès maintenant pour être informé du lancement et accéder en avant-première.",
+  "launch.emailPlaceholder": "Votre adresse email",
+  "launch.cta": "Me tenir informé",
+  "launch.success": "Vous êtes inscrit ! Nous vous tiendrons au courant.",
+  "launch.error.invalidEmail": "Veuillez entrer une adresse email valide.",
+  "launch.error.generic": "Une erreur est survenue. Veuillez réessayer.",
+  "launch.social": "Ou suivez-nous sur les réseaux sociaux"
 }

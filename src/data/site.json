@@ -1,6 +1,9 @@
 {
   "externalUrls": {
-    "platform": "https://app.bailo.be"
+    "platform": "https://app.bailo.be",
+    "login": "https://app.bailo.be/login",
+    "signup": "https://app.bailo.be/signup",
+    "demo": "https://app.bailo.be/demo"
   },
   "partners": [],
   "navLinks": [
@@ -34,7 +37,9 @@
     { "icon": "Facebook", "href": "https://www.facebook.com/profile.php?id=61563125913500", "label": "Facebook" }
   ],
   "contact": {
-    "email": "contact@bailo.be"
+    "email": "contact@bailo.be",
+    "phone": "+32 2 123 45 67",
+    "address": "12 rue de la Paix, 1000 Bruxelles, Belgique"
   },
   "features": [
     { "icon": "Shield", "titleKey": "features.secure.title", "descKey": "features.secure.desc", "color": "bg-primary" },
