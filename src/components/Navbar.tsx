@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
+import { getLaunchUrl } from "@/lib/launch";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
@@ -53,10 +54,10 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Button variant="ghost" size="sm" asChild>
-              <a href={siteData.externalUrls.login}>{t("nav.login")}</a>
+              <Link to={getLaunchUrl(siteData.externalUrls.login)}>{t("nav.login")}</Link>
             </Button>
             <Button variant="accent" size="default" asChild>
-              <a href={siteData.externalUrls.signup}>{t("nav.signup")}</a>
+              <Link to={getLaunchUrl(siteData.externalUrls.signup)}>{t("nav.signup")}</Link>
             </Button>
           </div>
 
@@ -96,10 +97,10 @@ const Navbar = () => {
               )}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
                 <Button variant="ghost" className="w-full justify-center" asChild>
-                  <a href={siteData.externalUrls.login}>{t("nav.login")}</a>
+                  <Link to={getLaunchUrl(siteData.externalUrls.login)}>{t("nav.login")}</Link>
                 </Button>
                 <Button variant="accent" className="w-full justify-center" asChild>
-                  <a href={siteData.externalUrls.signup}>{t("nav.signup")}</a>
+                  <Link to={getLaunchUrl(siteData.externalUrls.signup)}>{t("nav.signup")}</Link>
                 </Button>
               </div>
             </div>

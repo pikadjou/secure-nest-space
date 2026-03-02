@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Check, Gift, Zap, Building, Calendar, Shield, FileText, Headphones } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
+import { getLaunchUrl, isLaunchMode } from "@/lib/launch";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Shield,
@@ -57,7 +59,11 @@ const PricingSection = () => {
             </p>
 
             <Button variant="secondary" size="lg" className="w-full mb-4" asChild>
-              <a href={siteData.externalUrls.signup}>{t("pricing.freeOffer.cta")}</a>
+              {isLaunchMode() ? (
+                <Link to="/launch">{t("pricing.freeOffer.cta")}</Link>
+              ) : (
+                <a href={siteData.externalUrls.signup}>{t("pricing.freeOffer.cta")}</a>
+              )}
             </Button>
 
             <p className="text-xs text-muted-foreground text-center">
@@ -152,7 +158,11 @@ const PricingSection = () => {
             </ul>
 
             <Button variant="accent" size="lg" className="w-full mb-4" asChild>
-              <a href={siteData.externalUrls.signup}>{t("pricing.boost.cta")}</a>
+              {isLaunchMode() ? (
+                <Link to="/launch">{t("pricing.boost.cta")}</Link>
+              ) : (
+                <a href={siteData.externalUrls.signup}>{t("pricing.boost.cta")}</a>
+              )}
             </Button>
 
             <p className="text-xs text-muted-foreground text-center">
