@@ -34,7 +34,7 @@
 
   "hero.badge.kyc": "Vérification KYC",
   "hero.badge.ratings": "Évaluations certifiées",
-  "hero.badge.users": "+10 000 utilisateurs",
+  "hero.badge.users": "100% Belge",
   "hero.title.platform": "LA PLATEFORME DE",
   "hero.title.trust": "CONFIANCE",
   "hero.title.for": "POUR VOS",
@@ -61,7 +61,7 @@
   "features.transparent.desc": "Accès complet à l'historique des locations et des évaluations pour une décision éclairée.",
   "features.privacy.title": "Protection des Données",
   "features.privacy.desc": "Conformité RGPD et cryptage de toutes vos données personnelles et sensibles.",
-  "features.cta.title": "Rejoignez plus de 10 000 utilisateurs satisfaits",
+  "features.cta.title": "Prêt à louer en toute confiance ?",
   "features.cta.subtitle": "Commencez dès aujourd'hui à construire votre réputation locative",
   "features.cta.button": "Commencer maintenant",
 
@@ -154,7 +154,7 @@
   "footer.privacy": "Politique de confidentialité",
   "footer.legalNotice": "Mentions légales",
   "footer.cookies": "Cookies",
-  "footer.rights": "© 2024 Bailo. Tous droits réservés.",
+  "footer.rights": "© {year} Bailo. Tous droits réservés.",
   "footer.madeWith": "Fait avec ❤️ en Belgique",
   "footer.language": "Langue",
 

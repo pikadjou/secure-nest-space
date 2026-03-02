@@ -34,7 +34,7 @@
 
   "hero.badge.kyc": "KYC Verification",
   "hero.badge.ratings": "Certified Ratings",
-  "hero.badge.users": "+10,000 users",
+  "hero.badge.users": "100% Belgian",
   "hero.title.platform": "THE",
   "hero.title.trust": "TRUSTED",
   "hero.title.for": "PLATFORM FOR YOUR",
@@ -61,7 +61,7 @@
   "features.transparent.desc": "Complete access to rental and review history for an informed decision.",
   "features.privacy.title": "Data Protection",
   "features.privacy.desc": "GDPR compliance and encryption of all your personal and sensitive data.",
-  "features.cta.title": "Join over 10,000 satisfied users",
+  "features.cta.title": "Ready to rent with confidence?",
   "features.cta.subtitle": "Start building your rental reputation today",
   "features.cta.button": "Get started now",
 
@@ -154,7 +154,7 @@
   "footer.privacy": "Privacy Policy",
   "footer.legalNotice": "Legal Notice",
   "footer.cookies": "Cookies",
-  "footer.rights": "© 2024 Bailo. All rights reserved.",
+  "footer.rights": "© {year} Bailo. All rights reserved.",
   "footer.madeWith": "Made with ❤️ in Belgium",
   "footer.language": "Language",
 

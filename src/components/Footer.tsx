@@ -124,14 +124,18 @@ const Footer = () => {
                 <Mail className="w-4 h-4" />
                 <span>{siteData.contact.email}</span>
               </li>
-              <li className="flex items-center gap-2 text-primary-foreground/70">
-                <Phone className="w-4 h-4" />
-                <span>{siteData.contact.phone}</span>
-              </li>
-              <li className="flex items-start gap-2 text-primary-foreground/70">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>{siteData.contact.address}</span>
-              </li>
+              {siteData.contact.phone && (
+                <li className="hidden items-center gap-2 text-primary-foreground/70">
+                  <Phone className="w-4 h-4" />
+                  <span>{siteData.contact.phone}</span>
+                </li>
+              )}
+              {siteData.contact.address && (
+                <li className="hidden items-start gap-2 text-primary-foreground/70">
+                  <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
+                  <span>{siteData.contact.address}</span>
+                </li>
+              )}
             </ul>
           </div>
         </div>
@@ -140,7 +144,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col lg:flex-row justify-between items-center gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
             <p className="text-primary-foreground/50 text-sm text-center md:text-left">
-              {t("footer.rights")}
+              {t("footer.rights").replace("{year}", new Date().getFullYear().toString())}
             </p>
             <p className="text-primary-foreground/50 text-sm">
               {t("footer.madeWith")}
