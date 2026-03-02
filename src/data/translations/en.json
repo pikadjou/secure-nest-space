@@ -388,5 +388,15 @@
   "howItWorks.cta.title": "Ready to build your rental reputation?",
   "howItWorks.cta.subtitle": "Join thousands of users who trust Bailo for their rentals.",
   "howItWorks.cta.button": "Create my account",
-  "howItWorks.cta.demo": "See the demo"
+  "howItWorks.cta.demo": "See the demo",
+
+  "launch.badge": "Launching April 2025",
+  "launch.title": "Bailo is coming soon!",
+  "launch.description": "Our platform will be available in April. Sign up now to be notified at launch and get early access.",
+  "launch.emailPlaceholder": "Your email address",
+  "launch.cta": "Keep me posted",
+  "launch.success": "You're signed up! We'll keep you posted.",
+  "launch.error.invalidEmail": "Please enter a valid email address.",
+  "launch.error.generic": "An error occurred. Please try again.",
+  "launch.social": "Or follow us on social media"
 }

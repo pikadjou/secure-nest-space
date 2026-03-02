@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import usePageTitle from "@/hooks/usePageTitle";
 import siteData from "@/data/site.json";
 
+const LaunchBanner = lazy(() => import("@/components/LaunchBanner"));
 const FeaturesSection = lazy(() => import("@/components/FeaturesSection"));
 const PricingSection = lazy(() => import("@/components/PricingSection"));
 const BlogSection = lazy(() => import("@/components/BlogSection"));
@@ -45,6 +46,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <Suspense fallback={<div className="min-h-[200px]" />}>
+          <LaunchBanner />
           <FeaturesSection />
           <PricingSection />
           <BlogSection />
