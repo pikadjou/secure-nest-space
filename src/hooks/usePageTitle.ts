@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const BASE_URL = "https://www.bailo.fr";
+const BASE_URL = "https://www.bailo.be";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/og-default.jpg`;
 
 function setMeta(attr: string, key: string, content: string) {
