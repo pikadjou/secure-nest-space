@@ -242,20 +242,20 @@ const HowItWorks = () => {
                 <div className="bg-card rounded-xl p-6 border border-border/50">
                   <h3 className="font-semibold text-foreground mb-3">{t("howItWorks.reputation.benefits.title")}</h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-secondary" />
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       {t("howItWorks.reputation.benefits.item1")}
                     </li>
-                    <li className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-secondary" />
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       {t("howItWorks.reputation.benefits.item2")}
                     </li>
-                    <li className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-secondary" />
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       {t("howItWorks.reputation.benefits.item3")}
                     </li>
-                    <li className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-secondary" />
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       {t("howItWorks.reputation.benefits.item4")}
                     </li>
                   </ul>
