@@ -273,7 +273,7 @@
   "legal.notice.s1.title": "Site Publisher",
   "legal.notice.s1.content": "The Bailo site is published by Bailo SRL, a Belgian company with share capital of €50,000, registered with the Brussels trade register under number BE 0123.456.789, with headquarters at 12 rue de la Paix, 1000 Brussels, Belgium. Publication director: Jean Dupont. Contact: contact@bailo.be",
   "legal.notice.s2.title": "Hosting",
-  "legal.notice.s2.content": "The site is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, United States. Data is stored on servers located in the European Union.",
+  "legal.notice.s2.content": "The site is hosted by Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, United States. Data is stored in Cloudflare data centers located in Europe.",
   "legal.notice.s3.title": "Intellectual Property",
   "legal.notice.s3.content": "All content on the Bailo site (texts, images, videos, logos, trademarks, source code) is protected by Belgian and international intellectual property laws. Any unauthorized reproduction, representation or exploitation is subject to legal action.",
   "legal.notice.s4.title": "Applicable Law",
