@@ -399,5 +399,6 @@
   "launch.success": "Vous êtes inscrit ! Nous vous tiendrons au courant.",
   "launch.error.invalidEmail": "Veuillez entrer une adresse email valide.",
   "launch.error.generic": "Une erreur est survenue. Veuillez réessayer.",
+  "launch.error.turnstile": "Veuillez compléter la vérification de sécurité.",
   "launch.social": "Ou suivez-nous sur les réseaux sociaux"
 }

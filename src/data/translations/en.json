@@ -399,5 +399,6 @@
   "launch.success": "You're signed up! We'll keep you posted.",
   "launch.error.invalidEmail": "Please enter a valid email address.",
   "launch.error.generic": "An error occurred. Please try again.",
+  "launch.error.turnstile": "Please complete the security verification.",
   "launch.social": "Or follow us on social media"
 }
