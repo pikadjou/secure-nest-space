@@ -54,10 +54,7 @@ export const usePageTitle = (
     setMeta("property", "og:image", ogImage);
     if (hasDesc) setMeta("property", "og:description", desc);
 
-    // Twitter tags
-    setMeta("name", "twitter:title", fullTitle);
-    setMeta("name", "twitter:image", ogImage);
-    if (hasDesc) setMeta("name", "twitter:description", desc);
+
   }, [titleKey, suffix, t, options?.path, options?.ogImage, options?.ogType]);
 };
 

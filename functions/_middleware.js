@@ -26,7 +26,7 @@ function buildHtml({ title, description, image, url, type = 'website' }) {
   const fullTitle = title ? `${title} - ${SITE_NAME}` : `${SITE_NAME} - La plateforme de confiance pour vos locations`
   const desc = description || 'Bailo simplifie la relation locative grâce à des profils vérifiés, des avis certifiés et une gestion centralisée des documents.'
   const canonical = url || SITE
-  const ogImage = image ? `<meta property="og:image" content="${image}" /><meta name="twitter:image" content="${image}" />` : `<meta property="og:image" content="${OG_IMAGE}" /><meta name="twitter:image" content="${OG_IMAGE}" />`
+  const ogImage = image ? `<meta property="og:image" content="${image}" />` : `<meta property="og:image" content="${OG_IMAGE}" />`
 
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -44,9 +44,8 @@ function buildHtml({ title, description, image, url, type = 'website' }) {
   <meta property="og:url" content="${canonical}" />
   <meta property="og:locale" content="fr_BE" />
   ${ogImage}
-  <meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}" />
-  <meta name="twitter:title" content="${fullTitle}" />
-  <meta name="twitter:description" content="${desc}" />
+
+
 </head>
 <body>
   <h1>${fullTitle}</h1>
