@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -16,6 +16,17 @@ import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 import usePageTitle from "@/hooks/usePageTitle";
 
+const TURNSTILE_SITE_KEY = "0x4AAAAAACl_a8tEiEnQAgym";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (container: string | HTMLElement, options: Record<string, unknown>) => string;
+      reset: (widgetId: string) => void;
+    };
+  }
+}
+
 interface Attachment {
   id: string;
   file: File;
@@ -30,7 +41,36 @@ const Support = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [ticketNumber, setTicketNumber] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
   const { toast } = useToast();
+
+  const renderTurnstile = useCallback(() => {
+    if (turnstileRef.current && window.turnstile && !widgetIdRef.current) {
+      widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback: (token: string) => setTurnstileToken(token),
+        "expired-callback": () => setTurnstileToken(null),
+        theme: "light",
+        size: "normal",
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (window.turnstile) {
+      renderTurnstile();
+    } else {
+      const interval = setInterval(() => {
+        if (window.turnstile) {
+          renderTurnstile();
+          clearInterval(interval);
+        }
+      }, 200);
+      return () => clearInterval(interval);
+    }
+  }, [renderTurnstile]);
 
   const ticketSchema = z.object({
     nom: z.string().trim().min(2, t("support.validation.lastName")).max(50, t("support.validation.lastNameMax")),
@@ -114,6 +154,15 @@ const Support = () => {
   };
 
   const onSubmit = async (data: TicketFormData) => {
+    if (!turnstileToken) {
+      toast({
+        title: t("support.error.turnstile"),
+        description: t("support.error.turnstileDesc"),
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       const formData = new FormData();
@@ -122,6 +171,7 @@ const Support = () => {
       formData.append("email", data.email);
       formData.append("bailoId", data.idBailo);
       formData.append("message", data.message);
+      formData.append("turnstileToken", turnstileToken);
       attachments.forEach((att) => formData.append("files", att.file));
 
       const response = await fetch(
@@ -142,6 +192,11 @@ const Support = () => {
       });
     } finally {
       setIsSubmitting(false);
+      // Reset turnstile
+      setTurnstileToken(null);
+      if (widgetIdRef.current && window.turnstile) {
+        window.turnstile.reset(widgetIdRef.current);
+      }
     }
   };
 
@@ -150,6 +205,11 @@ const Support = () => {
     setAttachments([]);
     setIsSubmitted(false);
     setTicketNumber("");
+    // Reset turnstile
+    setTurnstileToken(null);
+    if (widgetIdRef.current && window.turnstile) {
+      window.turnstile.reset(widgetIdRef.current);
+    }
   };
 
   if (isSubmitted) {
@@ -309,7 +369,7 @@ const Support = () => {
                     <p className="text-sm text-muted-foreground">
                       {t("support.form.attachmentsHelp")}
                     </p>
-                    
+
                     {/* Upload Button */}
                     <div className="flex items-center gap-4">
                       <label className="cursor-pointer">
@@ -360,9 +420,14 @@ const Support = () => {
                     )}
                   </div>
 
+                  {/* Turnstile */}
+                  <div className="flex justify-center">
+                    <div ref={turnstileRef} />
+                  </div>
+
                   {/* Submit Button */}
                   <div className="pt-4">
-                    <Button type="submit" size="lg" className="w-full" variant="accent" disabled={isSubmitting}>
+                    <Button type="submit" size="lg" className="w-full" variant="accent" disabled={isSubmitting || !turnstileToken}>
                       {isSubmitting ? (
                         <Loader2 className="w-4 h-4 mr-2 animate-spin" />
                       ) : (

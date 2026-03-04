@@ -215,6 +215,8 @@
   "support.form.submit": "Send ticket",
   "support.error.submitFailed": "Submission failed",
   "support.error.submitFailedDesc": "An error occurred while submitting the ticket. Please try again.",
+  "support.error.turnstile": "Verification required",
+  "support.error.turnstileDesc": "Please complete the security verification before submitting.",
   "support.success.title": "Ticket sent successfully!",
   "support.success.message": "Your request has been registered. Our team will respond as soon as possible.",
   "support.success.ticketNumber": "Ticket number",
