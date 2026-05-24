@@ -1,0 +1,41 @@
+# Bailo
+
+> Bailo est une plateforme belge de location immobilière sécurisée qui met en relation propriétaires et locataires. Elle repose sur la vérification d'identité (KYC), un système de réputation par avis vérifiés, et la sécurisation des échanges entre les deux parties. Disponible sur https://app.bailo.be.
+
+## Présentation du produit
+
+- [Accueil](https://www.bailo.be/index.md): Page principale présentant la plateforme, ses avantages et les tarifs.
+- [Comment ça marche](https://www.bailo.be/how-it-works.md): Explication du processus étape par étape — création de profil, vérification, mise en relation et gestion des locations.
+- [À propos](https://www.bailo.be/about.md): Présentation de l'équipe et de la mission de Bailo.
+
+## Documentation utilisateur
+
+- [FAQ](https://www.bailo.be/faq.md): Questions fréquentes sur l'utilisation de la plateforme, les vérifications, les paiements et la sécurité.
+- [Support](https://www.bailo.be/support): Formulaire de contact pour obtenir de l'aide.
+- [Blog](https://www.bailo.be/blog.md): Articles sur le marché locatif belge, les bonnes pratiques et les actualités Bailo.
+
+## Application
+
+- [Plateforme](https://app.bailo.be): Application principale pour propriétaires et locataires.
+- [Inscription](https://app.bailo.be/signup): Créer un compte sur Bailo.
+- [Connexion](https://app.bailo.be/login): Se connecter à son espace Bailo.
+- [Démo](https://app.bailo.be/demo): Découvrir la plateforme sans inscription.
+
+## Articles de blog
+
+- [Pourquoi choisir Bailo ?](https://www.bailo.be/blog/pourquoi-choisir-bailo.md): Présentation de la plateforme et de son système d'évaluation mutuelle.
+- [Ce qu'apporte Bailo au marché locatif belge](https://www.bailo.be/blog/bailo-marche-locatif-belge.md): Impact de Bailo sur la confiance et la réduction des litiges.
+- [La proposition Bouchez et l'avenir du marché locatif](https://www.bailo.be/blog/proposition-bouchez-avenir-locatif.md): Analyse de la proposition sur les locataires mauvais payeurs et l'alternative Bailo.
+
+## Informations légales
+
+- [Conditions d'utilisation](https://www.bailo.be/terms): Termes et conditions du service.
+- [Politique de confidentialité](https://www.bailo.be/privacy): Traitement des données personnelles conformément au RGPD.
+- [Mentions légales](https://www.bailo.be/legal-notice): Informations légales sur la société.
+- [Politique de cookies](https://www.bailo.be/cookies): Utilisation des cookies sur le site.
+
+## Contact
+
+- Email: contact@bailo.be
+- Adresse: 12 rue de la Paix, 1000 Bruxelles, Belgique
+- Facebook: https://www.facebook.com/profile.php?id=61563125913500
