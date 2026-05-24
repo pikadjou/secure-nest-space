@@ -26,9 +26,9 @@ const organizationSchema = {
   address: {
     "@type": "PostalAddress",
     streetAddress: "12 rue de la Paix",
-    addressLocality: "Paris",
-    postalCode: "75002",
-    addressCountry: "FR",
+    addressLocality: "Bruxelles",
+    postalCode: "1000",
+    addressCountry: "BE",
   },
   sameAs: siteData.socialLinks.map((s) => s.href),
 };

@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowLeft, Calendar, Clock, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import usePageTitle from "@/hooks/usePageTitle";
 import { getArticleBySlug, getRelatedArticles } from "@/data/articles";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,20 +15,81 @@ const ArticleDetail = () => {
   const article = slug ? getArticleBySlug(slug) : undefined;
   const relatedArticles = article ? getRelatedArticles(article.id, 3) : [];
 
+  usePageTitle(
+    article ? (article.title as never) : "pageTitle.blog",
+    article
+      ? {
+          path: `/blog/${article.slug}`,
+          ogImage: article.image,
+          ogType: "article",
+        }
+      : { path: "/blog" }
+  );
+
   useEffect(() => {
-    if (article) {
-      document.title = `${article.title} | Bailo`;
+    if (!article) return;
+    const BASE_URL = "https://www.bailo.be";
+    const setMeta = (attr: string, key: string, content: string) => {
+      let el = document.querySelector(`meta[${attr}="${key}"]`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+    setMeta("name", "description", article.excerpt);
+    setMeta("property", "og:description", article.excerpt);
+    setMeta("name", "twitter:description", article.excerpt);
+    setMeta("property", "article:published_time", article.publishedAt);
+    setMeta("property", "article:author", article.author.name);
+    // Canonical for articles
+    let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
     }
+    canonical.setAttribute("href", `${BASE_URL}/blog/${article.slug}`);
   }, [article]);
 
   if (!article) {
     return <Navigate to="/blog" replace />;
   }
 
-  const shareUrl = window.location.href;
+  const shareUrl = `https://www.bailo.be/blog/${article.slug}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    image: article.image,
+    datePublished: article.publishedAt,
+    author: {
+      "@type": "Organization",
+      name: article.author.name,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Bailo",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.bailo.be/favicon.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.bailo.be/blog/${article.slug}`,
+    },
+  };
 
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navbar />
 
       {/* Hero */}

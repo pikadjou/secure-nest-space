@@ -17,10 +17,29 @@ const FAQ = () => {
 
   const faqCategories = faqData;
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqCategories.flatMap((cat) =>
+      cat.questions.map((item) => ({
+        "@type": "Question",
+        name: t(item.questionKey),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: t(item.answerKey),
+        },
+      }))
+    ),
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
-      
+
       <main>
       {/* Hero Section */}
       <section className="pt-24 lg:pt-32 pb-12 lg:pb-16">
