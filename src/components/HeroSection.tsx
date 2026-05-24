@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Star, Lock } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import siteData from "@/data/site.json";
+import { getLaunchUrl, isLaunchMode } from "@/lib/launch";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -44,30 +46,43 @@ const HeroSection = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.3s" }}>
               <Button variant="accent" size="xl" asChild>
-                <a href={siteData.externalUrls.platform}>
-                  {t("hero.cta.discover")}
-                  <ArrowRight className="w-5 h-5" />
-                </a>
+                {isLaunchMode() ? (
+                  <Link to="/launch">
+                    {t("hero.cta.discover")}
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                ) : (
+                  <a href={siteData.externalUrls.platform}>
+                    {t("hero.cta.discover")}
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                )}
               </Button>
               <Button variant="outline" size="xl" asChild>
-                <a href={siteData.externalUrls.demo}>{t("hero.cta.demo")}</a>
+                {isLaunchMode() ? (
+                  <Link to="/launch">{t("hero.cta.demo")}</Link>
+                ) : (
+                  <a href={siteData.externalUrls.demo}>{t("hero.cta.demo")}</a>
+                )}
               </Button>
             </div>
             
             {/* Partners logos */}
-            <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              <p className="text-sm text-muted-foreground mb-4">{t("hero.partners")}</p>
-              <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
-                {siteData.partners.map((partner) => (
-                  <span 
-                    key={partner} 
-                    className="text-lg font-bold text-muted-foreground/50 hover:text-muted-foreground transition-colors"
-                  >
-                    {partner}
-                  </span>
-                ))}
+            {siteData.partners.length > 0 && (
+              <div className="mt-12 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+                <p className="text-sm text-muted-foreground mb-4">{t("hero.partners")}</p>
+                <div className="flex flex-wrap gap-6 items-center justify-center lg:justify-start">
+                  {siteData.partners.map((partner) => (
+                    <span
+                      key={partner}
+                      className="text-lg font-bold text-muted-foreground/50 hover:text-muted-foreground transition-colors"
+                    >
+                      {partner}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
           
           {/* Right content - Hero Image with floating badges */}
@@ -100,13 +115,15 @@ const HeroSection = () => {
                 </div>
               </div>
               
-              {/* Floating badge - Rating */}
+              {/* Floating badge - Free offer */}
               <div className="absolute -right-4 lg:-right-8 bottom-1/4 bg-card rounded-xl shadow-card p-4 animate-float" style={{ animationDelay: "1s" }}>
-                <div className="text-center">
-                  <p className="text-xs text-muted-foreground mb-1">{t("hero.avgRating")}</p>
-                  <div className="flex items-center gap-1">
-                    <span className="text-2xl font-bold text-card-foreground">4.8/5</span>
-                    <Star className="w-5 h-5 text-accent fill-accent" />
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-accent-gradient flex items-center justify-center">
+                    <Star className="w-5 h-5 text-accent-foreground" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-card-foreground text-sm">{t("pricing.freeOffer.title")}</p>
+                    <p className="text-xs text-muted-foreground">{t("pricing.freeOffer.duration")}</p>
                   </div>
                 </div>
               </div>

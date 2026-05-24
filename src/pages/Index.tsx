@@ -15,8 +15,8 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Bailo",
   description: "Bailo révolutionne la relation locataire-propriétaire avec transparence et sécurité. Évaluez et soyez évalué en toute sérénité.",
-  url: "https://www.bailo.fr",
-  logo: "https://secure-nest-space.lovable.app/favicon.png",
+  url: "https://www.bailo.be",
+  logo: "https://www.bailo.be/favicon.png",
   contactPoint: {
     "@type": "ContactPoint",
     email: siteData.contact.email,

@@ -1,9 +1,11 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Shield, Building, Users, FileText, Star, Award, ArrowRight, CheckCircle2 } from "lucide-react";
 import siteData from "@/data/site.json";
+import { isLaunchMode } from "@/lib/launch";
 import usePageTitle from "@/hooks/usePageTitle";
 
 // Images
@@ -117,10 +119,17 @@ const HowItWorks = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
-                <a href={siteData.externalUrls.signup}>
-                  {t("howItWorks.hero.cta")}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
+                {isLaunchMode() ? (
+                  <Link to="/launch">
+                    {t("howItWorks.hero.cta")}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                ) : (
+                  <a href={siteData.externalUrls.signup}>
+                    {t("howItWorks.hero.cta")}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                )}
               </Button>
             </div>
           </div>
@@ -233,20 +242,20 @@ const HowItWorks = () => {
                 <div className="bg-card rounded-xl p-6 border border-border/50">
                   <h3 className="font-semibold text-foreground mb-3">{t("howItWorks.reputation.benefits.title")}</h3>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-secondary" />
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       {t("howItWorks.reputation.benefits.item1")}
                     </li>
-                    <li className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-secondary" />
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       {t("howItWorks.reputation.benefits.item2")}
                     </li>
-                    <li className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-secondary" />
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       {t("howItWorks.reputation.benefits.item3")}
                     </li>
-                    <li className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="w-5 h-5 text-secondary" />
+                    <li className="flex items-start gap-2 text-muted-foreground">
+                      <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                       {t("howItWorks.reputation.benefits.item4")}
                     </li>
                   </ul>
@@ -269,15 +278,28 @@ const HowItWorks = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>
-                <a href={siteData.externalUrls.signup}>
-                  {t("howItWorks.cta.button")}
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
+                {isLaunchMode() ? (
+                  <Link to="/launch">
+                    {t("howItWorks.cta.button")}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                ) : (
+                  <a href={siteData.externalUrls.signup}>
+                    {t("howItWorks.cta.button")}
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                )}
               </Button>
               <Button variant="hero-outline" size="xl" asChild>
-                <a href={siteData.externalUrls.demo}>
-                  {t("howItWorks.cta.demo")}
-                </a>
+                {isLaunchMode() ? (
+                  <Link to="/launch">
+                    {t("howItWorks.cta.demo")}
+                  </Link>
+                ) : (
+                  <a href={siteData.externalUrls.demo}>
+                    {t("howItWorks.cta.demo")}
+                  </a>
+                )}
               </Button>
             </div>
           </div>

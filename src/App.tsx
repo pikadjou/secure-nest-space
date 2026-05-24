@@ -19,6 +19,7 @@ const LegalNotice = lazy(() => import("./pages/LegalNotice"));
 const Cookies = lazy(() => import("./pages/Cookies"));
 const About = lazy(() => import("./pages/About"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
+const Launch = lazy(() => import("./pages/Launch"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ const App = () => (
               <Route path="/cookies" element={<Suspense fallback={<div className="min-h-screen" />}><Cookies /></Suspense>} />
               <Route path="/about" element={<Suspense fallback={<div className="min-h-screen" />}><About /></Suspense>} />
               <Route path="/how-it-works" element={<Suspense fallback={<div className="min-h-screen" />}><HowItWorks /></Suspense>} />
+              <Route path="/launch" element={<Suspense fallback={<div className="min-h-screen" />}><Launch /></Suspense>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<Suspense fallback={<div className="min-h-screen" />}><NotFound /></Suspense>} />
             </Routes>

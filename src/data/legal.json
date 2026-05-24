@@ -27,7 +27,6 @@
     "titleKey": "legal.notice.title",
     "lastUpdatedKey": "legal.notice.lastUpdated",
     "sections": [
-      { "titleKey": "legal.notice.s1.title", "contentKey": "legal.notice.s1.content" },
       { "titleKey": "legal.notice.s2.title", "contentKey": "legal.notice.s2.content" },
       { "titleKey": "legal.notice.s3.title", "contentKey": "legal.notice.s3.content" },
       { "titleKey": "legal.notice.s4.title", "contentKey": "legal.notice.s4.content" }

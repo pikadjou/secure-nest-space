@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Rocket, Mail, CheckCircle, Loader2 } from "lucide-react";
@@ -11,11 +11,51 @@ const emailSchema = z.string().trim().email().max(255);
 const API_URL =
   "https://bailo-api-support-gggre3bbd8d2bpf8.francecentral-01.azurewebsites.net/api/interested";
 
+const TURNSTILE_SITE_KEY = "0x4AAAAAACl_a8tEiEnQAgym";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (container: string | HTMLElement, options: Record<string, unknown>) => string;
+      reset: (widgetId: string) => void;
+    };
+  }
+}
+
 const LaunchBanner = () => {
   const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
+
+  const renderTurnstile = useCallback(() => {
+    if (turnstileRef.current && window.turnstile && !widgetIdRef.current) {
+      widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        callback: (token: string) => setTurnstileToken(token),
+        "expired-callback": () => setTurnstileToken(null),
+        theme: "light",
+        size: "normal",
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (window.turnstile) {
+      renderTurnstile();
+    } else {
+      const interval = setInterval(() => {
+        if (window.turnstile) {
+          renderTurnstile();
+          clearInterval(interval);
+        }
+      }, 200);
+      return () => clearInterval(interval);
+    }
+  }, [renderTurnstile]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,12 +66,18 @@ const LaunchBanner = () => {
       return;
     }
 
+    if (!turnstileToken) {
+      setStatus("error");
+      setMessage(t("launch.error.turnstile"));
+      return;
+    }
+
     setStatus("loading");
     try {
       const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: parsed.data }),
+        body: JSON.stringify({ email: parsed.data, turnstileToken }),
       });
 
       const data = await res.json();
@@ -46,6 +92,12 @@ const LaunchBanner = () => {
     } catch {
       setStatus("error");
       setMessage(t("launch.error.generic"));
+    }
+
+    // Reset turnstile for next attempt
+    setTurnstileToken(null);
+    if (widgetIdRef.current && window.turnstile) {
+      window.turnstile.reset(widgetIdRef.current);
     }
   };
 
@@ -67,35 +119,40 @@ const LaunchBanner = () => {
           </p>
 
           {/* Email form */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-6">
-            <div className="flex-1">
-              <Input
-                type="email"
-                placeholder={t("launch.emailPlaceholder")}
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                  if (status === "error") setStatus("idle");
-                }}
-                disabled={status === "loading"}
-                className="h-12"
-                required
-              />
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-6">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex-1">
+                <Input
+                  type="email"
+                  placeholder={t("launch.emailPlaceholder")}
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (status === "error") setStatus("idle");
+                  }}
+                  disabled={status === "loading"}
+                  className="h-12"
+                  required
+                />
+              </div>
+              <Button
+                type="submit"
+                variant="accent"
+                size="lg"
+                disabled={status === "loading" || !turnstileToken}
+                className="shrink-0"
+              >
+                {status === "loading" ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Mail className="w-4 h-4" />
+                )}
+                {t("launch.cta")}
+              </Button>
             </div>
-            <Button
-              type="submit"
-              variant="accent"
-              size="lg"
-              disabled={status === "loading"}
-              className="shrink-0"
-            >
-              {status === "loading" ? (
-                <Loader2 className="w-4 h-4 animate-spin" />
-              ) : (
-                <Mail className="w-4 h-4" />
-              )}
-              {t("launch.cta")}
-            </Button>
+            <div className="flex justify-center mt-4">
+              <div ref={turnstileRef} />
+            </div>
           </form>
 
           {/* Status message */}
