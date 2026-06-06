@@ -1,5 +1,8 @@
 {
   "launch": true,
+  "features": {
+    "tutorials": false
+  },
   "externalUrls": {
     "platform": "https://app.bailo.be",
     "login": "https://app.bailo.be/login",
@@ -10,6 +13,7 @@
   "navLinks": [
     { "labelKey": "nav.home", "href": "#", "homeHref": "/", "isRoute": false },
     { "labelKey": "nav.howItWorks", "href": "/how-it-works", "isRoute": true },
+    { "labelKey": "tutorials.nav.tutorials", "href": "/tutorials", "isRoute": true, "feature": "tutorials" },
     { "labelKey": "nav.features", "href": "#features", "homeHref": "/#features", "isRoute": false },
     { "labelKey": "nav.pricing", "href": "#pricing", "homeHref": "/#pricing", "isRoute": false },
     { "labelKey": "nav.blog", "href": "/blog", "isRoute": true },
@@ -22,7 +26,8 @@
       { "labelKey": "footer.features", "href": "/#features" },
       { "labelKey": "footer.pricing", "href": "/#pricing" },
       { "labelKey": "footer.faq", "href": "/faq" },
-      { "labelKey": "footer.blog", "href": "/blog" }
+      { "labelKey": "footer.blog", "href": "/blog" },
+      { "labelKey": "tutorials.nav.tutorials", "href": "/tutorials", "feature": "tutorials" }
     ],
     "company": [
       { "labelKey": "footer.about", "href": "/about" }

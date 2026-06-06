@@ -13,11 +13,15 @@ const Navbar = () => {
   const isHome = location.pathname === "/";
   const { t } = useLanguage();
 
-  const navLinks = siteData.navLinks.map((link) => ({
-    label: t(link.labelKey),
-    href: isHome ? link.href : (link.homeHref || link.href),
-    isRoute: link.isRoute || !isHome,
-  }));
+  const features = siteData.features as Record<string, boolean>;
+
+  const navLinks = siteData.navLinks
+    .filter((link) => !link.feature || features[link.feature])
+    .map((link) => ({
+      label: t(link.labelKey),
+      href: isHome ? link.href : (link.homeHref || link.href),
+      isRoute: link.isRoute || !isHome,
+    }));
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">

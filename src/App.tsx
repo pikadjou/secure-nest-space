@@ -21,6 +21,16 @@ const About = lazy(() => import("./pages/About"));
 const HowItWorks = lazy(() => import("./pages/HowItWorks"));
 const Launch = lazy(() => import("./pages/Launch"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Tutorials = lazy(() => import("./pages/Tutorials"));
+const TutorialProfile = lazy(() => import("./pages/tutorials/TutorialProfile"));
+const TutorialOwnerProfile = lazy(() => import("./pages/tutorials/TutorialOwnerProfile"));
+const TutorialTenantProfile = lazy(() => import("./pages/tutorials/TutorialTenantProfile"));
+const TutorialCreateEstate = lazy(() => import("./pages/tutorials/TutorialCreateEstate"));
+const TutorialCreateApplication = lazy(() => import("./pages/tutorials/TutorialCreateApplication"));
+const TutorialValidateApplication = lazy(() => import("./pages/tutorials/TutorialValidateApplication"));
+const TutorialManageApplication = lazy(() => import("./pages/tutorials/TutorialManageApplication"));
+const TutorialReviews = lazy(() => import("./pages/tutorials/TutorialReviews"));
+const Redirect = lazy(() => import("./pages/Redirect"));
 
 const queryClient = new QueryClient();
 
@@ -45,6 +55,16 @@ const App = () => (
               <Route path="/about" element={<Suspense fallback={<div className="min-h-screen" />}><About /></Suspense>} />
               <Route path="/how-it-works" element={<Suspense fallback={<div className="min-h-screen" />}><HowItWorks /></Suspense>} />
               <Route path="/launch" element={<Suspense fallback={<div className="min-h-screen" />}><Launch /></Suspense>} />
+              <Route path="/tutorials" element={<Suspense fallback={<div className="min-h-screen" />}><Tutorials /></Suspense>} />
+              <Route path="/tutorials/profile" element={<Suspense fallback={<div className="min-h-screen" />}><TutorialProfile /></Suspense>} />
+              <Route path="/tutorials/owner-profile" element={<Suspense fallback={<div className="min-h-screen" />}><TutorialOwnerProfile /></Suspense>} />
+              <Route path="/tutorials/tenant-profile" element={<Suspense fallback={<div className="min-h-screen" />}><TutorialTenantProfile /></Suspense>} />
+              <Route path="/tutorials/create-estate" element={<Suspense fallback={<div className="min-h-screen" />}><TutorialCreateEstate /></Suspense>} />
+              <Route path="/tutorials/create-application" element={<Suspense fallback={<div className="min-h-screen" />}><TutorialCreateApplication /></Suspense>} />
+              <Route path="/tutorials/validate-application" element={<Suspense fallback={<div className="min-h-screen" />}><TutorialValidateApplication /></Suspense>} />
+              <Route path="/tutorials/manage-application" element={<Suspense fallback={<div className="min-h-screen" />}><TutorialManageApplication /></Suspense>} />
+              <Route path="/tutorials/reviews" element={<Suspense fallback={<div className="min-h-screen" />}><TutorialReviews /></Suspense>} />
+              <Route path="/go" element={<Suspense fallback={null}><Redirect /></Suspense>} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<Suspense fallback={<div className="min-h-screen" />}><NotFound /></Suspense>} />
             </Routes>

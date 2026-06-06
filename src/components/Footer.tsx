@@ -15,6 +15,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 const Footer = () => {
   const { t } = useLanguage();
+  const features = siteData.features as Record<string, boolean>;
+  const productLinks = siteData.footerLinks.product.filter(
+    (link) => !("feature" in link) || features[(link as { feature?: string }).feature!]
+  );
 
   return (
     <footer className="bg-hero-gradient text-primary-foreground">
@@ -51,7 +55,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-lg">{t("footer.product")}</h4>
             <ul className="space-y-3">
-              {siteData.footerLinks.product.map((link) => (
+              {productLinks.map((link) => (
                 <li key={link.labelKey}>
                   <a
                     href={link.href}
