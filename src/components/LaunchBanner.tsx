@@ -114,9 +114,14 @@ const LaunchBanner = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t("launch.title")}
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-4 max-w-xl mx-auto">
             {t("launch.description")}
           </p>
+
+          {/* Early bird offer */}
+          <div className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-secondary/10 border border-secondary/30 mb-8">
+            <span className="text-sm font-semibold text-secondary">{t("launch.earlyBird")}</span>
+          </div>
 
           {/* Email form */}
           <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-6">
