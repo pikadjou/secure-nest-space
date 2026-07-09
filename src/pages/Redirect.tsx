@@ -22,6 +22,7 @@ const SCOPE_MAP: Record<string, string> = {
   "about":        "/about",
   "pricing":      "/#pricing",
   "features":     "/#features",
+  "cgu":          "/terms",
 };
 
 const Redirect = () => {
