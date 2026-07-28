@@ -7,7 +7,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.createEstate.step1.desc",
     fieldsKey: "tutorials.createEstate.step1.fields",
     tipKey: "tutorials.createEstate.step1.tip",
-    screenshotSrc: "/src/assets/tutorials/estate/general-info.png",
+    screenshotSrc: "/assets/tutorials/estate/general-info.png",
     screenshotUrl: "dashboard.bailo.be/estates/my-estate-form/new",
   },
   {
@@ -15,7 +15,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.createEstate.step2.desc",
     fieldsKey: "tutorials.createEstate.step2.fields",
     tipKey: "tutorials.createEstate.step2.tip",
-    screenshotSrc: "/src/assets/tutorials/estate/features.png",
+    screenshotSrc: "/assets/tutorials/estate/features.png",
     screenshotUrl: "dashboard.bailo.be/estates/my-estate-form/new",
   },
   {
@@ -23,7 +23,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.createEstate.step3.desc",
     fieldsKey: "tutorials.createEstate.step3.fields",
     tipKey: "tutorials.createEstate.step3.tip",
-    screenshotSrc: "/src/assets/tutorials/estate/availability.png",
+    screenshotSrc: "/assets/tutorials/estate/availability.png",
     screenshotUrl: "dashboard.bailo.be/estates/my-estate-form/new",
   },
 ];
@@ -38,7 +38,7 @@ const TutorialCreateEstate = () => {
       pageTitleKey="pageTitle.tutorials.createEstate"
       accessStepsKey="tutorials.createEstate.access.steps"
       accessUrlKey="tutorials.createEstate.access.url"
-      accessScreenshotSrc="/src/assets/tutorials/estate/access.png"
+      accessScreenshotSrc="/assets/tutorials/estate/access.png"
       steps={steps}
     />
   );

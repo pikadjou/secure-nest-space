@@ -7,7 +7,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.reviews.step1.desc",
     fieldsKey: "tutorials.reviews.step1.fields",
     tipKey: "tutorials.reviews.step1.tip",
-    screenshotSrc: "/src/assets/tutorials/reviews/tenant-review.png",
+    screenshotSrc: "/assets/tutorials/reviews/tenant-review.png",
     screenshotUrl: "dashboard.bailo.be/reviews/review/[tenantApplicationId]",
   },
   {
@@ -15,7 +15,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.reviews.step2.desc",
     fieldsKey: "tutorials.reviews.step2.fields",
     tipKey: "tutorials.reviews.step2.tip",
-    screenshotSrc: "/src/assets/tutorials/reviews/owner-review.png",
+    screenshotSrc: "/assets/tutorials/reviews/owner-review.png",
     screenshotUrl: "dashboard.bailo.be/reviews/review/[tenantApplicationId]",
   },
   {
@@ -23,7 +23,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.reviews.step3.desc",
     fieldsKey: "tutorials.reviews.step3.fields",
     tipKey: "tutorials.reviews.step3.tip",
-    screenshotSrc: "/src/assets/tutorials/reviews/estate-review.png",
+    screenshotSrc: "/assets/tutorials/reviews/estate-review.png",
     screenshotUrl: "dashboard.bailo.be/reviews/review/[tenantApplicationId]",
   },
   {
@@ -31,7 +31,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.reviews.step4.desc",
     fieldsKey: "tutorials.reviews.step4.fields",
     tipKey: "tutorials.reviews.step4.tip",
-    screenshotSrc: "/src/assets/tutorials/reviews/view-review.png",
+    screenshotSrc: "/assets/tutorials/reviews/view-review.png",
     screenshotUrl: "dashboard.bailo.be/reviews/view/[type]/[id]",
   },
 ];
@@ -46,7 +46,7 @@ const TutorialReviews = () => {
       pageTitleKey="pageTitle.tutorials.reviews"
       accessStepsKey="tutorials.reviews.access.steps"
       accessUrlKey="tutorials.reviews.access.url"
-      accessScreenshotSrc="/src/assets/tutorials/reviews/access.png"
+      accessScreenshotSrc="/assets/tutorials/reviews/access.png"
       steps={steps}
     />
   );
