@@ -433,6 +433,7 @@
   "tutorials.cta.subtitle": "Create your account and start using Bailo today.",
   "tutorials.access.title": "How to access this page",
   "tutorials.screenshot.placeholder": "Screenshot to be added",
+  "tutorials.screenshot.zoom": "Enlarge screenshot",
   "tutorials.step": "Step",
 
   "tutorials.index.badge": "Documentation",
@@ -460,7 +461,7 @@
   "tutorials.index.role.common": "Common",
 
   "tutorials.profile.access.url": "dashboard.bailo.be/user/my-profile",
-  "tutorials.profile.access.steps": "Log in at dashboard.bailo.be · Click your avatar in the top right · Select \"My profile\" from the menu",
+  "tutorials.profile.access.steps": "Log in at dashboard.bailo.be · Click your avatar in the top right · Select \"Profile\" from the dropdown menu",
   "tutorials.profile.title": "Fill in your profile",
   "tutorials.profile.subtitle": "Your Bailo profile is your calling card. Complete it to inspire trust.",
   "tutorials.profile.step1.title": "Basic information",
@@ -477,7 +478,7 @@
   "tutorials.profile.step3.tip": "Identity verification is strongly recommended. Verified profiles receive significantly more positive responses.",
 
   "tutorials.ownerProfile.access.url": "dashboard.bailo.be/user/owner",
-  "tutorials.ownerProfile.access.steps": "Log in at dashboard.bailo.be · Click your avatar in the top right · Select \"My profile\" · Scroll to the \"Role\" section and activate the Landlord role · Click \"View profile\" or access directly via the side menu",
+  "tutorials.ownerProfile.access.steps": "Log in at dashboard.bailo.be · Click your avatar in the top right and select \"Profile\" · Scroll down to the role selection and enable the \"Owner\" role · The \"Owner\" entry then becomes clickable in the avatar menu and in the side menu of the profile page",
   "tutorials.ownerProfile.title": "Landlord profile",
   "tutorials.ownerProfile.subtitle": "Complete your landlord profile to build trust with potential tenants.",
   "tutorials.ownerProfile.step1.title": "Landlord information",
@@ -490,7 +491,7 @@
   "tutorials.ownerProfile.step2.tip": "Tip: make your profile as complete and public as possible. Transparency builds trust.",
 
   "tutorials.tenantProfile.access.url": "dashboard.bailo.be/user/tenant",
-  "tutorials.tenantProfile.access.steps": "Log in at dashboard.bailo.be · Click your avatar in the top right · Select \"My profile\" · Scroll to the \"Role\" section and activate the Tenant role · Click \"View profile\" or access directly via the side menu",
+  "tutorials.tenantProfile.access.steps": "Log in at dashboard.bailo.be · Click your avatar in the top right and select \"Profile\" · Scroll down to the role selection and enable the \"Tenant\" role · The \"Tenant\" entry then becomes clickable in the avatar menu and in the side menu of the profile page",
   "tutorials.tenantProfile.title": "Tenant profile",
   "tutorials.tenantProfile.subtitle": "A complete tenant profile increases your chances of getting your dream rental.",
   "tutorials.tenantProfile.step1.title": "Tenant information",
@@ -503,7 +504,7 @@
   "tutorials.tenantProfile.step2.tip": "Tip: a visible and complete profile reassures landlords and speeds up decision-making.",
 
   "tutorials.createEstate.access.url": "dashboard.bailo.be/estates/my-estate-form/new",
-  "tutorials.createEstate.access.steps": "Log in at dashboard.bailo.be · In the side menu, click \"My properties\" · Click the \"+\" or \"Add a property\" button",
+  "tutorials.createEstate.access.steps": "Log in at dashboard.bailo.be · In the top navigation bar, click \"Properties\" · On the \"My properties\" page, click the \"+ Create property\" button in the top right",
   "tutorials.createEstate.title": "Create a property",
   "tutorials.createEstate.subtitle": "Publish your property in a few steps and start receiving applications.",
   "tutorials.createEstate.step1.title": "General information",
@@ -520,7 +521,7 @@
   "tutorials.createEstate.step3.tip": "Tip: set a rent in line with the local market. A consistent price attracts serious candidates more quickly.",
 
   "tutorials.createApplication.access.url": "dashboard.bailo.be/tenant-applications/create",
-  "tutorials.createApplication.access.steps": "Log in at dashboard.bailo.be · In the side menu, click \"Applications\" · Click the \"+\" or \"New application\" button",
+  "tutorials.createApplication.access.steps": "Log in at dashboard.bailo.be · In the top navigation bar, click \"Rental Applications\" · On the \"My Rental Applications\" page, click the \"+ New Application\" button in the top right",
   "tutorials.createApplication.title": "Create a rental application",
   "tutorials.createApplication.subtitle": "Start a rental relationship in a few steps: choose a property, fill in the details, and add tenants.",
   "tutorials.createApplication.step1.title": "Select a property",
@@ -537,7 +538,7 @@
   "tutorials.createApplication.step3.tip": "Tip: invite all co-tenants before submitting. Each tenant will need to accept the application on their side.",
 
   "tutorials.validateApplication.access.url": "dashboard.bailo.be/tenant-applications/detail/[id]",
-  "tutorials.validateApplication.access.steps": "Log in at dashboard.bailo.be · In the side menu, click \"Applications\" · Click on the application with a pending validation status",
+  "tutorials.validateApplication.access.steps": "Log in at dashboard.bailo.be · In the top navigation bar, click \"Rental Applications\" · Find the application with the orange \"Pending\" badge · Click \"Manage\" at the bottom of its card",
   "tutorials.validateApplication.title": "Validate an application",
   "tutorials.validateApplication.subtitle": "Review the details of an application and make your decision with full knowledge of the facts.",
   "tutorials.validateApplication.step1.title": "Review the parties",
@@ -554,7 +555,7 @@
   "tutorials.validateApplication.step3.tip": "Important: the screenshot below shows the request author's view, tracking its progress. The Validate and Reject buttons appear for the party the request is addressed to.",
 
   "tutorials.manageApplication.access.url": "dashboard.bailo.be/tenant-applications/detail/[id]",
-  "tutorials.manageApplication.access.steps": "Log in at dashboard.bailo.be · In the side menu, click \"Applications\" · Click on an approved application (green status)",
+  "tutorials.manageApplication.access.steps": "Log in at dashboard.bailo.be · In the top navigation bar, click \"Rental Applications\" · Find an application with the green \"Accepted\" badge · Click \"Manage\" at the bottom of its card",
   "tutorials.manageApplication.title": "Manage an application",
   "tutorials.manageApplication.subtitle": "View the details of an approved application, manage documents, and track the rental relationship.",
   "tutorials.manageApplication.step1.title": "Overview",
@@ -562,8 +563,8 @@
   "tutorials.manageApplication.step1.fields": "Landlord card · Tenant(s) card · Address card · Monthly rent card · Review request banner (if available)",
   "tutorials.manageApplication.step1.tip": "Tip: if the tenancy is over, a banner invites you to leave a review. Take the opportunity to rate the experience.",
   "tutorials.manageApplication.step2.title": "Tab navigation",
-  "tutorials.manageApplication.step2.desc": "The lower section is organised into tabs. Each tab corresponds to an aspect of the rental relationship: general information, lease, inventory, shared documents, and reviews.",
-  "tutorials.manageApplication.step2.fields": "Information tab (lease details) · Lease tab (contract and closure) · Inventory tab · Documents tab · Reviews tab (evaluation summary)",
+  "tutorials.manageApplication.step2.desc": "The lower section is organised into tabs. Each tab corresponds to an aspect of the rental relationship: general information, lease, inventory, shared documents, and review.",
+  "tutorials.manageApplication.step2.fields": "Informations tab (parties and lease details) · Lease tab (contract and closure) · Inventory tab · Documents tab · Review tab, which appears once the tenancy is over",
   "tutorials.manageApplication.step2.tip": "Tip: use the Documents tab to centralise all documents related to the tenancy (contract, inventories, rent receipts…).",
   "tutorials.manageApplication.step3.title": "Upload a document",
   "tutorials.manageApplication.step3.desc": "From the Documents tab, you can upload files directly related to this application. A modal form allows you to choose the file and categorise it.",
@@ -571,7 +572,7 @@
   "tutorials.manageApplication.step3.tip": "Tip: use clear file names and categorise your documents properly. All application participants have access to them.",
 
   "tutorials.reviews.access.url": "dashboard.bailo.be/reviews/review/[tenantApplicationId]",
-  "tutorials.reviews.access.steps": "Log in at dashboard.bailo.be · Open an approved application · A \"Leave a review\" banner appears once the tenancy is over · Click it to access the review form",
+  "tutorials.reviews.access.steps": "Log in at dashboard.bailo.be · In the top navigation bar, click \"Reviews\" · Open the \"Rentals to review\" tab · Click the rental you want to review to open the review form",
   "tutorials.reviews.title": "Reviews",
   "tutorials.reviews.subtitle": "Give and view reviews for tenants, landlords, and properties.",
   "tutorials.reviews.step1.title": "Create a tenant review",

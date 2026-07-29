@@ -7,7 +7,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.tenantProfile.step1.desc",
     fieldsKey: "tutorials.tenantProfile.step1.fields",
     tipKey: "tutorials.tenantProfile.step1.tip",
-    screenshotSrc: "/assets/tutorials/tenant-profile/tenant-info.png",
+    screenshotSrc: "/assets/tutorials/tenant-profile/tenant-info.webp",
     screenshotUrl: "dashboard.bailo.be/user/tenant",
   },
   {
@@ -15,7 +15,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.tenantProfile.step2.desc",
     fieldsKey: "tutorials.tenantProfile.step2.fields",
     tipKey: "tutorials.tenantProfile.step2.tip",
-    screenshotSrc: "/assets/tutorials/tenant-profile/visibility.png",
+    screenshotSrc: "/assets/tutorials/tenant-profile/visibility.webp",
     screenshotUrl: "dashboard.bailo.be/user/tenant",
   },
 ];
@@ -30,7 +30,7 @@ const TutorialTenantProfile = () => {
       pageTitleKey="pageTitle.tutorials.tenantProfile"
       accessStepsKey="tutorials.tenantProfile.access.steps"
       accessUrlKey="tutorials.tenantProfile.access.url"
-      accessScreenshotSrc="/assets/tutorials/tenant-profile/access.png"
+      accessScreenshotSrc="/assets/tutorials/tenant-profile/access.webp"
       steps={steps}
     />
   );

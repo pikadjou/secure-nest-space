@@ -433,6 +433,7 @@
   "tutorials.cta.subtitle": "Créez votre compte et commencez à utiliser Bailo dès aujourd'hui.",
   "tutorials.access.title": "Comment accéder à cette page",
   "tutorials.screenshot.placeholder": "Screenshot à ajouter",
+  "tutorials.screenshot.zoom": "Agrandir la capture",
   "tutorials.step": "Étape",
 
   "tutorials.index.badge": "Documentation",
@@ -459,9 +460,8 @@
   "tutorials.index.role.tenant": "Locataire",
   "tutorials.index.role.common": "Commun",
 
-  "tutorials.profile.access.screenshot": "/src/assets/tutorials/profile/access.png",
   "tutorials.profile.access.url": "dashboard.bailo.be/user/my-profile",
-  "tutorials.profile.access.steps": "Connectez-vous sur dashboard.bailo.be · Cliquez sur votre avatar en haut à droite · Sélectionnez \"Mon profil\" dans le menu",
+  "tutorials.profile.access.steps": "Connectez-vous sur dashboard.bailo.be · Cliquez sur votre avatar en haut à droite · Sélectionnez \"Profil\" dans le menu déroulant",
   "tutorials.profile.title": "Remplir son profil",
   "tutorials.profile.subtitle": "Votre profil Bailo est votre carte de visite. Complétez-le pour inspirer confiance.",
   "tutorials.profile.step1.title": "Informations de base",
@@ -478,7 +478,7 @@
   "tutorials.profile.step3.tip": "La vérification d'identité est fortement recommandée. Les profils vérifiés obtiennent significativement plus de réponses positives.",
 
   "tutorials.ownerProfile.access.url": "dashboard.bailo.be/user/owner",
-  "tutorials.ownerProfile.access.steps": "Connectez-vous sur dashboard.bailo.be · Cliquez sur votre avatar en haut à droite · Sélectionnez \"Mon profil\" · Faites défiler jusqu'à la section \"Rôle\" et activez le rôle Propriétaire · Cliquez sur \"Voir le profil\" ou accédez directement via le menu latéral",
+  "tutorials.ownerProfile.access.steps": "Connectez-vous sur dashboard.bailo.be · Cliquez sur votre avatar en haut à droite et sélectionnez \"Profil\" · Faites défiler jusqu'à la sélection des rôles et activez le rôle \"Propriétaire\" · L'entrée \"Propriétaire\" devient alors cliquable dans le menu de l'avatar et dans le menu latéral de la page profil",
   "tutorials.ownerProfile.title": "Profil propriétaire",
   "tutorials.ownerProfile.subtitle": "Complétez votre profil propriétaire pour donner confiance aux locataires potentiels.",
   "tutorials.ownerProfile.step1.title": "Informations propriétaire",
@@ -491,7 +491,7 @@
   "tutorials.ownerProfile.step2.tip": "Conseil : rendez votre profil aussi complet et public que possible. La transparence favorise la confiance.",
 
   "tutorials.tenantProfile.access.url": "dashboard.bailo.be/user/tenant",
-  "tutorials.tenantProfile.access.steps": "Connectez-vous sur dashboard.bailo.be · Cliquez sur votre avatar en haut à droite · Sélectionnez \"Mon profil\" · Faites défiler jusqu'à la section \"Rôle\" et activez le rôle Locataire · Cliquez sur \"Voir le profil\" ou accédez directement via le menu latéral",
+  "tutorials.tenantProfile.access.steps": "Connectez-vous sur dashboard.bailo.be · Cliquez sur votre avatar en haut à droite et sélectionnez \"Profil\" · Faites défiler jusqu'à la sélection des rôles et activez le rôle \"Locataire\" · L'entrée \"Locataire\" devient alors cliquable dans le menu de l'avatar et dans le menu latéral de la page profil",
   "tutorials.tenantProfile.title": "Profil locataire",
   "tutorials.tenantProfile.subtitle": "Un profil locataire complet augmente vos chances d'obtenir la location de vos rêves.",
   "tutorials.tenantProfile.step1.title": "Informations locataire",
@@ -504,7 +504,7 @@
   "tutorials.tenantProfile.step2.tip": "Conseil : un profil visible et complet rassure les propriétaires et accélère les prises de décision.",
 
   "tutorials.createEstate.access.url": "dashboard.bailo.be/estates/my-estate-form/new",
-  "tutorials.createEstate.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans le menu latéral, cliquez sur \"Mes biens\" · Cliquez sur le bouton \"+\" ou \"Ajouter un bien\"",
+  "tutorials.createEstate.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans la barre de navigation en haut, cliquez sur \"Mes Biens\" · Sur la page \"Mes biens immobiliers\", cliquez sur le bouton \"+ Créer un bien\" en haut à droite",
   "tutorials.createEstate.title": "Créer un bien",
   "tutorials.createEstate.subtitle": "Publiez votre bien immobilier en quelques étapes et commencez à recevoir des candidatures.",
   "tutorials.createEstate.step1.title": "Informations générales",
@@ -521,7 +521,7 @@
   "tutorials.createEstate.step3.tip": "Conseil : fixez un loyer en adéquation avec le marché local. Un prix cohérent attire des candidats sérieux plus rapidement.",
 
   "tutorials.createApplication.access.url": "dashboard.bailo.be/tenant-applications/create",
-  "tutorials.createApplication.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans le menu latéral, cliquez sur \"Candidatures\" · Cliquez sur le bouton \"+\" ou \"Nouvelle candidature\"",
+  "tutorials.createApplication.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans la barre de navigation en haut, cliquez sur \"Mes locations\" · Sur la page \"Mes demandes de location\", cliquez sur le bouton \"+ Nouvelle demande\" en haut à droite",
   "tutorials.createApplication.title": "Créer une candidature locative",
   "tutorials.createApplication.subtitle": "Initiez une relation locative en quelques étapes : choisissez un bien, renseignez les détails et ajoutez les locataires.",
   "tutorials.createApplication.step1.title": "Sélectionner un bien",
@@ -538,7 +538,7 @@
   "tutorials.createApplication.step3.tip": "Conseil : invitez tous les colocataires avant de soumettre. Chaque locataire devra accepter la candidature de son côté.",
 
   "tutorials.validateApplication.access.url": "dashboard.bailo.be/tenant-applications/detail/[id]",
-  "tutorials.validateApplication.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans le menu latéral, cliquez sur \"Candidatures\" · Cliquez sur la candidature dont le statut est en attente de validation",
+  "tutorials.validateApplication.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans la barre de navigation en haut, cliquez sur \"Mes locations\" · Repérez la demande portant le badge orange \"En attente\" · Cliquez sur \"Gérer\" au bas de sa carte",
   "tutorials.validateApplication.title": "Valider une candidature",
   "tutorials.validateApplication.subtitle": "Examinez les détails d'une candidature et prenez votre décision en toute connaissance de cause.",
   "tutorials.validateApplication.step1.title": "Consulter les parties",
@@ -555,7 +555,7 @@
   "tutorials.validateApplication.step3.tip": "Important : la capture ci-dessous montre la vue de l'auteur de la demande, qui en suit l'avancement. Les boutons Valider et Rejeter apparaissent chez la partie à qui la demande est adressée.",
 
   "tutorials.manageApplication.access.url": "dashboard.bailo.be/tenant-applications/detail/[id]",
-  "tutorials.manageApplication.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans le menu latéral, cliquez sur \"Candidatures\" · Cliquez sur une candidature approuvée (statut vert)",
+  "tutorials.manageApplication.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans la barre de navigation en haut, cliquez sur \"Mes locations\" · Repérez une demande portant le badge vert \"Acceptée\" · Cliquez sur \"Gérer\" au bas de sa carte",
   "tutorials.manageApplication.title": "Gérer une candidature",
   "tutorials.manageApplication.subtitle": "Consultez le détail d'une candidature approuvée, gérez les documents et suivez la relation locative.",
   "tutorials.manageApplication.step1.title": "Vue d'ensemble",
@@ -563,8 +563,8 @@
   "tutorials.manageApplication.step1.fields": "Carte propriétaire · Carte locataires · Carte adresse · Carte loyer mensuel · Bouton de demande d'avis (si disponible)",
   "tutorials.manageApplication.step1.tip": "Conseil : si la location est terminée, un encart vous invite à laisser un avis. Profitez-en pour évaluer l'expérience.",
   "tutorials.manageApplication.step2.title": "Navigation par onglets",
-  "tutorials.manageApplication.step2.desc": "La section inférieure est organisée en onglets. Chaque onglet correspond à un aspect de la relation locative : informations générales, bail, inventaire, documents partagés et avis.",
-  "tutorials.manageApplication.step2.fields": "Onglet Informations (détails du bail) · Onglet Bail (contrat et clôture) · Onglet Inventaire · Onglet Documents · Onglet Avis (résumé des évaluations)",
+  "tutorials.manageApplication.step2.desc": "La section inférieure est organisée en onglets. Chaque onglet correspond à un aspect de la relation locative : informations générales, bail, état des lieux, documents partagés et évaluation.",
+  "tutorials.manageApplication.step2.fields": "Onglet Informations (parties et détails du bail) · Onglet Bail (contrat et clôture) · Onglet État des lieux · Onglet Documents · Onglet Évaluation, qui apparaît une fois la location terminée",
   "tutorials.manageApplication.step2.tip": "Conseil : utilisez l'onglet Documents pour centraliser tous les documents liés à la location (contrat, états des lieux, quittances…).",
   "tutorials.manageApplication.step3.title": "Ajouter un document",
   "tutorials.manageApplication.step3.desc": "Depuis l'onglet Documents, vous pouvez uploader des fichiers directement liés à cette candidature. Un formulaire modal vous permet de choisir le fichier et de le catégoriser.",
@@ -572,7 +572,7 @@
   "tutorials.manageApplication.step3.tip": "Conseil : utilisez des noms de fichiers clairs et catégorisez bien vos documents. Tous les participants à la candidature y ont accès.",
 
   "tutorials.reviews.access.url": "dashboard.bailo.be/reviews/review/[tenantApplicationId]",
-  "tutorials.reviews.access.steps": "Connectez-vous sur dashboard.bailo.be · Ouvrez une candidature approuvée · Un encart \"Laisser un avis\" apparaît une fois la location terminée · Cliquez dessus pour accéder au formulaire d'avis",
+  "tutorials.reviews.access.steps": "Connectez-vous sur dashboard.bailo.be · Dans la barre de navigation en haut, cliquez sur \"Évaluations\" · Ouvrez l'onglet \"Locations à évaluer\" · Cliquez sur la location que vous souhaitez évaluer pour ouvrir le formulaire d'avis",
   "tutorials.reviews.title": "Les avis",
   "tutorials.reviews.subtitle": "Donnez et consultez des avis sur les locataires, propriétaires et biens immobiliers.",
   "tutorials.reviews.step1.title": "Créer un avis locataire",

@@ -7,7 +7,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.createApplication.step1.desc",
     fieldsKey: "tutorials.createApplication.step1.fields",
     tipKey: "tutorials.createApplication.step1.tip",
-    screenshotSrc: "/assets/tutorials/application-create/select-estate.png",
+    screenshotSrc: "/assets/tutorials/application-create/select-estate.webp",
     screenshotUrl: "dashboard.bailo.be/tenant-applications/create",
   },
   {
@@ -15,7 +15,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.createApplication.step2.desc",
     fieldsKey: "tutorials.createApplication.step2.fields",
     tipKey: "tutorials.createApplication.step2.tip",
-    screenshotSrc: "/assets/tutorials/application-create/lease-details.png",
+    screenshotSrc: "/assets/tutorials/application-create/lease-details.webp",
     screenshotUrl: "dashboard.bailo.be/tenant-applications/create",
   },
   {
@@ -23,7 +23,7 @@ const steps: TutorialStep[] = [
     descKey: "tutorials.createApplication.step3.desc",
     fieldsKey: "tutorials.createApplication.step3.fields",
     tipKey: "tutorials.createApplication.step3.tip",
-    screenshotSrc: "/assets/tutorials/application-create/add-tenants.png",
+    screenshotSrc: "/assets/tutorials/application-create/add-tenants.webp",
     screenshotUrl: "dashboard.bailo.be/tenant-applications/create",
   },
 ];
@@ -38,7 +38,7 @@ const TutorialCreateApplication = () => {
       pageTitleKey="pageTitle.tutorials.createApplication"
       accessStepsKey="tutorials.createApplication.access.steps"
       accessUrlKey="tutorials.createApplication.access.url"
-      accessScreenshotSrc="/assets/tutorials/application-create/access.png"
+      accessScreenshotSrc="/assets/tutorials/application-create/access.webp"
       steps={steps}
     />
   );
