@@ -273,10 +273,7 @@ const HowItWorks = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-4">
               {t("howItWorks.cta.title")}
             </h2>
-            <p className="text-xl text-primary-foreground/80 mb-8">
-              {t("howItWorks.cta.subtitle")}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button variant="hero" size="xl" asChild>
                 {isLaunchMode() ? (
                   <Link to="/launch">
