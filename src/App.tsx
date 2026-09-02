@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import CookieBanner from "@/components/CookieBanner";
+import GtmPageView from "@/components/GtmPageView";
 import Index from "./pages/Index";
 
 const Blog = lazy(() => import("./pages/Blog"));
@@ -42,6 +43,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <GtmPageView />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/blog" element={<Suspense fallback={<div className="min-h-screen" />}><Blog /></Suspense>} />

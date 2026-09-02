@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import { updateGtmConsent } from "@/lib/gtm";
 
 export interface CookiePreferences {
   necessary: boolean; // Always true, cannot be disabled
@@ -42,9 +43,11 @@ export const CookieConsentProvider = ({ children }: { children: ReactNode }) => 
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
-        setPreferences({ ...defaultPreferences, ...parsed.preferences });
+        const restored: CookiePreferences = { ...defaultPreferences, ...parsed.preferences };
+        setPreferences(restored);
         setHasConsented(true);
         setShowBanner(false);
+        updateGtmConsent(restored);
       } catch {
         setShowBanner(true);
       }
@@ -61,6 +64,7 @@ export const CookieConsentProvider = ({ children }: { children: ReactNode }) => 
         timestamp: new Date().toISOString(),
       })
     );
+    updateGtmConsent(prefs);
   };
 
   const acceptAll = () => {

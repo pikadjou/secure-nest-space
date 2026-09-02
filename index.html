@@ -4,7 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.png" type="image/png" />
-    
+
+    <!-- Google Consent Mode v2 - defaults MUST be set before GTM loads -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+
+      (function () {
+        var stored = { analytics: false, marketing: false, preferences: false };
+        try {
+          var raw = localStorage.getItem('cookie-consent');
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (parsed && parsed.preferences) {
+              stored = parsed.preferences;
+            }
+          }
+        } catch (e) { /* localStorage unavailable or corrupted: keep denied */ }
+
+        var state = function (allowed) { return allowed ? 'granted' : 'denied'; };
+
+        gtag('consent', 'default', {
+          ad_storage: state(stored.marketing),
+          ad_user_data: state(stored.marketing),
+          ad_personalization: state(stored.marketing),
+          analytics_storage: state(stored.analytics),
+          functionality_storage: state(stored.preferences),
+          personalization_storage: state(stored.preferences),
+          security_storage: 'granted',
+          wait_for_update: 500
+        });
+      })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PWLRRKVF');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- Preload critical fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,6 +77,11 @@
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWLRRKVF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
