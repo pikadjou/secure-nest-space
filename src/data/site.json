@@ -90,6 +90,11 @@
       ]
     }
   },
+  "trustParadox": [
+    { "icon": "BedDouble", "labelKey": "paradox.hotel.label", "actionKey": "paradox.hotel.action", "color": "bg-primary" },
+    { "icon": "Car", "labelKey": "paradox.car.label", "actionKey": "paradox.car.action", "color": "bg-secondary" },
+    { "icon": "Pizza", "labelKey": "paradox.pizza.label", "actionKey": "paradox.pizza.action", "color": "bg-accent" }
+  ],
   "trustBadges": [
     { "icon": "Shield", "textKey": "pricing.trust.ssl" },
     { "icon": "FileText", "textKey": "pricing.trust.invoice" },
